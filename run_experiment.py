@@ -1,0 +1,16 @@
+from stimulus.Mot.Mot import main_mot_experiment
+from stimulus.VisualSearch.VisualSearch import main_visual_search_experiment
+from stimulus.AbruptOnset.AbruptOnset import main_abrupt_onset_experiment
+from stimulus.ItalianGame.ItalianGame import main_italian_game_experiment
+import time
+from MouseMovements.MouseTracker import PygameMouseTracker
+import pygame
+import json
+from EyeTracking.EyeTrackingSetup import setup_and_calibrate_tracker
+
+el_tracker = setup_and_calibrate_tracker("MOT")
+main_italian_game_experiment()
+main_mot_experiment(el_tracker)
+main_visual_search_experiment()
+main_abrupt_onset_experiment(el_tracker)
+

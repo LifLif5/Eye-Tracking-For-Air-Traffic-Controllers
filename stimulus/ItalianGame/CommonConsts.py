@@ -1,0 +1,22 @@
+
+import tkinter as tk
+from ..Utils import WIDTH, HEIGHT
+
+# Constants
+HOME_BASE_POS = (WIDTH // 2, HEIGHT // 2)
+ANIMAL_SPEED = 2
+SPAWN_INTERVAL =2000  
+ANIMALS_CIRCLE_RADIUS = 20  # Radius of the animal circle
+HOME_BASE_BOUNDARY_RADIUS = 100  # Radius of the home base boundary
+INITIAL_PLAYER_HEALTH = 100
+
+FONT_SIZE = 36
+WEAPON_IMAGE_SIZE = (100, 100)
+ANIMAL_IMAGE_SIZE = (75, 75)
+HOUSE_IMAGE_SIZE = (80, 80)
+
+# Center the home base on the screen
+HOME_BASE_POS = (
+    (WIDTH - HOUSE_IMAGE_SIZE[0]) // 2,
+    (HEIGHT - HOUSE_IMAGE_SIZE[1]) // 2
+)
