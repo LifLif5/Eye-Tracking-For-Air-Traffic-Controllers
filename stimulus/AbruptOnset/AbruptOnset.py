@@ -82,6 +82,7 @@ def run_trial(el_tracker : pylink.EyeLink, trial_index ,with_distractors=False):
     pygame.display.flip()
     pygame.time.wait(int(FIXATION_TIME * 1000))
 
+
     target_letter = random.choice(TARGET_LETTERS)
     target_angle = random.uniform(0, 360)
     target_x, target_y = get_position_around_center(DIST_FROM_CENTER, target_angle)
@@ -97,7 +98,7 @@ def run_trial(el_tracker : pylink.EyeLink, trial_index ,with_distractors=False):
             draw_letter(DISTRACTOR_LETTER, x, y)
 
     pygame.display.flip()
-
+    el_tracker.sendMessage("TARGET_DRAWN")
     pygame.event.clear()
     start_time = time.time()
     while True:
@@ -113,6 +114,8 @@ def run_trial(el_tracker : pylink.EyeLink, trial_index ,with_distractors=False):
                     pygame.quit()
                     exit()
                 response = event.unicode.upper()
+                el_tracker.sendMessage("KEY_PRESSED")
+                el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
                 return elapsed if response == target_letter else -1
 
 

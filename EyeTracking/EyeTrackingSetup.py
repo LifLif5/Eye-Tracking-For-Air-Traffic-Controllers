@@ -119,26 +119,6 @@ def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" :
     # The EDF data filename should not exceed eight alphanumeric characters
     # use ONLY number 0-9, letters, and _ (underscore) in the filename
     edf_fname = edf_input
-
-    # Prompt user to specify an EDF data filename
-    # before we open a fullscreen window
-    # while True:
-    #     prompt = '\nSpecify an EDF filename\n' + \
-    #         'Filename must not exceed eight alphanumeric characters.\n' + \
-    #         'ONLY letters, numbers and underscore are allowed.\n\n--> '
-    #     edf_fname = input(prompt)
-    #     # strip trailing characters, ignore the '.edf' extension
-    #     edf_fname = edf_fname.rstrip().split('.')[0]
-
-    #     # check if the filename is valid (length <= 8 & no special char)
-    #     allowed_char = ascii_letters + digits + '_'
-    #     if not all([c in allowed_char for c in edf_fname]):
-    #         print('ERROR: Invalid EDF filename')
-    #     elif len(edf_fname) > 8:
-    #         print('ERROR: EDF filename should not exceed 8 characters')
-    #     else:
-    #         break
-
     # Set up a folder to store the EDF data files and the associated resources
     # e.g., files defining the interest areas used in each trialer
     results_folder = 'results'
@@ -236,10 +216,6 @@ def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" :
     el_tracker.sendCommand("button_function 5 'accept_target_fixation'")
 
     # Step 4: set up a graphics environment for calibration
-
-
-    
-
         
     # scn_width, scn_height = win.get_size()
     pygame.mouse.set_visible(False)  # hide mouse cursor
@@ -278,7 +254,7 @@ def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" :
     pylink.openGraphicsEx(genv)
     pygame.mouse.set_visible(True)  # hide mouse cursor
 
-    return el_tracker
+    return el_tracker, edf_fname
 
 
 # def show_message(message, fg_color, bg_color):
