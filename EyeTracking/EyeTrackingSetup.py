@@ -57,7 +57,7 @@ def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" :
     pygame.mouse.set_visible(False)  # hide mouse cursor
 
     # Set this variable to True to run the script in "Dummy Mode"
-    dummy_mode = True
+    dummy_mode = False
 
     # get the screen resolution natively supported by the monitor
     scn_width, scn_height = Utils.WIDTH, Utils.HEIGHT
@@ -253,6 +253,13 @@ def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" :
     # Request Pylink to use the Pygame window we opened above for calibration
     pylink.openGraphicsEx(genv)
     pygame.mouse.set_visible(True)  # hide mouse cursor
+
+
+    try:
+        el_tracker.doTrackerSetup()
+    except RuntimeError as err:
+        print('ERROR:', err)
+        el_tracker.exitCalibration()
 
     return el_tracker, edf_fname
 

@@ -105,21 +105,21 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
                 obj["dir"][1] *= -1
             pygame.draw.circle(screen, WHITE, obj["pos"], radius)
 
-            # Draw arrow to indicate direction
-            pos = np.array(obj["pos"])
-            dir_vec = np.array(obj["dir"])
-            norm_dir = dir_vec / np.linalg.norm(dir_vec) if np.linalg.norm(dir_vec) != 0 else dir_vec
-            arrow_length = radius + 50
-            end_pos = pos + norm_dir * arrow_length
-            pygame.draw.line(screen, GREEN, pos, end_pos.astype(int), 3)
-            # Draw arrowhead
-            angle = np.arctan2(norm_dir[1], norm_dir[0])
-            arrowhead_length = 20
-            arrowhead_angle = np.pi / 6
-            left = end_pos - arrowhead_length * np.array([np.cos(angle - arrowhead_angle), np.sin(angle - arrowhead_angle)])
-            right = end_pos - arrowhead_length * np.array([np.cos(angle + arrowhead_angle), np.sin(angle + arrowhead_angle)])
-            pygame.draw.line(screen, GREEN, end_pos.astype(int), left.astype(int), 3)
-            pygame.draw.line(screen, GREEN, end_pos.astype(int), right.astype(int), 3)
+            # # Draw arrow to indicate direction
+            # pos = np.array(obj["pos"])
+            # dir_vec = np.array(obj["dir"])
+            # norm_dir = dir_vec / np.linalg.norm(dir_vec) if np.linalg.norm(dir_vec) != 0 else dir_vec
+            # arrow_length = radius + 50
+            # end_pos = pos + norm_dir * arrow_length
+            # pygame.draw.line(screen, GREEN, pos, end_pos.astype(int), 3)
+            # # Draw arrowhead
+            # angle = np.arctan2(norm_dir[1], norm_dir[0])
+            # arrowhead_length = 20
+            # arrowhead_angle = np.pi / 6
+            # left = end_pos - arrowhead_length * np.array([np.cos(angle - arrowhead_angle), np.sin(angle - arrowhead_angle)])
+            # right = end_pos - arrowhead_length * np.array([np.cos(angle + arrowhead_angle), np.sin(angle + arrowhead_angle)])
+            # pygame.draw.line(screen, GREEN, end_pos.astype(int), left.astype(int), 3)
+            # pygame.draw.line(screen, GREEN, end_pos.astype(int), right.astype(int), 3)
 
         pygame.display.flip()
         # if not image_taken:
