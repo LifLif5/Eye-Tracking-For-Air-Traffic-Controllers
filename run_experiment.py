@@ -10,6 +10,7 @@ import pylink
 import os
 
 from EyeTracking.EyeTrackingSetup import setup_and_calibrate_tracker
+import argparse
 
 def close_tracker(el_tracker: pylink.EyeLink, edf_filename: str, destination_path: str = "results"):
     """
@@ -31,22 +32,27 @@ def close_tracker(el_tracker: pylink.EyeLink, edf_filename: str, destination_pat
     pylink.closeGraphics()
 
 
+parser = argparse.ArgumentParser(description="Run experiment with optional dummy mode.")
+parser.add_argument('--dummy', action='store_true', help='Run EyeLink in dummy mode')
+args = parser.parse_args()
+dummy_mode = args.dummy
+print(f"Running in dummy mode: {dummy_mode}")
 
-el_tracker, edf_filename = setup_and_calibrate_tracker("MOT")
+el_tracker, edf_filename = setup_and_calibrate_tracker("MOT", dummy_mode=dummy_mode)
 main_mot_experiment(el_tracker)
 close_tracker(el_tracker, edf_filename)
 
 
-el_tracker, edf_filename = setup_and_calibrate_tracker("REACTION")
+el_tracker, edf_filename = setup_and_calibrate_tracker("REACTION", dummy_mode=dummy_mode)
 main_abrupt_onset_experiment(el_tracker)
 close_tracker(el_tracker, edf_filename)
 
 
-el_tracker, edf_filename = setup_and_calibrate_tracker("SEARCH")
-main_visual_search_experiment()
+el_tracker, edf_filename = setup_and_calibrate_tracker("SEARCH", dummy_mode=dummy_mode)
+main_visual_search_experiment(el_tracker)
 close_tracker(el_tracker, edf_filename)
 
 
-el_tracker, edf_filename = setup_and_calibrate_tracker("GAME")
-main_italian_game_experiment()
+el_tracker, edf_filename = setup_and_calibrate_tracker("GAME", dummy_mode=dummy_mode)
+main_italian_game_experiment(el_tracker)
 close_tracker(el_tracker, edf_filename)

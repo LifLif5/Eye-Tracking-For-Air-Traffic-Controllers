@@ -3,6 +3,8 @@ import pygame
 import random
 import time
 
+import pylink
+
 from . import CommonConsts as Consts
 from .Animal import Animal, Weapon, randomize_animal_location
 from typing import List
@@ -109,11 +111,40 @@ def shoot(weapon: Weapon, mouse_x: int, mouse_y: int, animals : List[Animal]) ->
                 return True
     return False
 
+def prompt_numeric_input(screen, font, question_text, position=(750, 650)):
+    input_text = ""
+    active = True
 
+    # Pre-render the question text
+    question_surface = font.render(question_text, True, (0, 0, 0))
+
+    while active:
+        screen.blit(question_surface, position)
+
+        # Render input box
+        input_box = pygame.Rect(position[0], position[1] + 40, 200, 36)
+        pygame.draw.rect(screen, (200, 200, 200), input_box)
+        text_surface = font.render(input_text, True, (0, 0, 0))
+        screen.blit(text_surface, (input_box.x + 5, input_box.y + 5))
+        pygame.draw.rect(screen, (0, 0, 0), input_box, 2)
+
+        pygame.display.flip()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                return None  # Exit condition
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RETURN:
+                    return input_text  # Return the numeric string
+                elif event.key == pygame.K_BACKSPACE:
+                    input_text = input_text[:-1]
+                elif event.unicode.isdigit():
+                    input_text += event.unicode
 
 
 #####################################################################
-def game_round(beep_distractions: bool = False, visual_distractions: bool = False):
+def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool = False, visual_distractions: bool = False):
     # Initialize scoring system
     global player_health, tung_tung_kills
     player_health = Consts.INITIAL_PLAYER_HEALTH
@@ -143,6 +174,8 @@ def game_round(beep_distractions: bool = False, visual_distractions: bool = Fals
     # Game loop
     running: bool = True
     right_mouse_pressed = False  # Track the state of the right mouse button
+    el_tracker.sendMessage(f"TRIALID {trial_index}")
+    el_tracker.sendMessage(f"TRIAL_START {trial_index}")
     while running:
         screen.blit(Assets.background_image, (0, 0))  # Draw background
         screen.blit(Assets.home_base_image, Consts.HOME_BASE_POS)  # Draw home base
@@ -288,32 +321,45 @@ def game_round(beep_distractions: bool = False, visual_distractions: bool = Fals
     pygame.display.flip()
 
     if beep_distractions:
-        ask_beep_text = font.render(f"How many beeps were played? (Correct: {beep_count})", True, (0, 0, 0))
-        screen.blit(ask_beep_text, (10, Consts.HEIGHT - 100))
-        pygame.display.flip()
+        value = prompt_numeric_input(screen, font, "How many beeps were played?")
+
+    elif visual_distractions:
+        value = prompt_numeric_input(screen, font, "How many red circles were shown?")
+
+    else:
         waiting = True
         while waiting:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_RETURN):
                     waiting = False
+                
+    # Send trial end message to EyeLink tracker
+    el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
 
-    if visual_distractions:
-        ask_visual_text = font.render(f"How many visual distractions were shown? (Correct: {visual_count})", True, (0, 0, 0))
-        screen.blit(ask_visual_text, (10, Consts.HEIGHT - 60))
-        pygame.display.flip()
-        waiting = True
-        while waiting:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_RETURN):
-                    waiting = False
 
-def main_italian_game_experiment():
+def main_italian_game_experiment(el_tracker:pylink.EyeLink):
     # Call the explanation screen before starting the game loop
     show_explanation_screen()
+    el_tracker.setOfflineMode()
+    el_tracker.startRecording(1, 1, 1, 1)
+    pylink.pumpDelay(100)  # allow tracker to stabilize
+    game_round(0, el_tracker)
+    pylink.pumpDelay(100)
+    el_tracker.stopRecording()
 
-    game_round()
+    show_explanation_screen()
+    el_tracker.setOfflineMode()
+    el_tracker.startRecording(1, 1, 1, 1)
+    pylink.pumpDelay(100)  # allow tracker to stabilize
+    game_round(1, el_tracker, beep_distractions= True)
+    pylink.pumpDelay(100)
+    el_tracker.stopRecording()
 
-    game_round(beep_distractions= True)
-
-    game_round(visual_distractions=True)
-
+    show_explanation_screen()
+    el_tracker.setOfflineMode()
+    el_tracker.startRecording(1, 1, 1, 1)
+    pylink.pumpDelay(100)  # allow tracker to stabilize
+    game_round(2, el_tracker, visual_distractions=True)
+    pylink.pumpDelay(100)
+    el_tracker.stopRecording()
+    el_tracker.setOfflineMode()

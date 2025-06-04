@@ -49,76 +49,74 @@ from stimulus import Utils
 from .CalibrationGraphicsPygame import CalibrationGraphics
 from string import ascii_letters, digits
 
-
-def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" : 
+participant_name = ""
+def setup_and_calibrate_tracker(task_name, dummy_mode) -> "pylink.EyeLink" : 
+    global participant_name
     # initialize pygame
     pygame.init()
     win = pygame.display.set_mode((0, 0), FULLSCREEN | DOUBLEBUF)
     pygame.mouse.set_visible(False)  # hide mouse cursor
-
-    # Set this variable to True to run the script in "Dummy Mode"
-    dummy_mode = False
 
     # get the screen resolution natively supported by the monitor
     scn_width, scn_height = Utils.WIDTH, Utils.HEIGHT
     pygame.display.set_caption("Enter EDF filename")
     font = pygame.font.SysFont('Arial', 32)
 
-    edf_input = ''
-    allowed_char = ascii_letters + digits + '_'
-    active = True
-    error_msg = ''
-    
-    while active:
-        win.fill((128, 128, 128))
+    if participant_name == "":
+        allowed_char = ascii_letters + digits + '_'
+        active = True
+        error_msg = ''
+        
+        while active:
+            win.fill((128, 128, 128))
 
-        prompt_lines = [
-            'Enter participant name/Id (max 8 characters)',
-            'Use only letters, numbers, and underscore',
-            'Press ENTER when done'
-        ]
+            prompt_lines = [
+                'Enter participant name/Id (max 8 characters)',
+                'Use only letters, numbers, and underscore',
+                'Press ENTER when done'
+            ]
 
-        for i, line in enumerate(prompt_lines):
-            line_surf = font.render(line, True, (0, 0, 0))
-            win.blit(line_surf, (50, 50 + i * 40))
+            for i, line in enumerate(prompt_lines):
+                line_surf = font.render(line, True, (0, 0, 0))
+                win.blit(line_surf, (50, 50 + i * 40))
 
-        input_surf = font.render('> ' + edf_input, True, (0, 0, 0))
-        win.blit(input_surf, (50, 200))
+            input_surf = font.render('> ' + participant_name, True, (0, 0, 0))
+            win.blit(input_surf, (50, 200))
 
-        if error_msg:
-            err_surf = font.render(error_msg, True, (200, 0, 0))
-            win.blit(err_surf, (50, 260))
+            if error_msg:
+                err_surf = font.render(error_msg, True, (200, 0, 0))
+                win.blit(err_surf, (50, 260))
 
-        pygame.display.flip()
+            pygame.display.flip()
 
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                sys.exit()
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_RETURN:
-                    if not all(c in allowed_char for c in edf_input):
-                        error_msg = 'ERROR: Invalid EDF filename'
-                    elif len(edf_input) > 8:
-                        error_msg = 'ERROR: Filename too long'
-                    elif len(edf_input) == 0:
-                        error_msg = 'ERROR: Filename required'
-                    else:
-                        active = False
-                elif event.key == pygame.K_BACKSPACE:
-                    edf_input = edf_input[:-1]
-                    error_msg = ''
-                else:
-                    char = event.unicode
-                    if char in allowed_char:
-                        edf_input += char
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_RETURN:
+                        if not all(c in allowed_char for c in participant_name):
+                            error_msg = 'ERROR: Invalid EDF filename'
+                        elif len(participant_name) > 8:
+                            error_msg = 'ERROR: Filename too long'
+                        elif len(participant_name) == 0:
+                            error_msg = 'ERROR: Filename required'
+                        else:
+                            active = False
+                    elif event.key == pygame.K_BACKSPACE:
+                        participant_name = participant_name[:-1]
                         error_msg = ''
+                    else:
+                        char = event.unicode
+                        if char in allowed_char:
+                            participant_name += char
+                            error_msg = ''
 
     # Set up EDF data file name and local data folder
     #
     # The EDF data filename should not exceed eight alphanumeric characters
     # use ONLY number 0-9, letters, and _ (underscore) in the filename
-    edf_fname = edf_input
+    edf_fname = participant_name
     # Set up a folder to store the EDF data files and the associated resources
     # e.g., files defining the interest areas used in each trialer
     results_folder = 'results'

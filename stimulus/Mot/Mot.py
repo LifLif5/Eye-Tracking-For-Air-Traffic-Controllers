@@ -186,12 +186,12 @@ def main_mot_experiment(el_tracker):
     # global mouse_tracker TODO
     # mouse_tracker = MouseRecorder(mouse_file_path)
     try:
-        # for i in range(len(config["trials"])):
-        #     mot_trial(i)
+        
         el_tracker.setOfflineMode()
         el_tracker.startRecording(1, 1, 1, 1)
         pylink.pumpDelay(100)  # allow tracker to stabilize
-        mot_trial(el_tracker, 0)
+        for i in range(len(config["trials"])):
+            mot_trial(el_tracker, i)
 
         pylink.pumpDelay(100)
         el_tracker.stopRecording()

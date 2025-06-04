@@ -17,7 +17,7 @@ DISTRACTOR_LETTER = '9'
 
 FIXATION_TIME = 1.0
 MAX_TRIAL_DURATION = 10.0
-NUM_TRIALS = 1 #20 TODO
+NUM_TRIALS = 20
 DIST_FROM_CENTER = 350  # Radius from center for letter placement
 
 pygame.init()
@@ -119,12 +119,12 @@ def run_trial(el_tracker : pylink.EyeLink, trial_index ,with_distractors=False):
                 return elapsed if response == target_letter else -1
 
 
-def main_abrupt_onset_experiment(el_tracker):
+def main_abrupt_onset_experiment(el_tracker: pylink.EyeLink):
     display_instructions([
         "Digit Identification Task",
         "A single digit (4, 5, or 6) will appear around the center.",
         "Press the matching key as quickly and accurately as possible.",
-        "Press any key to start Phase 1 (no distractors)..."
+        "Press any key to start..."
     ])
     el_tracker.setOfflineMode()
     el_tracker.startRecording(1, 1, 1, 1)
@@ -141,7 +141,9 @@ def main_abrupt_onset_experiment(el_tracker):
         "Focus on the correct digit (4, 5, or 6) and ignore the rest.",
         "Press any key to begin..."
     ])
-
+    el_tracker.setOfflineMode()
+    el_tracker.startRecording(1, 1, 1, 1)
+    pylink.pumpDelay(100)  # allow tracker to stabilize
     reaction_times_phase2 = []
     for _ in range(NUM_TRIALS):
         rt = run_trial(el_tracker ,0,with_distractors=True)
@@ -153,6 +155,8 @@ def main_abrupt_onset_experiment(el_tracker):
     ])
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
+    el_tracker.setOfflineMode()
+
     print("Phase 1 Reaction Times:", reaction_times_phase1)
     print("Phase 2 Reaction Times (with distractors):", reaction_times_phase2)
 

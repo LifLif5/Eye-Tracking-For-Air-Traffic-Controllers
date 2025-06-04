@@ -5,6 +5,8 @@ import time
 import tkinter as tk
 import math
 
+import pylink
+
 from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK ,BLUE
 
 # Initialize pygame
@@ -30,13 +32,41 @@ def draw_letter(letter, color, pos, angle=0):
     screen.blit(text_surface, rect.topleft)
 
 
+def wait_for_keypress():
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    pygame.quit()
+                    exit()
+                return
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                exit()
 
-def search_trial(SEARCH_TYPE, N_DISTRACTORS):
+
+def display_instructions(lines):
+    screen.fill(WHITE)
+    y_offset = 100
+    for line in lines:
+        txt_surf = font.render(line, True, (0, 0, 0))
+        screen.blit(txt_surf, (50, y_offset))
+        y_offset += 50
+    pygame.display.flip()
+    wait_for_keypress()
+
+
+def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS):
+    el_tracker.sendMessage(f"TRIALID {trial_count}")
+    el_tracker.sendMessage(f"TRIAL_START {trial_count}")
     screen.fill(WHITE)
     focus_text = font.render("+", True, BLACK)
     focus_rect = focus_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
     screen.blit(focus_text, focus_rect.topleft)
+    el_tracker.sendMessage("FIX_POINT_DRAWN")
+
     pygame.display.flip()
+    
     time.sleep(1)
 
     positions = generate_grid_positions(N_DISTRACTORS + 1, jitter=USE_NOISE)
@@ -64,6 +94,7 @@ def search_trial(SEARCH_TYPE, N_DISTRACTORS):
         else:
             draw_letter(L_SHAPE, RED, target_pos)
 
+    el_tracker.sendMessage(f"LETTERS_DRAWN")
     pygame.display.flip()
 
     pygame.event.clear()
@@ -77,6 +108,8 @@ def search_trial(SEARCH_TYPE, N_DISTRACTORS):
                 pygame.quit()
                 sys.exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
+                el_tracker.sendMessage("MOUSE_CLICKED")
+                el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
                 x, y = event.pos
                 dist = ((x - target_pos[0]) ** 2 + (y - target_pos[1]) ** 2) ** 0.5
                 if dist <= FONT_SIZE:
@@ -85,15 +118,44 @@ def search_trial(SEARCH_TYPE, N_DISTRACTORS):
                     return 30 + time.time() - start_time
     return -1
 
-def main_visual_search_experiment():
+def main_visual_search_experiment(el_tracker: pylink.EyeLink):
     performance = []
     num_trials = 1 #TODO 5
-    num_distractors = [5]#[7,17,31, 65, 119, 189]TODO
-
+    num_distractors = [7,17,31, 65, 119, 189]
+    trial_count = 0
+    display_instructions([
+        "Welcome to the Visual Search Task!",
+        "Each trial you will see a + sign in the center of the screen.",
+        "This is your fixation point.",
+        "After a short delay, you will see a set of letters.",
+        "Your task is to find the T letter and press it as quickly as possible.",
+        "Press any key to start the experiment..."
+    ])
+    el_tracker.setOfflineMode()
+    el_tracker.startRecording(1, 1, 1, 1)
+    pylink.pumpDelay(100)  # allow tracker to stabilize
     for distractors in num_distractors:
         for _ in range(num_trials):
-            performance.append(search_trial("feature", distractors))
+            performance.append(search_trial(trial_count, el_tracker,"feature", distractors))
+            trial_count += 1
+    pylink.pumpDelay(100)
+    el_tracker.stopRecording()
+    display_instructions([
+        "Great Job!",
+        "Now we will do a more difficult task.",
+        "You will see a set of letters, some of which are T and some are L.",
+        "Your task is to find a BLUE T OR a RED L and press it as quickly as possible.",
+        "Press any key to start the experiment..."
+    ])
+    el_tracker.setOfflineMode()
+    el_tracker.startRecording(1, 1, 1, 1)
+    pylink.pumpDelay(100)  # allow tracker to stabilize
+    for distractors in num_distractors:
         for _ in range(num_trials):
-            performance.append(search_trial("conjunction", distractors))
+            performance.append(search_trial(trial_count, el_tracker,"conjunction", distractors))
+            trial_count += 1
+
+    pylink.pumpDelay(100)
+    el_tracker.stopRecording()
     print(performance)
 
