@@ -38,19 +38,19 @@ args = parser.parse_args()
 dummy_mode = args.dummy
 print(f"Running in dummy mode: {dummy_mode}")
 
-el_tracker, edf_filename = setup_and_calibrate_tracker("MOT", dummy_mode=dummy_mode)
-main_mot_experiment(el_tracker)
-close_tracker(el_tracker, edf_filename)
+# el_tracker, edf_filename = setup_and_calibrate_tracker("MOT", dummy_mode=dummy_mode)
+# main_mot_experiment(el_tracker)
+# close_tracker(el_tracker, edf_filename)
 
 
-el_tracker, edf_filename = setup_and_calibrate_tracker("REACTION", dummy_mode=dummy_mode)
-main_abrupt_onset_experiment(el_tracker)
-close_tracker(el_tracker, edf_filename)
+# el_tracker, edf_filename = setup_and_calibrate_tracker("REACTION", dummy_mode=dummy_mode)
+# main_abrupt_onset_experiment(el_tracker)
+# close_tracker(el_tracker, edf_filename)
 
 
-el_tracker, edf_filename = setup_and_calibrate_tracker("SEARCH", dummy_mode=dummy_mode)
-main_visual_search_experiment(el_tracker)
-close_tracker(el_tracker, edf_filename)
+# el_tracker, edf_filename = setup_and_calibrate_tracker("SEARCH", dummy_mode=dummy_mode)
+# main_visual_search_experiment(el_tracker)
+# close_tracker(el_tracker, edf_filename)
 
 
 el_tracker, edf_filename = setup_and_calibrate_tracker("GAME", dummy_mode=dummy_mode)

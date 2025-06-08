@@ -11,8 +11,14 @@ class Spline:
         self.total_length = arc_lengths[-1]
         self.distance_traveled = 0.0
 
+
     @classmethod
-    def create(cls, start: Tuple[float, float], end: Tuple[float, float]) -> "Spline":
+    def create(cls, start: Tuple[float, float], end: Tuple[float, float], seed=None) -> "Spline":
+        if seed is not None:
+            rng = random.Random(seed)
+        else:
+            rng = random
+
         dx, dy = end[0] - start[0], end[1] - start[1]
         length = math.hypot(dx, dy)
         dir_x, dir_y = dx / length, dy / length
@@ -21,8 +27,8 @@ class Spline:
         # Generate intermediate control points
         points = [start]
         for factor in [0.25, 0.5, 0.75]:
-            px = start[0] + dx * factor + random.uniform(-150, 150) * perp_x
-            py = start[1] + dy * factor + random.uniform(-150, 150) * perp_y
+            px = start[0] + dx * factor + rng.uniform(-150, 150) * perp_x
+            py = start[1] + dy * factor + rng.uniform(-150, 150) * perp_y
             points.append((px, py))
         points.append(end)
 

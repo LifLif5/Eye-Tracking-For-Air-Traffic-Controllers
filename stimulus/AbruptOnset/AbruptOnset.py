@@ -3,6 +3,7 @@ import random
 import time
 import math
 import pylink
+import json
 from ..Utils import  HEIGHT,WIDTH, WHITE, RED, GREEN, BLACK
 
 
@@ -13,7 +14,7 @@ FIXATION_SIZE = 20  # Size of the + sign
 LETTER_COLOR = (50, 50, 180)
 LETTER_FONT_SIZE = 48
 TARGET_LETTERS = ['4', '5', '6']
-DISTRACTOR_LETTER = '9'
+DISTRACTOR_LETTER = '7'
 
 FIXATION_TIME = 1.0
 MAX_TRIAL_DURATION = 10.0
@@ -26,6 +27,27 @@ pygame.display.set_caption("Digit Identification Task")
 clock = pygame.time.Clock()
 font = pygame.font.SysFont(None, LETTER_FONT_SIZE)
 
+def build_config_file():
+    rng = random.Random()  # Independent random generator instance
+
+    pairs = []
+    for _ in range(100):
+        target_letter = rng.choice(TARGET_LETTERS)
+        target_angle = rng.uniform(0, 360)
+        pairs.append({"letter": target_letter, "angle": round(target_angle, 4)})
+
+    # Save to config file
+    with open("stimulus/AbruptOnset/config_pairs.json", "w") as f:
+        json.dump(pairs, f, indent=2)
+
+def load_pair_by_index(index, filename="stimulus/AbruptOnset/config_pairs.json"):
+    with open(filename, "r") as f:
+        data = json.load(f)
+    if index < 0 or index >= len(data):
+        raise IndexError(f"Index {index} out of range. File contains {len(data)} pairs.")
+    
+    pair = data[index]
+    return pair["letter"], float(pair["angle"])
 
 def draw_fixation(cx, cy):
     focus_text = font.render("+", True, FIXATION_COLOR)
@@ -82,9 +104,9 @@ def run_trial(el_tracker : pylink.EyeLink, trial_index ,with_distractors=False):
     pygame.display.flip()
     pygame.time.wait(int(FIXATION_TIME * 1000))
 
-
-    target_letter = random.choice(TARGET_LETTERS)
-    target_angle = random.uniform(0, 360)
+    target_letter, target_angle = load_pair_by_index(trial_index)
+    # target_letter = random.choice(TARGET_LETTERS)
+    # target_angle = random.uniform(0, 360)
     target_x, target_y = get_position_around_center(DIST_FROM_CENTER, target_angle)
 
     screen.fill(BACKGROUND_COLOR)
@@ -120,6 +142,8 @@ def run_trial(el_tracker : pylink.EyeLink, trial_index ,with_distractors=False):
 
 
 def main_abrupt_onset_experiment(el_tracker: pylink.EyeLink):
+
+    # build_config_file()  # Create the config file with random pairs
     display_instructions([
         "Digit Identification Task",
         "A single digit (4, 5, or 6) will appear around the center.",
@@ -130,9 +154,11 @@ def main_abrupt_onset_experiment(el_tracker: pylink.EyeLink):
     el_tracker.startRecording(1, 1, 1, 1)
     pylink.pumpDelay(100)  # allow tracker to stabilize
     reaction_times_phase1 = []
+    trial_count = 0
     for _ in range(NUM_TRIALS):
-        rt = run_trial(el_tracker ,0,with_distractors=False)
+        rt = run_trial(el_tracker ,trial_count,with_distractors=False)
         reaction_times_phase1.append(rt)
+        trial_count += 1
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
     display_instructions([
@@ -146,8 +172,9 @@ def main_abrupt_onset_experiment(el_tracker: pylink.EyeLink):
     pylink.pumpDelay(100)  # allow tracker to stabilize
     reaction_times_phase2 = []
     for _ in range(NUM_TRIALS):
-        rt = run_trial(el_tracker ,0,with_distractors=True)
+        rt = run_trial(el_tracker, trial_count, with_distractors=True)
         reaction_times_phase2.append(rt)
+        trial_count += 1
 
     display_instructions([
         "Experiment complete.",

@@ -5,6 +5,8 @@ import time
 
 import pylink
 
+from .config_builder import generate_trials, get_animal, is_time_to_distruct
+
 from . import CommonConsts as Consts
 from .Animal import Animal, Weapon, randomize_animal_location
 from typing import List
@@ -149,16 +151,10 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
     global player_health, tung_tung_kills
     player_health = Consts.INITIAL_PLAYER_HEALTH
     tung_tung_kills = 0
+    seconds_counter = 0
 
     beep_count = 0
     visual_count = 0
-
-    if beep_distractions:
-        pygame.time.set_timer(pygame.USEREVENT + 1, 2000)  # Trigger beep every 2 seconds
-
-    if visual_distractions:
-        pygame.time.set_timer(pygame.USEREVENT + 2, 3000)  # Trigger visual distraction every 3 seconds
-
     # reinitialize weapons
     Bombardino_Crocodillo.reinitialize()
     Bombini_Gusini.reinitialize()
@@ -233,22 +229,22 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
             if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                 running = False
 
-            # Spawn an animal every second
+            # every second spawn an animal and check for distractions
             if event.type == pygame.USEREVENT:
-                if len(animals) < 15:  # Limit the number of animals to 15
-                    animal_type: str = random.choice(list(Assets.animals_images.keys()))
-                    image: pygame.Surface = Assets.animals_images[animal_type]
-                    spawn_x, spawn_y = randomize_animal_location()
-                    animals.append(Animal.create(animal_type, image, spawn_x, spawn_y))
+                animals.append(get_animal(trial_index, seconds_counter))  # Get the next animal from the trial data
 
-            if beep_distractions and event.type == pygame.USEREVENT + 1:  # Beep event
-                Assets.beep_sound.play()
-                beep_count += 1
+                should_distruct, distruct_position = is_time_to_distruct(trial_index, seconds_counter)
+                if should_distruct:
+                    if beep_distractions:
+                        Assets.beep_sound.play()
+                        beep_count += 1
 
-            if visual_distractions and event.type == pygame.USEREVENT + 2:  # Visual distraction event
-                visual_x, visual_y = random.randint(0, Consts.WIDTH), random.randint(0, Consts.HEIGHT)
-                pygame.draw.circle(screen, (255, 0, 0), (visual_x, visual_y), 20)  # Red circle as distraction
-                visual_count += 1
+                    if visual_distractions:  # Visual distraction event
+                        visual_x, visual_y = distruct_position
+                        pygame.draw.circle(screen, (255, 0, 0), (visual_x, visual_y), 20)  # Red circle as distraction
+                        visual_count += 1
+
+                seconds_counter += 1  # Increment the seconds counter
 
             # Handle right mouse button press and release
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:  # Right mouse button
@@ -338,6 +334,7 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
 
 
 def main_italian_game_experiment(el_tracker:pylink.EyeLink):
+    #generate_trials()  # Generate trials if needed
     # Call the explanation screen before starting the game loop
     show_explanation_screen()
     el_tracker.setOfflineMode()

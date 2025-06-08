@@ -4,6 +4,9 @@ import sys
 import time
 import tkinter as tk
 import math
+import json
+import os
+
 
 import pylink
 
@@ -19,11 +22,32 @@ USE_NOISE = True  # Set to False for exact center, True for jittered
 # Shapes
 T_SHAPE = "T"
 L_SHAPE = "L"
-
+FILE_LOCATION = "stimulus/VisualSearch/"
 # Initialize screen
 screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption("Visual Search Task")
 font = pygame.font.SysFont(None, FONT_SIZE, bold=True)
+instructions_font = pygame.font.SysFont(None, FONT_SIZE, bold=False)
+
+def save_trial_config(search_type, trial_data):
+    filename = f"{FILE_LOCATION}{search_type.lower()}_trials.json"
+    all_trials = []
+    if os.path.exists(filename):
+        with open(filename, 'r') as f:
+            all_trials = json.load(f)
+    all_trials.append(trial_data)
+    with open(filename, 'w') as f:
+        json.dump(all_trials, f, indent=2)
+
+def load_trial_config(search_type, trial_count):
+    filename = f"{FILE_LOCATION}{search_type.lower()}_trials.json"
+    with open(filename, 'r') as f:
+        all_trials = json.load(f)
+    for trial in all_trials:
+        if trial["trial_id"] == trial_count:
+            return trial
+    raise ValueError(f"Trial with trial_id={trial_count} not found in {filename}")
+
 
 def draw_letter(letter, color, pos, angle=0):
     text_surface = font.render(letter, True, color)
@@ -49,14 +73,14 @@ def display_instructions(lines):
     screen.fill(WHITE)
     y_offset = 100
     for line in lines:
-        txt_surf = font.render(line, True, (0, 0, 0))
+        txt_surf = instructions_font.render(line, True, (0, 0, 0))
         screen.blit(txt_surf, (50, y_offset))
         y_offset += 50
     pygame.display.flip()
     wait_for_keypress()
 
 
-def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS):
+def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_config=False):
     el_tracker.sendMessage(f"TRIALID {trial_count}")
     el_tracker.sendMessage(f"TRIAL_START {trial_count}")
     screen.fill(WHITE)
@@ -64,47 +88,71 @@ def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS):
     focus_rect = focus_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
     screen.blit(focus_text, focus_rect.topleft)
     el_tracker.sendMessage("FIX_POINT_DRAWN")
-
     pygame.display.flip()
-    
     time.sleep(1)
 
-    positions = generate_grid_positions(N_DISTRACTORS + 1, jitter=USE_NOISE)
-    screen.fill(WHITE)
-    target_pos = random.choice(positions)
+    if use_saved_config:
+        trial_data = load_trial_config(SEARCH_TYPE, trial_count)
+        target_pos = tuple(trial_data["target_pos"])
+        target_type = trial_data["target_type"]
+        target_color = trial_data["target_color"]
+        distractors = trial_data["distractors"]
+    else:
+        positions = generate_grid_positions(N_DISTRACTORS + 1, jitter=USE_NOISE)
+        target_pos = random.choice(positions)
+        distractors = []
+        for pos in positions:
+            if pos == target_pos:
+                continue
+            angle = random.choice([0, 90, 180, 270])
+            if SEARCH_TYPE == "feature":
+                distractors.append({"shape": "L_SHAPE", "color": "BLACK", "angle": angle, "pos": pos})
+            elif SEARCH_TYPE == "pop_out":
+                distractors.append({"shape": "L_SHAPE", "color": "BLACK", "angle": 0, "pos": pos})
+            else:
+                if random.random() < 0.5:
+                    distractors.append({"shape": "L_SHAPE", "color": "BLUE", "angle": angle, "pos": pos})
+                else:
+                    distractors.append({"shape": "T_SHAPE", "color": "RED", "angle": angle, "pos": pos})
 
-    for pos in positions:
-        if pos == target_pos:
-            continue
-        angle = random.choice([0, 90, 180, 270])
         if SEARCH_TYPE == "feature":
-            draw_letter(L_SHAPE, BLACK, pos, angle)
+            target_type, target_color = "T_SHAPE", "BLACK"
+        elif SEARCH_TYPE == "pop_out":
+            target_type, target_color = "T_SHAPE", "RED"
         else:
             if random.random() < 0.5:
-                draw_letter(L_SHAPE, BLUE, pos, angle)
+                target_type, target_color = "T_SHAPE", "BLUE"
             else:
-                draw_letter(T_SHAPE, RED, pos, angle)
+                target_type, target_color = "L_SHAPE", "RED"
 
-    if SEARCH_TYPE == "feature":
-        draw_letter(T_SHAPE, BLACK, target_pos)
-    else:
-        target_type = random.choice([1, 2])
-        if target_type == 1:
-            draw_letter(T_SHAPE, BLUE, target_pos)
-        else:
-            draw_letter(L_SHAPE, RED, target_pos)
+        trial_data = {
+            "trial_id": trial_count,
+            "target_pos": list(target_pos),
+            "target_type": target_type,
+            "target_color": target_color,
+            "distractors": distractors
+        }
+        save_trial_config(SEARCH_TYPE, trial_data)
 
-    el_tracker.sendMessage(f"LETTERS_DRAWN")
+    # Draw stimuli
+    screen.fill(WHITE)
+    for d in distractors:
+        shape = L_SHAPE if d["shape"] == "L_SHAPE" else T_SHAPE
+        color = eval(d["color"])  # Caution: assumes color names are defined
+        draw_letter(shape, color, d["pos"], d["angle"])
+
+    target_shape = L_SHAPE if target_type == "L_SHAPE" else T_SHAPE
+    draw_letter(target_shape, eval(target_color), target_pos)
+
+    el_tracker.sendMessage("LETTERS_DRAWN")
     pygame.display.flip()
 
+    # Event loop
     pygame.event.clear()
     start_time = time.time()
     while time.time() - start_time < 30:
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                sys.exit()
-            elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
                 pygame.quit()
                 sys.exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
@@ -118,11 +166,26 @@ def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS):
                     return 30 + time.time() - start_time
     return -1
 
+
 def main_visual_search_experiment(el_tracker: pylink.EyeLink):
     performance = []
-    num_trials = 1 #TODO 5
-    num_distractors = [7,17,31, 65, 119, 189]
+    num_trials = 1
+    num_distractors = [7, 17, 31, 65, 119, 189]
     trial_count = 0
+    display_instructions([
+        "POP OUT SEARCH TASK"
+    ])
+    el_tracker.setOfflineMode()
+    el_tracker.startRecording(1, 1, 1, 1)
+    pylink.pumpDelay(100)  # allow tracker to stabilize
+    for distractors in num_distractors:
+        for _ in range(num_trials):
+            performance.append(search_trial(trial_count, el_tracker,"pop_out", distractors, use_saved_config=False))
+            trial_count += 1
+    pylink.pumpDelay(100)
+    el_tracker.stopRecording()
+
+
     display_instructions([
         "Welcome to the Visual Search Task!",
         "Each trial you will see a + sign in the center of the screen.",
@@ -136,7 +199,7 @@ def main_visual_search_experiment(el_tracker: pylink.EyeLink):
     pylink.pumpDelay(100)  # allow tracker to stabilize
     for distractors in num_distractors:
         for _ in range(num_trials):
-            performance.append(search_trial(trial_count, el_tracker,"feature", distractors))
+            performance.append(search_trial(trial_count, el_tracker,"feature", distractors, use_saved_config=False))
             trial_count += 1
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
@@ -152,7 +215,7 @@ def main_visual_search_experiment(el_tracker: pylink.EyeLink):
     pylink.pumpDelay(100)  # allow tracker to stabilize
     for distractors in num_distractors:
         for _ in range(num_trials):
-            performance.append(search_trial(trial_count, el_tracker,"conjunction", distractors))
+            performance.append(search_trial(trial_count, el_tracker,"conjunction", distractors, use_saved_config=False))
             trial_count += 1
 
     pylink.pumpDelay(100)

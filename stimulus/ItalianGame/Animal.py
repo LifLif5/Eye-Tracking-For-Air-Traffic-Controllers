@@ -11,13 +11,14 @@ import math
 import pygame
 from .Spline import Spline
 class Animal:
-    def __init__(self, animal_type, image, x, y, health=1, damage=0):
+    def __init__(self, animal_type, image, x, y, health=1, damage=0, spline=None):
         self.animal_type = animal_type
         self.image = image
         self.x = x
         self.y = y
         self.health = health
         self.damage = damage
+        self.spline = spline
 
         # Create spline from current position to home base
         start = (self.x, self.y)
@@ -25,14 +26,14 @@ class Animal:
             Consts.HOME_BASE_POS[0] + Consts.HOUSE_IMAGE_SIZE[0] // 2,
             Consts.HOME_BASE_POS[1] + Consts.HOUSE_IMAGE_SIZE[1] // 2
         )
-        self.spline : Spline = Spline.create(start, end)
 
     @classmethod
-    def create(cls, animal_type: str, image: pygame.Surface, x: float, y: float) -> "Animal":
+    def create(cls, animal_type: str, image: pygame.Surface,
+                x: float, y: float, spline: Spline) -> "Animal":
         health = 3 if animal_type == "Tralalero_Tralala" else 2 if animal_type == "Chimpanzini_Bananini" else 1
         damage = 20 if animal_type == "Tralalero_Tralala" else 10 if animal_type == "Chimpanzini_Bananini" else 0
-        return cls(animal_type, image, x, y, health, damage)
-    
+        return cls(animal_type, image, x, y, health, damage, spline)
+
     def move(self):
         self.x, self.y = self.spline.get_next(Consts.ANIMAL_SPEED)
 
