@@ -11,6 +11,8 @@ from . import CommonConsts as Consts
 from .Animal import Animal, Weapon, randomize_animal_location
 from typing import List
 from . import AssetLoader as Assets
+from ..Utils import HEIGHT,WIDTH
+
 
 
 
@@ -19,10 +21,9 @@ from . import AssetLoader as Assets
 pygame.init()
 
 animal_circle_radius = Consts.ANIMALS_CIRCLE_RADIUS  # Radius of the animal circle
-
+ 
 # Game window
-screen = pygame.display.set_mode((pygame.display.Info().current_w, pygame.display.Info().current_h), pygame.FULLSCREEN)  # Set to full screen
-Consts.WIDTH, Consts.HEIGHT = screen.get_size()  # Update Consts with the full screen dimensions
+screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption("Eye Tracking Experiment")
 
 
@@ -70,7 +71,7 @@ def draw_circles_around_home_base() -> None:
     center_x, center_y = Consts.HOME_BASE_POS[0] + Consts.HOUSE_IMAGE_SIZE[0] // 2, Consts.HOME_BASE_POS[1] + Consts.HOUSE_IMAGE_SIZE[1] // 2
 
     # Ensure circles are drawn within screen boundaries
-    if 0 <= center_x <= Consts.WIDTH and 0 <= center_y <= Consts.HEIGHT:
+    if 0 <= center_x <= WIDTH and 0 <= center_y <= HEIGHT:
         pygame.draw.circle(screen, (0, 255, 0), (center_x, center_y), Bombardino_Crocodillo.range, 2)  # Outer circle for Bombardino_Crocodillo
         pygame.draw.circle(screen, (0, 255, 0), (center_x, center_y), Bombini_Gusini.range, 2)  # Inner circle for Bombini_Gusini
         pygame.draw.circle(screen, (255, 0, 0), (center_x, center_y), Consts.HOME_BASE_BOUNDARY_RADIUS, 2)  # Boundary circle for home base
@@ -189,7 +190,7 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
 
         # Display player's health
         health_text = font.render(f"Health: {player_health}", True, (255, 255, 255))  # Changed color to white
-        screen.blit(health_text, (Consts.WIDTH * 0.45, 10))
+        screen.blit(health_text, (WIDTH * 0.45, 10))
 
         # display weapon cooldowns
         bombardino_cooldown = max(0, Bombardino_Crocodillo.cooldown - (pygame.time.get_ticks() - Bombardino_Crocodillo.last_used))
@@ -201,9 +202,9 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
 
         # display weapon ammo
         bombardino_ammo_text = font.render(f"Crocodilo Ammo: {Bombardino_Crocodillo.ammo}", True, (255, 255, 255))
-        screen.blit(bombardino_ammo_text, (Consts.WIDTH* 0.8, 10))
+        screen.blit(bombardino_ammo_text, (WIDTH* 0.8, 10))
         bombini_ammo_text = font.render(f"Gusini Ammo: {Bombini_Gusini.ammo}", True, (255, 255, 255))
-        screen.blit(bombini_ammo_text, (Consts.WIDTH* 0.8, 50))
+        screen.blit(bombini_ammo_text, (WIDTH* 0.8, 50))
         
 
         # # Display weapon ammo and status
@@ -305,9 +306,9 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
     final_score_text = font.render(f"Tung Tung Kills: {tung_tung_kills}", True, (0, 0, 0))  # Black color for final score
 
     # Center the text on the screen
-    game_over_x = (Consts.WIDTH - game_over_text.get_width()) // 2
-    game_over_y = (Consts.HEIGHT - game_over_text.get_height()) // 2
-    final_score_x = (Consts.WIDTH - final_score_text.get_width()) // 2
+    game_over_x = (WIDTH - game_over_text.get_width()) // 2
+    game_over_y = (HEIGHT - game_over_text.get_height()) // 2
+    final_score_x = (WIDTH - final_score_text.get_width()) // 2
     final_score_y = game_over_y + game_over_text.get_height() + 20
 
     # Display the texts
@@ -334,7 +335,7 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
 
 
 def main_italian_game_experiment(el_tracker:pylink.EyeLink):
-    #generate_trials()  # Generate trials if needed
+    generate_trials()  # Generate trials if needed
     # Call the explanation screen before starting the game loop
     show_explanation_screen()
     el_tracker.setOfflineMode()

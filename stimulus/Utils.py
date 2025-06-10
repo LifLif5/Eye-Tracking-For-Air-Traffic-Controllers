@@ -2,12 +2,11 @@
 import math
 import random
 import tkinter as tk
+import pygame
 
-# Initialize tkinter to get screen dimensions
-root = tk.Tk()
-root.withdraw()
-WIDTH = root.winfo_screenwidth()
-HEIGHT = root.winfo_screenheight()
+pygame.init()
+screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+WIDTH, HEIGHT = screen.get_size()
 
 
 

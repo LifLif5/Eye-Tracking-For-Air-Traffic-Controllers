@@ -11,13 +11,14 @@ from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLA
 
 # Init pygame
 pygame.init()
+
 screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption("Multi-Object Tracking (MOT)")
 font = pygame.font.SysFont(None, 40)
 
 
 # Load or initialize config
-CONFIG_PATH = "stimulus\MOT\mot_config.yaml"
+CONFIG_PATH = "stimulus\\MOT\\mot_config.yaml"
 if os.path.exists(CONFIG_PATH):
     with open(CONFIG_PATH, "r") as f:
         config = yaml.safe_load(f)
@@ -190,7 +191,8 @@ def main_mot_experiment(el_tracker):
         el_tracker.setOfflineMode()
         el_tracker.startRecording(1, 1, 1, 1)
         pylink.pumpDelay(100)  # allow tracker to stabilize
-        for i in range(len(config["trials"])):
+        # for i in range(len(config["trials"])):
+        for i in range(5):
             mot_trial(el_tracker, i)
 
         pylink.pumpDelay(100)

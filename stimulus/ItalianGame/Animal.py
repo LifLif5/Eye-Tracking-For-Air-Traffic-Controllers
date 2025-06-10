@@ -4,6 +4,7 @@ from typing import List, Tuple
 import pygame
 import scipy
 from scipy.interpolate import splprep, splev, make_interp_spline
+from ..Utils import HEIGHT,WIDTH
 
 import numpy as np
 from . import CommonConsts as Consts
@@ -41,8 +42,8 @@ class Animal:
         return self.x <= mouse_x <= self.x + 50 and self.y <= mouse_y <= self.y + 50
 
 def randomize_animal_location() -> Tuple[int, int]:
-    spawn_x: int = random.choice([0, Consts.WIDTH - 50])
-    spawn_y: int = random.randint(0, Consts.HEIGHT - 50)
+    spawn_x: int = random.choice([0+Consts.ANIMALS_CIRCLE_RADIUS, WIDTH - Consts.ANIMALS_CIRCLE_RADIUS])
+    spawn_y: int = random.randint(0+Consts.ANIMALS_CIRCLE_RADIUS, HEIGHT - Consts.ANIMALS_CIRCLE_RADIUS)
     return spawn_x, spawn_y
 
 

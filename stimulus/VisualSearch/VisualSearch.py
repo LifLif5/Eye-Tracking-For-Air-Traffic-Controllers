@@ -180,7 +180,7 @@ def main_visual_search_experiment(el_tracker: pylink.EyeLink):
     pylink.pumpDelay(100)  # allow tracker to stabilize
     for distractors in num_distractors:
         for _ in range(num_trials):
-            performance.append(search_trial(trial_count, el_tracker,"pop_out", distractors, use_saved_config=False))
+            performance.append(search_trial(trial_count, el_tracker,"pop_out", distractors, use_saved_config=True))
             trial_count += 1
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
@@ -199,7 +199,7 @@ def main_visual_search_experiment(el_tracker: pylink.EyeLink):
     pylink.pumpDelay(100)  # allow tracker to stabilize
     for distractors in num_distractors:
         for _ in range(num_trials):
-            performance.append(search_trial(trial_count, el_tracker,"feature", distractors, use_saved_config=False))
+            performance.append(search_trial(trial_count, el_tracker,"feature", distractors, use_saved_config=True))
             trial_count += 1
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
@@ -215,7 +215,7 @@ def main_visual_search_experiment(el_tracker: pylink.EyeLink):
     pylink.pumpDelay(100)  # allow tracker to stabilize
     for distractors in num_distractors:
         for _ in range(num_trials):
-            performance.append(search_trial(trial_count, el_tracker,"conjunction", distractors, use_saved_config=False))
+            performance.append(search_trial(trial_count, el_tracker,"conjunction", distractors, use_saved_config=True))
             trial_count += 1
 
     pylink.pumpDelay(100)

@@ -50,8 +50,10 @@ from .CalibrationGraphicsPygame import CalibrationGraphics
 from string import ascii_letters, digits
 
 participant_name = ""
+session_folder = ""
+current_edf_file = ""
 def setup_and_calibrate_tracker(task_name, dummy_mode) -> "pylink.EyeLink" : 
-    global participant_name
+    global participant_name, session_folder, current_edf_file
     # initialize pygame
     pygame.init()
     win = pygame.display.set_mode((0, 0), FULLSCREEN | DOUBLEBUF)
@@ -152,6 +154,7 @@ def setup_and_calibrate_tracker(task_name, dummy_mode) -> "pylink.EyeLink" :
 
     # Step 2: Open an EDF data file on the Host PC
     edf_file = edf_fname + ".EDF"
+    current_edf_file = edf_file
     try:
         el_tracker.openDataFile(edf_file)
     except RuntimeError as err:
@@ -326,50 +329,43 @@ def setup_and_calibrate_tracker(task_name, dummy_mode) -> "pylink.EyeLink" :
 #     return resp
 
 
-# def terminate_task():
-#     """ Terminate the task gracefully and retrieve the EDF data file
+def terminate_task(task_name):
+    """ Terminate the task gracefully and retrieve the EDF data file
 
-#     file_to_retrieve: The EDF on the Host that we would like to download
-#     win: the current window used by the experimental script
-#     """
+    file_to_retrieve: The EDF on the Host that we would like to download
+    win: the current window used by the experimental script
+    """
 
-#     # disconnect from the tracker if there is an active connection
-#     el_tracker = pylink.getEYELINK()
+    # disconnect from the tracker if there is an active connection
+    el_tracker = pylink.getEYELINK()
 
-#     if el_tracker.isConnected():
-#         # Terminate the current trial first if the task terminated prematurely
-#         error = el_tracker.isRecording()
-#         if error == pylink.TRIAL_OK:
-#             abort_trial()
+    if el_tracker.isConnected():
+        # Terminate the current trial first if the task terminated prematurely
+        error = el_tracker.isRecording()
+        if error == pylink.TRIAL_OK:
+            # abort_trial()
+            print("Aborting trial due to task termination")
+        # Put tracker in Offline mode
+        el_tracker.setOfflineMode()
 
-#         # Put tracker in Offline mode
-#         el_tracker.setOfflineMode()
+        # Clear the Host PC screen and wait for 500 ms
+        el_tracker.sendCommand('clear_screen 0')
+        pylink.msecDelay(500)
 
-#         # Clear the Host PC screen and wait for 500 ms
-#         el_tracker.sendCommand('clear_screen 0')
-#         pylink.msecDelay(500)
+        # Close the edf data file on the Host
+        el_tracker.closeDataFile()
 
-#         # Close the edf data file on the Host
-#         el_tracker.closeDataFile()
+        # Download the EDF data file from the Host PC to a local data folder
+        # parameters: source_file_on_the_host, destination_file_on_local_drive
+        local_edf = os.path.join(session_folder, task_name+'_'+ participant_name + '.EDF')
+        try:
+            el_tracker.receiveDataFile(current_edf_file, local_edf)
+        except RuntimeError as error:
+            print('ERROR:', error)
 
-#         # Show a file transfer message on the screen
-#         msg = 'EDF data is transferring from EyeLink Host PC...'
-#         show_message(msg, (0, 0, 0), (128, 128, 128))
+        el_tracker.close()
 
-#         # Download the EDF data file from the Host PC to a local data folder
-#         # parameters: source_file_on_the_host, destination_file_on_local_drive
-#         local_edf = os.path.join(session_folder, session_identifier + '.EDF')
-#         try:
-#             el_tracker.receiveDataFile(edf_file, local_edf)
-#         except RuntimeError as error:
-#             print('ERROR:', error)
-
-#         # Close the link to the tracker.
-#         el_tracker.close()
-
-#     # quit pygame and python
-#     pygame.quit()
-#     sys.exit()
+    pylink.closeGraphics()
 
 
 # def abort_trial():
@@ -387,10 +383,6 @@ def setup_and_calibrate_tracker(task_name, dummy_mode) -> "pylink.EyeLink" :
 #         pylink.pumpDelay(100)
 #         el_tracker.stopRecording()
 
-#     # clear the screen
-#     surf = win
-#     surf.fill((128, 128, 128))
-#     pygame.display.flip()
 #     # Send a message to clear the Data Viewer screen
 #     el_tracker.sendMessage('!V CLEAR 128 128 128')
 
