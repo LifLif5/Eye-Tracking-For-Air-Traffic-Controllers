@@ -45,7 +45,6 @@ def quit_check(events):
             raise SystemExit("Experiment terminated by user.")
 
 def mot_trial(el_tracker : pylink.EyeLink, trial_index):
-
     trial = config["trials"][trial_index]
     num_objects, num_targets = trial["params"]
     radius, speed = 20, 5
