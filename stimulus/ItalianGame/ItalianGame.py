@@ -16,7 +16,6 @@ from ..Utils import HEIGHT,WIDTH
 
 
 
-
 # Initialize Pygame
 pygame.init()
 
@@ -32,11 +31,17 @@ pygame.display.set_caption("Eye Tracking Experiment")
 font = pygame.font.Font(None, Consts.FONT_SIZE)
 
 
-def show_explanation_screen():
-    """Display the instruction screens with navigation and start the game on Enter at the last screen."""
+def show_explanation_screen(images):
+    """Display the instruction screens with navigation and start the game on Enter at the last screen.
+
+    Args:
+        images (list): A list of Pygame surface objects representing instruction images.
+    """
     current_page = 0
+    total_pages = len(images)
+
     while True:
-        screen.blit(Assets.instruction_images[current_page], (0, 0))
+        screen.blit(images[current_page], (0, 0))
         pygame.display.flip()
 
         for event in pygame.event.get():
@@ -44,11 +49,11 @@ def show_explanation_screen():
                 pygame.quit()
                 exit()
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT and current_page < len(Assets.instruction_images) - 1:  # Next page
+                if event.key == pygame.K_LEFT and current_page < total_pages - 1:
                     current_page += 1
-                elif event.key == pygame.K_RIGHT and current_page > 0:  # Previous page
+                elif event.key == pygame.K_RIGHT and current_page > 0:
                     current_page -= 1
-                elif event.key == pygame.K_RETURN and current_page == len(Assets.instruction_images) - 1:  # Start game
+                elif event.key == pygame.K_RETURN and current_page == total_pages - 1:
                     return
 
 def update_weapon_status(weapon: Weapon) -> None:
@@ -148,6 +153,9 @@ def prompt_numeric_input(screen, font, question_text, position=(750, 650)):
 
 #####################################################################
 def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool = False, visual_distractions: bool = False):
+
+    take_image = False
+    draw_red_circle_time = None
     # Initialize scoring system
     global player_health, tung_tung_kills
     player_health = Consts.INITIAL_PLAYER_HEALTH
@@ -173,7 +181,7 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
     right_mouse_pressed = False  # Track the state of the right mouse button
     el_tracker.sendMessage(f"TRIALID {trial_index}")
     el_tracker.sendMessage(f"TRIAL_START {trial_index}")
-    while running:
+    while running and (seconds_counter <Consts.NUMBER_OF_ANIMALS_IN_TRIAL or len(animals) != 0):
         screen.blit(Assets.background_image, (0, 0))  # Draw background
         screen.blit(Assets.home_base_image, Consts.HOME_BASE_POS)  # Draw home base
         draw_circles_around_home_base()  # Draw the circles
@@ -215,6 +223,14 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
         # screen.blit(Crocodillo_text, (10, 50))
         # screen.blit(Gusini_text, (10, 90))
 
+        if draw_red_circle_time is not None:
+            current_time = pygame.time.get_ticks()
+            if current_time - draw_red_circle_time < Consts.RED_CIRCLE_DURATION:
+                # Draw the red circle distraction
+                pygame.draw.circle(screen, (255, 0, 0), (visual_x, visual_y), Consts.RED_CIRCLE_RADIUS)  # Red circle as distraction
+
+            else:
+                draw_red_circle_time = None
 
         # Check if player's health is 0 or less
         if player_health <= 0:
@@ -232,7 +248,10 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
 
             # every second spawn an animal and check for distractions
             if event.type == pygame.USEREVENT:
-                animals.append(get_animal(trial_index, seconds_counter))  # Get the next animal from the trial data
+                next_animal = get_animal(trial_index, seconds_counter)
+                if next_animal is None:
+                    continue
+                animals.append(next_animal)  # Get the next animal from the trial data
 
                 should_distruct, distruct_position = is_time_to_distruct(trial_index, seconds_counter)
                 if should_distruct:
@@ -242,8 +261,9 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
 
                     if visual_distractions:  # Visual distraction event
                         visual_x, visual_y = distruct_position
-                        pygame.draw.circle(screen, (255, 0, 0), (visual_x, visual_y), 20)  # Red circle as distraction
+                        pygame.draw.circle(screen, (255, 0, 0), (visual_x, visual_y), Consts.RED_CIRCLE_RADIUS)  # Red circle as distraction
                         visual_count += 1
+                        draw_red_circle_time = pygame.time.get_ticks()  # Record the time when the red circle was drawn
 
                 seconds_counter += 1  # Increment the seconds counter
 
@@ -254,10 +274,10 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
                 right_mouse_pressed = False
 
             # Handle weapon activation
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_c:  # 'c' key for Bombardino_Crocodillo
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_1:  # '1' key for Bombardino_Crocodillo
                 if Bombardino_Crocodillo.activate():
                     Assets.bombardino_activation_sound.play()  # Play activation sound for Bombardino_Crocodillo
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_g:  # 'g' key for Bombini_Gusini
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_2:  # '2' key for Bombini_Gusini
                 if Bombini_Gusini.activate():
                     Assets.bombini_activation_sound.play()  # Play activation sound for Bombini_Gusini
 
@@ -294,15 +314,25 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
 
             if right_mouse_pressed and animal.is_clicked(mouse_x, mouse_y):
                 draw_animal(animal, show_image=True)
+                take_image = True
             else:
                 draw_animal(animal, show_image=False)
 
+        # if take_image:
+        #     # Take a screenshot of the current screen and save it with a timestamp
+        #     pygame.image.save(screen, f"screenshot_{int(time.time() * 1000)}.png")
+        #     take_image = False
+            
         pygame.display.flip()
         pygame.time.delay(30)  # Smooth animation
 
     # game finished
     # Display game over screen
-    game_over_text = font.render("Game Over", True, (255, 0, 0))  # Red color for game over text
+    if player_health <= 0:
+        game_over_text = font.render("Game Over You Died", True, (255, 0, 0))  # Red color for game over text
+    else:
+        game_over_text = font.render("Game Over You Won", True, (0, 200, 0))  # Green color for victory text
+
     final_score_text = font.render(f"Tung Tung Kills: {tung_tung_kills}", True, (0, 0, 0))  # Black color for final score
 
     # Center the text on the screen
@@ -337,7 +367,7 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
 def main_italian_game_experiment(el_tracker:pylink.EyeLink):
     generate_trials()  # Generate trials if needed
     # Call the explanation screen before starting the game loop
-    show_explanation_screen()
+    show_explanation_screen(Assets.instruction_images[0:4])
     el_tracker.setOfflineMode()
     el_tracker.startRecording(1, 1, 1, 1)
     pylink.pumpDelay(100)  # allow tracker to stabilize
@@ -345,7 +375,7 @@ def main_italian_game_experiment(el_tracker:pylink.EyeLink):
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
 
-    show_explanation_screen()
+    show_explanation_screen(Assets.instruction_images[4:5])
     el_tracker.setOfflineMode()
     el_tracker.startRecording(1, 1, 1, 1)
     pylink.pumpDelay(100)  # allow tracker to stabilize
@@ -353,7 +383,7 @@ def main_italian_game_experiment(el_tracker:pylink.EyeLink):
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
 
-    show_explanation_screen()
+    show_explanation_screen(Assets.instruction_images[5:6])
     el_tracker.setOfflineMode()
     el_tracker.startRecording(1, 1, 1, 1)
     pylink.pumpDelay(100)  # allow tracker to stabilize

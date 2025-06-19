@@ -16,7 +16,31 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption("Multi-Object Tracking (MOT)")
 font = pygame.font.SysFont(None, 40)
 
+def show_explanation_screen(images):
+    """Display the instruction screens with navigation and start the game on Enter at the last screen.
 
+    Args:
+        images (list): A list of Pygame surface objects representing instruction images.
+    """
+    current_page = 0
+    total_pages = len(images)
+
+    while True:
+        screen.blit(images[current_page], (0, 0))
+        pygame.display.flip()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                exit()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT and current_page < total_pages - 1:
+                    current_page += 1
+                elif event.key == pygame.K_RIGHT and current_page > 0:
+                    current_page -= 1
+                elif event.key == pygame.K_RETURN and current_page == total_pages - 1:
+                    return
+                
 # Load or initialize config
 CONFIG_PATH = "stimulus\\MOT\\mot_config.yaml"
 if os.path.exists(CONFIG_PATH):
@@ -186,7 +210,12 @@ def main_mot_experiment(el_tracker):
     # global mouse_tracker TODO
     # mouse_tracker = MouseRecorder(mouse_file_path)
     try:
-        
+        instruction_images = [
+            pygame.image.load("stimulus/instructions/mot_instructions_page_1.png"),
+            pygame.image.load("stimulus/instructions/mot_instructions_page_2.png")
+        ]
+        instruction_images = [pygame.transform.scale(img, (WIDTH, HEIGHT)) for img in instruction_images]
+        show_explanation_screen(instruction_images)
         el_tracker.setOfflineMode()
         el_tracker.startRecording(1, 1, 1, 1)
         pylink.pumpDelay(100)  # allow tracker to stabilize

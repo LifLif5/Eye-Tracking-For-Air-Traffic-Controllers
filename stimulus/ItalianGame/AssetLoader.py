@@ -34,8 +34,12 @@ explanation_image = pygame.transform.scale(explanation_image, (Consts.WIDTH, Con
 
 # Load instruction images
 instruction_images = [
-    pygame.image.load("stimulus/ItalianGame/pictures/Instructions1.png"),
-    pygame.image.load("stimulus/ItalianGame/pictures/Instructions2.png")
+    pygame.image.load("stimulus/instructions/game_instructions_page_1.png"),
+    pygame.image.load("stimulus/instructions/game_instructions_page_2.png"),
+    pygame.image.load("stimulus/instructions/game_instructions_page_3.png"),
+    pygame.image.load("stimulus/instructions/game_instructions_page_4.png"),
+    pygame.image.load("stimulus/instructions/game_instructions_page_5.png"),
+    pygame.image.load("stimulus/instructions/game_instructions_page_6.png")
 ]
 instruction_images = [pygame.transform.scale(img, (Consts.WIDTH, Consts.HEIGHT)) for img in instruction_images]
 

@@ -13,7 +13,7 @@ from . import AssetLoader as Assets
 import json
 
 filename = "stimulus/ItalianGame/animal_trials.json"
-def generate_trials(n_trials=5, trial_size=200, k=4):
+def generate_trials(n_trials=5, trial_size=Consts.NUMBER_OF_ANIMALS_IN_TRIAL, k=4):
     rng = random.Random()  # Ensures better randomness
     end_point = (
                 Consts.HOME_BASE_POS[0] + Consts.HOUSE_IMAGE_SIZE[0] // 2,
@@ -60,11 +60,18 @@ def get_animal(trial_number, index) -> Animal:
     with open(filename, "r") as f:
         trials = json.load(f)
 
-    animal_data = trials[trial_number]["animals"][index]
+    # Check if trial_number and index are within range
+    if trial_number < 0 or trial_number >= len(trials):
+        return None
+    animals = trials[trial_number]["animals"]
+    if index < 0 or index >= len(animals):
+        return None
+
+    animal_data = animals[index]
     animal_type = animal_data["animal_type"]
     spawn = tuple(animal_data["spawn"])
 
-    spline_data = trials[trial_number]["animals"][index]["spline"]
+    spline_data = animal_data["spline"]
     spline_obj = Spline.create(tuple(spline_data["start"]), tuple(spline_data["end"]), seed=spline_data["seed"])
     
     image = Assets.animals_images[animal_type]
