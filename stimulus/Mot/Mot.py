@@ -6,7 +6,7 @@ import yaml
 import os
 import pylink
 from MouseMovements.MouseTracker import MouseRecorder
-from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK, YELLOW, DUMMY_MODE
+from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK, YELLOW, DUMMY_MODE,MOUSE_POS_MSG
 
 
 # Init pygame
@@ -156,6 +156,8 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
             # pygame.draw.line(screen, GREEN, end_pos.astype(int), right.astype(int), 3)
 
         pygame.display.flip()
+        x, y = pygame.mouse.get_pos()
+        el_tracker.sendMessage(f"{MOUSE_POS_MSG} {x} {y}")
         # if not image_taken:
         #     pygame.image.save(screen, "mot2.png")
         #     image_taken = True
@@ -176,18 +178,18 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
     clicked, count = [], 0
     collecting = True
     pygame.event.clear()
-    #TODO mouse_tracker.start_trial(trial_index)
 
     while collecting:
         events = pygame.event.get()
         quit_check(events)
-        # TODO mouse_tracker.update()
-        
+        mouse_x, mouse_y = pygame.mouse.get_pos()
+        el_tracker.sendMessage(f"{MOUSE_POS_MSG} {mouse_x} {mouse_y}")
         for event in events:
+            if event.type == pygame.MOUSEBUTTONUP and event.button == 1:
+                el_tracker.sendMessage(f"!LEFT_MOUSE_UP {mouse_x} {mouse_y}")
             if event.type == pygame.MOUSEBUTTONDOWN:
+                el_tracker.sendMessage(f"!LEFT_MOUSE_DOWN {mouse_x} {mouse_y}")  # Send left click position to EyeLink tracker
 
-                # TODO mouse_tracker.log_event("click", {"pos": event.pos,
-                #                              "button": event.button})
                 mouse_pos = event.pos
                 for i, obj in enumerate(objects):
                     if i in clicked:
@@ -212,7 +214,7 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
                     pygame.display.flip()
                     pygame.time.wait(2000)  # Optional: short pause before continuing
                     collecting = False
-    # TODO mouse_tracker.stop_trial()
+
     # Show score
     score = len(set(clicked) & set(target_indices))
     screen.fill(BLACK)
@@ -227,9 +229,6 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
 
 
 def main_mot_experiment():
-    # Initialize mouse tracker
-    # global mouse_tracker TODO
-    # mouse_tracker = MouseRecorder(mouse_file_path)
     performance = []
     try:
         el_tracker = pylink.getEYELINK()

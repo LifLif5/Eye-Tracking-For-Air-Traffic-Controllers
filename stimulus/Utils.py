@@ -20,8 +20,7 @@ parser.add_argument('--dummy', action='store_true', help='Run EyeLink in dummy m
 args = parser.parse_args()
 DUMMY_MODE = args.dummy
 
-# def drift_correction(x, y, el_tracker):
-#     EyeTrackingSetup.drift_correction(x, y, el_tracker)
+MOUSE_POS_MSG = "!MOUSE_POS"
     
 def generate_grid_positions(n_items, jitter=True):
     aspect_ratio = WIDTH / HEIGHT

@@ -10,7 +10,7 @@ import os
 
 import pylink
 
-from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK ,BLUE, DUMMY_MODE
+from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK ,BLUE, DUMMY_MODE,MOUSE_POS_MSG
 
 # Initialize pygame
 pygame.init()
@@ -82,7 +82,6 @@ def display_instructions(lines):
 
 def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_config=False):
     el_tracker.sendMessage(f"TRIALID {trial_count}")
-    el_tracker.sendMessage(f"TRIAL_START {trial_count}")
     screen.fill(WHITE)
 
 
@@ -154,13 +153,18 @@ def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_
     # Event loop
     pygame.event.clear()
     start_time = time.time()
+    el_tracker.sendMessage(f"TRIAL_START {trial_count}")
+
     while time.time() - start_time < 30:
+        x, y = pygame.mouse.get_pos()
+        el_tracker.sendMessage(f"{MOUSE_POS_MSG} {x} {y}")
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
                 pygame.quit()
                 sys.exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
-                el_tracker.sendMessage("MOUSE_CLICKED")
+                el_tracker.sendMessage(f"!LEFT_MOUSE_DOWN {x} {y}") 
                 el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
                 x, y = event.pos
                 dist = ((x - target_pos[0]) ** 2 + (y - target_pos[1]) ** 2) ** 0.5
@@ -174,7 +178,7 @@ def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_
 def main_visual_search_experiment():
     el_tracker = pylink.getEYELINK()
     performance = []
-    num_trials = 5
+    num_trials = 1
     # num_distractors = [7, 17, 31, 65, 119, 189]
     num_distractors = [7, 31, 119]
     

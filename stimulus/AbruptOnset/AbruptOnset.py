@@ -13,6 +13,8 @@ FIXATION_SIZE = 20  # Size of the + sign
 LETTER_COLOR = (50, 50, 180)
 LETTER_FONT_SIZE = 48
 TARGET_LETTERS = ['4', '5', '6']
+VALID_KEYS = [pygame.K_4, pygame.K_5, pygame.K_6, pygame.K_7,
+               pygame.K_KP4, pygame.K_KP5, pygame.K_KP6, pygame.K_KP7]
 DISTRACTOR_LETTER = '7'
 
 FIXATION_TIME = 1.0
@@ -135,10 +137,22 @@ def run_trial(el_tracker : pylink.EyeLink, trial_index ,with_distractors=False):
                 if event.key == pygame.K_ESCAPE:
                     pygame.quit()
                     exit()
-                response = event.unicode.upper()
-                el_tracker.sendMessage("KEY_PRESSED")
-                el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
-                return elapsed if response == target_letter else -1
+                if event.key in VALID_KEYS:
+                    pressed_letter = None
+                    if event.type == pygame.KEYDOWN:
+                        if event.key in (pygame.K_4, pygame.K_KP4):
+                            pressed_letter = '4'
+                        elif event.key in (pygame.K_5, pygame.K_KP5):
+                            pressed_letter = '5'
+                        elif event.key in (pygame.K_6, pygame.K_KP6):
+                            pressed_letter = '6'
+                        elif event.key in (pygame.K_7, pygame.K_KP7):
+                            pressed_letter = '7'
+                        
+
+                    el_tracker.sendMessage("KEY_PRESSED")
+                    el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
+                    return elapsed if pressed_letter == target_letter else -1
 
 
 def main_abrupt_onset_experiment():
