@@ -3,6 +3,7 @@ import math
 import random
 import tkinter as tk
 import pygame
+import argparse
 
 pygame.init()
 screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
@@ -13,7 +14,15 @@ WIDTH, HEIGHT = screen.get_size()
 # Colors
 WHITE, RED, GREEN, BLACK = (255,255,255), (255,0,0), (0,255,0), (0,0,0)
 BLUE = (0, 0, 255)
+YELLOW = (255, 255, 0)
+parser = argparse.ArgumentParser(description="Run experiment with optional dummy mode.")
+parser.add_argument('--dummy', action='store_true', help='Run EyeLink in dummy mode')
+args = parser.parse_args()
+DUMMY_MODE = args.dummy
 
+# def drift_correction(x, y, el_tracker):
+#     EyeTrackingSetup.drift_correction(x, y, el_tracker)
+    
 def generate_grid_positions(n_items, jitter=True):
     aspect_ratio = WIDTH / HEIGHT
     cols = math.ceil(math.sqrt(n_items * aspect_ratio))

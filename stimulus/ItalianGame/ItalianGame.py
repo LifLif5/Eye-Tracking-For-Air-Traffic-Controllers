@@ -8,10 +8,10 @@ import pylink
 from .config_builder import generate_trials, get_animal, is_time_to_distruct
 
 from . import CommonConsts as Consts
-from .Animal import Animal, Weapon, randomize_animal_location
+from .Animal import Animal, Weapon
 from typing import List
 from . import AssetLoader as Assets
-from ..Utils import HEIGHT,WIDTH
+from ..Utils import HEIGHT,WIDTH, WHITE, BLACK, RED, BLUE, GREEN, DUMMY_MODE
 
 
 
@@ -77,9 +77,9 @@ def draw_circles_around_home_base() -> None:
 
     # Ensure circles are drawn within screen boundaries
     if 0 <= center_x <= WIDTH and 0 <= center_y <= HEIGHT:
-        pygame.draw.circle(screen, (0, 255, 0), (center_x, center_y), Bombardino_Crocodillo.range, 2)  # Outer circle for Bombardino_Crocodillo
-        pygame.draw.circle(screen, (0, 255, 0), (center_x, center_y), Bombini_Gusini.range, 2)  # Inner circle for Bombini_Gusini
-        pygame.draw.circle(screen, (255, 0, 0), (center_x, center_y), Consts.HOME_BASE_BOUNDARY_RADIUS, 2)  # Boundary circle for home base
+        pygame.draw.circle(screen, GREEN, (center_x, center_y), Bombardino_Crocodillo.range, 2)  # Outer circle for Bombardino_Crocodillo
+        pygame.draw.circle(screen, GREEN, (center_x, center_y), Bombini_Gusini.range, 2)  # Inner circle for Bombini_Gusini
+        pygame.draw.circle(screen, RED, (center_x, center_y), Consts.HOME_BASE_BOUNDARY_RADIUS, 2)  # Boundary circle for home base
 
 
 def draw_animal(animal: Animal, show_image: bool) -> None:
@@ -88,7 +88,7 @@ def draw_animal(animal: Animal, show_image: bool) -> None:
         # Adjust the image position to align with the circle's center
         draw_object(animal.image, animal.x - animal_circle_radius, animal.y - animal_circle_radius)
     else:
-        pygame.draw.circle(screen, (0, 0, 255), (int(animal.x + animal_circle_radius), int(animal.y + animal_circle_radius)), animal_circle_radius)
+        pygame.draw.circle(screen, BLUE, (int(animal.x + animal_circle_radius), int(animal.y + animal_circle_radius)), animal_circle_radius)
 
 def draw_weapon(image: pygame.Surface, x: float, y: float) -> None:
     """Draw the weapon image at the specified position."""
@@ -124,7 +124,7 @@ def prompt_numeric_input(screen, font, question_text, position=(750, 650)):
     active = True
 
     # Pre-render the question text
-    question_surface = font.render(question_text, True, (0, 0, 0))
+    question_surface = font.render(question_text, True, BLACK)
 
     while active:
         screen.blit(question_surface, position)
@@ -132,9 +132,9 @@ def prompt_numeric_input(screen, font, question_text, position=(750, 650)):
         # Render input box
         input_box = pygame.Rect(position[0], position[1] + 40, 200, 36)
         pygame.draw.rect(screen, (200, 200, 200), input_box)
-        text_surface = font.render(input_text, True, (0, 0, 0))
+        text_surface = font.render(input_text, True, BLACK)
         screen.blit(text_surface, (input_box.x + 5, input_box.y + 5))
-        pygame.draw.rect(screen, (0, 0, 0), input_box, 2)
+        pygame.draw.rect(screen, BLACK, input_box, 2)
 
         pygame.display.flip()
 
@@ -150,7 +150,16 @@ def prompt_numeric_input(screen, font, question_text, position=(750, 650)):
                 elif event.unicode.isdigit():
                     input_text += event.unicode
 
-
+def drift_correction(el_tracker: pylink.EyeLink):
+    screen.fill(WHITE)  # White background
+    focus_text = font.render("+", True, BLACK)
+    
+    focus_rect = focus_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
+    screen.blit(focus_text, focus_rect.topleft)
+    el_tracker.sendMessage("FIX_POINT_DRAWN")
+    pygame.display.flip()
+    if not DUMMY_MODE:
+        el_tracker.doDriftCorrect(WIDTH // 2,  HEIGHT // 2, 0, 0)
 #####################################################################
 def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool = False, visual_distractions: bool = False):
 
@@ -197,29 +206,29 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
             draw_weapon(Assets.Bombini_Gusini_image, Consts.HOME_BASE_POS[0], Consts.HOME_BASE_POS[1] - 80)  # Adjust position
 
         # Display player's health
-        health_text = font.render(f"Health: {player_health}", True, (255, 255, 255))  # Changed color to white
+        health_text = font.render(f"Health: {player_health}", True, WHITE)  # Changed color to white
         screen.blit(health_text, (WIDTH * 0.45, 10))
 
         # display weapon cooldowns
         bombardino_cooldown = max(0, Bombardino_Crocodillo.cooldown - (pygame.time.get_ticks() - Bombardino_Crocodillo.last_used))
         bombini_cooldown = max(0, Bombini_Gusini.cooldown - (pygame.time.get_ticks() - Bombini_Gusini.last_used))
-        bombardino_cooldown_text = font.render(f"Crocodilo Cooldown: {bombardino_cooldown / 1000:.1f} seconds", True, (255, 255, 255))
+        bombardino_cooldown_text = font.render(f"Crocodilo Cooldown: {bombardino_cooldown / 1000:.1f} seconds", True, WHITE)
         screen.blit(bombardino_cooldown_text, (10, 10))
-        bombini_cooldown_text = font.render(f"Gusini Cooldown: {bombini_cooldown / 1000:.1f} seconds", True, (255, 255, 255))
+        bombini_cooldown_text = font.render(f"Gusini Cooldown: {bombini_cooldown / 1000:.1f} seconds", True, WHITE)
         screen.blit(bombini_cooldown_text, (10, 50))
 
         # display weapon ammo
-        bombardino_ammo_text = font.render(f"Crocodilo Ammo: {Bombardino_Crocodillo.ammo}", True, (255, 255, 255))
+        bombardino_ammo_text = font.render(f"Crocodilo Ammo: {Bombardino_Crocodillo.ammo}", True, WHITE)
         screen.blit(bombardino_ammo_text, (WIDTH* 0.8, 10))
-        bombini_ammo_text = font.render(f"Gusini Ammo: {Bombini_Gusini.ammo}", True, (255, 255, 255))
+        bombini_ammo_text = font.render(f"Gusini Ammo: {Bombini_Gusini.ammo}", True, WHITE)
         screen.blit(bombini_ammo_text, (WIDTH* 0.8, 50))
         
 
         # # Display weapon ammo and status
         # Crocodillo_status = "Active" if Bombardino_Crocodillo.is_active else "Inactive"
         # Gusini_status = "Active" if Bombini_Gusini.is_active else "Inactive"
-        # Crocodillo_text = font.render(f"Crocodillo Ammo: {Bombardino_Crocodillo.ammo} ({Crocodillo_status})", True, (255, 255, 255))
-        # Gusini_text = font.render(f"Gusini Ammo: {Bombini_Gusini.ammo} ({Gusini_status})", True, (255, 255, 255))
+        # Crocodillo_text = font.render(f"Crocodillo Ammo: {Bombardino_Crocodillo.ammo} ({Crocodillo_status})", True, WHITE)
+        # Gusini_text = font.render(f"Gusini Ammo: {Bombini_Gusini.ammo} ({Gusini_status})", True, WHITE)
         # screen.blit(Crocodillo_text, (10, 50))
         # screen.blit(Gusini_text, (10, 90))
 
@@ -227,7 +236,7 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
             current_time = pygame.time.get_ticks()
             if current_time - draw_red_circle_time < Consts.RED_CIRCLE_DURATION:
                 # Draw the red circle distraction
-                pygame.draw.circle(screen, (255, 0, 0), (visual_x, visual_y), Consts.RED_CIRCLE_RADIUS)  # Red circle as distraction
+                pygame.draw.circle(screen, RED, (visual_x, visual_y), Consts.RED_CIRCLE_RADIUS)  # Red circle as distraction
 
             else:
                 draw_red_circle_time = None
@@ -258,26 +267,33 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
                     if beep_distractions:
                         Assets.beep_sound.play()
                         beep_count += 1
+                        el_tracker.sendMessage(f"BEEP {beep_count}")  # Send beep count to EyeLink tracker
 
                     if visual_distractions:  # Visual distraction event
                         visual_x, visual_y = distruct_position
-                        pygame.draw.circle(screen, (255, 0, 0), (visual_x, visual_y), Consts.RED_CIRCLE_RADIUS)  # Red circle as distraction
+                        pygame.draw.circle(screen, RED, (visual_x, visual_y), Consts.RED_CIRCLE_RADIUS)  # Red circle as distraction
                         visual_count += 1
                         draw_red_circle_time = pygame.time.get_ticks()  # Record the time when the red circle was drawn
+                        el_tracker.sendMessage(f"VISUAL_DISTRACTION {visual_count} {visual_x} {visual_y}")  # Send visual distraction event to EyeLink tracker
 
                 seconds_counter += 1  # Increment the seconds counter
 
             # Handle right mouse button press and release
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:  # Right mouse button
                 right_mouse_pressed = True
+                mouse_x, mouse_y = pygame.mouse.get_pos()
+                el_tracker.sendMessage(f"RIGHT_CLICK {mouse_x} {mouse_y}")  # Send right click position to EyeLink tracker
             elif event.type == pygame.MOUSEBUTTONUP and event.button == 3:  # Right mouse button released
                 right_mouse_pressed = False
+                el_tracker.sendMessage("RIGHT_CLICK_RELEASED")  # Send right click release event to EyeLink tracker
 
             # Handle weapon activation
             if event.type == pygame.KEYDOWN and event.key == pygame.K_1:  # '1' key for Bombardino_Crocodillo
+                el_tracker.sendMessage("BUTTON_1_PRESSED")  # Send button press event to EyeLink tracker
                 if Bombardino_Crocodillo.activate():
                     Assets.bombardino_activation_sound.play()  # Play activation sound for Bombardino_Crocodillo
             if event.type == pygame.KEYDOWN and event.key == pygame.K_2:  # '2' key for Bombini_Gusini
+                el_tracker.sendMessage("BUTTON_2_PRESSED")  # Send button press event to EyeLink tracker
                 if Bombini_Gusini.activate():
                     Assets.bombini_activation_sound.play()  # Play activation sound for Bombini_Gusini
 
@@ -285,6 +301,7 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:  # Left mouse button for shooting
                 mouse_x, mouse_y = pygame.mouse.get_pos()
                 # Prioritize Bombini_Gusini if both weapons are active and the click is within range
+                el_tracker.sendMessage(f"LEFT_CLICK {mouse_x} {mouse_y}")  # Send left click position to EyeLink tracker
                 if Bombini_Gusini.is_active and shoot(Bombini_Gusini, mouse_x, mouse_y, animals):
                     pass  # Bombini_Gusini shoots, so Bombardino_Crocodillo does nothing
                 elif Bombardino_Crocodillo.is_active:
@@ -329,11 +346,13 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
     # game finished
     # Display game over screen
     if player_health <= 0:
-        game_over_text = font.render("Game Over You Died", True, (255, 0, 0))  # Red color for game over text
+        el_tracker.sendMessage("GAME_OVER YOU_DIED")
+        game_over_text = font.render("Game Over You Died", True, RED)  # Red color for game over text
     else:
+        el_tracker.sendMessage("GAME_OVER YOU_WON")
         game_over_text = font.render("Game Over You Won", True, (0, 200, 0))  # Green color for victory text
 
-    final_score_text = font.render(f"Tung Tung Kills: {tung_tung_kills}", True, (0, 0, 0))  # Black color for final score
+    final_score_text = font.render(f"Tung Tung Kills: {tung_tung_kills}", True, BLACK)  # Black color for final score
 
     # Center the text on the screen
     game_over_x = (WIDTH - game_over_text.get_width()) // 2
@@ -342,16 +361,17 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
     final_score_y = game_over_y + game_over_text.get_height() + 20
 
     # Display the texts
-    screen.fill((255, 255, 255))  # White background
+    screen.fill(WHITE)  # White background
     screen.blit(game_over_text, (game_over_x, game_over_y))
     screen.blit(final_score_text, (final_score_x, final_score_y))
     pygame.display.flip()
 
+    answer = 0
     if beep_distractions:
-        value = prompt_numeric_input(screen, font, "How many beeps were played?")
+        answer = prompt_numeric_input(screen, font, "How many beeps were played?")
 
     elif visual_distractions:
-        value = prompt_numeric_input(screen, font, "How many red circles were shown?")
+        answer = prompt_numeric_input(screen, font, "How many red circles were shown?")
 
     else:
         waiting = True
@@ -362,32 +382,42 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
                 
     # Send trial end message to EyeLink tracker
     el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
+    return (player_health, tung_tung_kills, beep_count if beep_distractions else (visual_count if visual_distractions else 0), answer)
 
 
-def main_italian_game_experiment(el_tracker:pylink.EyeLink):
+def main_italian_game_experiment():
+
+    performance = []
+
+    el_tracker = pylink.getEYELINK()
     generate_trials()  # Generate trials if needed
     # Call the explanation screen before starting the game loop
     show_explanation_screen(Assets.instruction_images[0:4])
+    drift_correction(el_tracker)
     el_tracker.setOfflineMode()
     el_tracker.startRecording(1, 1, 1, 1)
     pylink.pumpDelay(100)  # allow tracker to stabilize
-    game_round(0, el_tracker)
+    performance.append(game_round(0, el_tracker))
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
 
     show_explanation_screen(Assets.instruction_images[4:5])
+    drift_correction(el_tracker)
     el_tracker.setOfflineMode()
     el_tracker.startRecording(1, 1, 1, 1)
     pylink.pumpDelay(100)  # allow tracker to stabilize
-    game_round(1, el_tracker, beep_distractions= True)
+    performance.append(game_round(1, el_tracker, beep_distractions= True))
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
 
     show_explanation_screen(Assets.instruction_images[5:6])
+    drift_correction(el_tracker)
     el_tracker.setOfflineMode()
     el_tracker.startRecording(1, 1, 1, 1)
     pylink.pumpDelay(100)  # allow tracker to stabilize
-    game_round(2, el_tracker, visual_distractions=True)
+    performance.append(game_round(2, el_tracker, visual_distractions=True))
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
     el_tracker.setOfflineMode()
+
+    return performance

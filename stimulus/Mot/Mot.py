@@ -6,7 +6,7 @@ import yaml
 import os
 import pylink
 from MouseMovements.MouseTracker import MouseRecorder
-from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK
+from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK, YELLOW, DUMMY_MODE
 
 
 # Init pygame
@@ -49,11 +49,11 @@ if os.path.exists(CONFIG_PATH):
 else:
     config = {
     "trials": [{"params": list(p), "locations": None, "directions": None, "targets": None} for p in [
-        [10, 4], [12, 4], [14, 4], [16, 4], [18, 4],
-        [20, 4], [22, 4], [24, 4], [26, 4], [28, 4],
-        [11, 5], [11, 5], [11, 5], [11, 5], [11, 5],
-        [13, 6], [13, 6], [13, 6], [13, 6], [13, 6],
-        [15, 7], [15, 7], [15, 7], [15, 7], [15, 7]
+        [10, 4, 10, 5], [12, 4, 10, 5], [14, 4, 10, 5], [16, 4, 10, 5], [18, 4, 10, 5],
+        [20, 4, 5, 5], [22, 4, 5, 5], [24, 4, 5, 5], [26, 4, 5, 5], [28, 4, 5, 5],
+        [11, 5, 10, 5], [11, 5, 10, 6], [11, 5, 5, 8], [11, 5, 5, 9], [11, 5, 5, 10],
+        [13, 6, 10, 5], [13, 6, 10, 6], [13, 6, 5, 8], [13, 6, 5, 9], [13, 6, 5, 10],
+        [15, 7, 10, 5], [15, 7, 10, 6], [15, 7, 5, 8], [15, 7, 5, 9], [15, 7, 5, 10]
     ]]
 }
 
@@ -70,8 +70,8 @@ def quit_check(events):
 
 def mot_trial(el_tracker : pylink.EyeLink, trial_index):
     trial = config["trials"][trial_index]
-    num_objects, num_targets = trial["params"]
-    radius, speed = 20, 5
+    num_objects, num_targets, trial_duration, speed= trial["params"]
+    radius = 20
 
     # Generate if None
     if not trial["locations"]:
@@ -97,6 +97,16 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
     el_tracker.sendMessage(f"TRIAL_START {trial_index}")
 
     # Display initial targets AFTER recording has started
+    screen.fill(BLACK)
+    focus_text = font.render("+", True, WHITE)
+    
+    focus_rect = focus_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
+    screen.blit(focus_text, focus_rect.topleft)
+    el_tracker.sendMessage("FIX_POINT_DRAWN")
+    pygame.display.flip()
+    if not DUMMY_MODE:
+        el_tracker.doDriftCorrect(WIDTH // 2,  HEIGHT // 2, 0, 0)
+
     screen.fill(BLACK)
     for i, obj in enumerate(objects):
         color = RED if i in target_indices else WHITE
@@ -150,7 +160,7 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
         #     pygame.image.save(screen, "mot2.png")
         #     image_taken = True
         clock.tick(30)
-        if pygame.time.get_ticks() - start_time > 10000:
+        if pygame.time.get_ticks() - start_time > trial_duration * 1000:
             running = False
 
     # Prompt
@@ -172,6 +182,7 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
         events = pygame.event.get()
         quit_check(events)
         # TODO mouse_tracker.update()
+        
         for event in events:
             if event.type == pygame.MOUSEBUTTONDOWN:
 
@@ -179,18 +190,27 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
                 #                              "button": event.button})
                 mouse_pos = event.pos
                 for i, obj in enumerate(objects):
-                    if i in clicked: continue
+                    if i in clicked:
+                        continue
                     if np.linalg.norm(np.array(obj["pos"]) - mouse_pos) <= radius:
                         clicked.append(i)
                         count += 1
-                        mark = 'V' if i in target_indices else 'X'
-                        color = GREEN if mark == 'V' else RED
-                        screen.blit(font.render(mark, True, color), font.render(mark, True, color).get_rect(center=obj["pos"]))
+
+                        # Indicate selection with yellow circle
+                        pygame.draw.circle(screen, YELLOW, obj["pos"], radius)
                         pygame.display.flip()
+                        
                 if count >= num_targets:
                     el_tracker.sendMessage("CLICKS_COLLECTED")
 
-                    pygame.time.wait(500)
+                    # Now reveal correctness
+                    for i in clicked:
+                        mark = 'V' if i in target_indices else 'X'
+                        color = GREEN if mark == 'V' else RED
+                        screen.blit(font.render(mark, True, color), font.render(mark, True, color).get_rect(center=objects[i]["pos"]))
+                    
+                    pygame.display.flip()
+                    pygame.time.wait(2000)  # Optional: short pause before continuing
                     collecting = False
     # TODO mouse_tracker.stop_trial()
     # Show score
@@ -201,15 +221,18 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
     pygame.display.flip()
     pygame.time.wait(3000)
     el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
+    return (score, num_targets)
 
     
 
 
-def main_mot_experiment(el_tracker):
+def main_mot_experiment():
     # Initialize mouse tracker
     # global mouse_tracker TODO
     # mouse_tracker = MouseRecorder(mouse_file_path)
+    performance = []
     try:
+        el_tracker = pylink.getEYELINK()
         instruction_images = [
             pygame.image.load("stimulus/instructions/mot_instructions_page_1.png"),
             pygame.image.load("stimulus/instructions/mot_instructions_page_2.png")
@@ -221,9 +244,10 @@ def main_mot_experiment(el_tracker):
         pylink.pumpDelay(100)  # allow tracker to stabilize
         # for i in range(len(config["trials"])):
         for i in range(5):
-            mot_trial(el_tracker, i)
+            performance.append(mot_trial(el_tracker, i))
 
         pylink.pumpDelay(100)
         el_tracker.stopRecording()
+        return performance
     except SystemExit:
         pass

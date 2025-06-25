@@ -4,8 +4,7 @@ import time
 import math
 import pylink
 import json
-from ..Utils import  HEIGHT,WIDTH, WHITE, RED, GREEN, BLACK
-
+from ..Utils import  HEIGHT,WIDTH, WHITE, RED, GREEN, BLACK, DUMMY_MODE
 
 BACKGROUND_COLOR = (230, 230, 230)
 FIXATION_COLOR = (0, 0, 0)
@@ -92,16 +91,17 @@ def get_position_around_center(radius, angle_deg=None):
     y = int(cy + radius * math.sin(angle))
     return x, y
 
-
 def run_trial(el_tracker : pylink.EyeLink, trial_index ,with_distractors=False):
     screen.fill(BACKGROUND_COLOR)
     cx, cy = WIDTH // 2, HEIGHT // 2
     el_tracker.sendMessage(f"TRIALID {trial_index}")
     el_tracker.sendMessage(f"TRIAL_START {trial_index}")
-
     draw_fixation(cx, cy)
+    if not DUMMY_MODE:
+        el_tracker.doDriftCorrect(cx, cy, 0, 0)
     el_tracker.sendMessage("FIX_POINT_DRAWN")
     pygame.display.flip()
+
     pygame.time.wait(int(FIXATION_TIME * 1000))
 
     target_letter, target_angle = load_pair_by_index(trial_index)
@@ -141,49 +141,70 @@ def run_trial(el_tracker : pylink.EyeLink, trial_index ,with_distractors=False):
                 return elapsed if response == target_letter else -1
 
 
-def main_abrupt_onset_experiment(el_tracker: pylink.EyeLink):
+def main_abrupt_onset_experiment():
+    el_tracker = pylink.getEYELINK()
 
-    # build_config_file()  # Create the config file with random pairs
+    # Flush keypress queue to avoid skipping screens
+    pylink.flushGetkeyQueue()
+
+    # Instructions before Phase 1
     display_instructions([
         "Digit Identification Task",
         "A single digit (4, 5, or 6) will appear around the center.",
         "Press the matching key as quickly and accurately as possible.",
         "Press any key to start..."
     ])
+
+    # Start Phase 1 Recording
     el_tracker.setOfflineMode()
+    pylink.msecDelay(50)
     el_tracker.startRecording(1, 1, 1, 1)
-    pylink.pumpDelay(100)  # allow tracker to stabilize
-    reaction_times_phase1 = []
+    pylink.pumpDelay(100)
+    el_tracker.sendMessage("PHASE1_START")
+
+    reaction_times = []
     trial_count = 0
     for _ in range(NUM_TRIALS):
-        rt = run_trial(el_tracker ,trial_count,with_distractors=False)
-        reaction_times_phase1.append(rt)
+        rt = run_trial(el_tracker, trial_count, with_distractors=False)
+        reaction_times.append(rt)
         trial_count += 1
-    pylink.pumpDelay(100)
+
+    el_tracker.sendMessage("PHASE1_END")
     el_tracker.stopRecording()
+    pylink.pumpDelay(100)
+
+    # Instructions before Phase 2
+    pylink.flushGetkeyQueue()
     display_instructions([
         "Phase 2: Distractor Digits",
         "Now you'll see extra digits (9s) appearing along with the target.",
         "Focus on the correct digit (4, 5, or 6) and ignore the rest.",
         "Press any key to begin..."
     ])
+
+    # Start Phase 2 Recording
     el_tracker.setOfflineMode()
+    pylink.msecDelay(50)
     el_tracker.startRecording(1, 1, 1, 1)
-    pylink.pumpDelay(100)  # allow tracker to stabilize
-    reaction_times_phase2 = []
+    pylink.pumpDelay(100)
+    el_tracker.sendMessage("PHASE2_START")
+
     for _ in range(NUM_TRIALS):
         rt = run_trial(el_tracker, trial_count, with_distractors=True)
-        reaction_times_phase2.append(rt)
+        reaction_times.append(rt)
         trial_count += 1
 
+    el_tracker.sendMessage("PHASE2_END")
+    el_tracker.stopRecording()
+    pylink.pumpDelay(100)
+    el_tracker.setOfflineMode()
+
+    # Final instructions
+    pylink.flushGetkeyQueue()
     display_instructions([
         "Experiment complete.",
         "Press any key to exit."
     ])
-    pylink.pumpDelay(100)
-    el_tracker.stopRecording()
-    el_tracker.setOfflineMode()
 
-    print("Phase 1 Reaction Times:", reaction_times_phase1)
-    print("Phase 2 Reaction Times (with distractors):", reaction_times_phase2)
+    return reaction_times
 

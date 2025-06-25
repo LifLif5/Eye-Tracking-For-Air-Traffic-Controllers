@@ -5,7 +5,7 @@ import pygame
 from . import CommonConsts as Consts
 ##################################################################################
 ############################  Load assets  #######################################
-background_image = pygame.image.load("stimulus/ItalianGame/pictures/new_background.png")  
+background_image = pygame.image.load("stimulus/ItalianGame/pictures/background.png")  
 background_image = pygame.transform.scale(background_image, (Consts.WIDTH, Consts.HEIGHT))  # Scale to fit the screen
 home_base_image = pygame.image.load("stimulus/ItalianGame/pictures/House.png") 
 home_base_image = pygame.transform.scale(home_base_image, Consts.HOUSE_IMAGE_SIZE)

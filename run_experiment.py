@@ -10,7 +10,7 @@ import pylink
 import os
 from stimulus import Utils
 
-from EyeTracking.EyeTrackingSetup import setup_and_calibrate_tracker, terminate_task
+from EyeTracking.EyeTrackingSetup import setup_and_calibrate_tracker, terminate_task, set_dummy_mode_in_tracker
 import argparse
 
 # def close_tracker(el_tracker: pylink.EyeLink, edf_filename: str, destination_path: str = "results"):
@@ -39,25 +39,27 @@ parser.add_argument('--dummy', action='store_true', help='Run EyeLink in dummy m
 args = parser.parse_args()
 dummy_mode = args.dummy
 print(f"Running in dummy mode: {dummy_mode}")
-
-# el_tracker, edf_filename = setup_and_calibrate_tracker("MOT", dummy_mode=dummy_mode)
-# main_mot_experiment(el_tracker)
-# terminate_task("MOT")
+set_dummy_mode_in_tracker(dummy_mode)
 
 
-# el_tracker, edf_filename = setup_and_calibrate_tracker("REACTION", dummy_mode=dummy_mode)
-# main_abrupt_onset_experiment(el_tracker)
-# terminate_task("REACTION")
+el_tracker, edf_filename = setup_and_calibrate_tracker("MOT")
+mot_performance = main_mot_experiment()
+terminate_task("MOT", mot_performance)
 
 
-# el_tracker, edf_filename = setup_and_calibrate_tracker("SEARCH", dummy_mode=dummy_mode)
-# main_visual_search_experiment(el_tracker)
-# terminate_task("SEARCH")
+el_tracker, edf_filename = setup_and_calibrate_tracker("REACTION")
+reaction_performance = main_abrupt_onset_experiment()
+terminate_task("REACTION", reaction_performance)
 
 
-el_tracker, edf_filename = setup_and_calibrate_tracker("GAME", dummy_mode=dummy_mode)
-main_italian_game_experiment(el_tracker)
-terminate_task("GAME")
+el_tracker, edf_filename = setup_and_calibrate_tracker("SEARCH")
+visual_search_performance = main_visual_search_experiment()
+terminate_task("SEARCH", visual_search_performance)
+
+
+el_tracker, edf_filename = setup_and_calibrate_tracker("GAME")
+italian_game_performance = main_italian_game_experiment()
+terminate_task("GAME", italian_game_performance)
 
 
 

@@ -43,6 +43,7 @@ import sys
 import pygame
 import random
 import time
+import json
 from pygame.locals import *
 
 from stimulus import Utils
@@ -52,7 +53,14 @@ from string import ascii_letters, digits
 participant_name = ""
 session_folder = ""
 current_edf_file = ""
-def setup_and_calibrate_tracker(task_name, dummy_mode) -> "pylink.EyeLink" : 
+dummy_mode = False
+def set_dummy_mode_in_tracker(mode: bool):
+    """Set the dummy mode for the EyeLink tracker."""
+    global dummy_mode
+    dummy_mode = mode
+
+
+def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" : 
     global participant_name, session_folder, current_edf_file
     # initialize pygame
     pygame.init()
@@ -253,7 +261,7 @@ def setup_and_calibrate_tracker(task_name, dummy_mode) -> "pylink.EyeLink" :
 
     # Request Pylink to use the Pygame window we opened above for calibration
     pylink.openGraphicsEx(genv)
-    pygame.mouse.set_visible(True)  # hide mouse cursor
+    pygame.mouse.set_visible(False)  # hide mouse cursor
 
 
     try:
@@ -261,6 +269,12 @@ def setup_and_calibrate_tracker(task_name, dummy_mode) -> "pylink.EyeLink" :
     except RuntimeError as err:
         print('ERROR:', err)
         el_tracker.exitCalibration()
+        
+    if not dummy_mode:
+        pylink.setDriftCorrectSounds("off")
+
+    
+    pygame.mouse.set_visible(True)  # hide mouse cursor
 
     return el_tracker, edf_fname
 
@@ -329,7 +343,7 @@ def setup_and_calibrate_tracker(task_name, dummy_mode) -> "pylink.EyeLink" :
 #     return resp
 
 
-def terminate_task(task_name):
+def terminate_task(task_name, performance):
     """ Terminate the task gracefully and retrieve the EDF data file
 
     file_to_retrieve: The EDF on the Host that we would like to download
@@ -362,7 +376,14 @@ def terminate_task(task_name):
             el_tracker.receiveDataFile(current_edf_file, local_edf)
         except RuntimeError as error:
             print('ERROR:', error)
+        # Save performance data
 
+        performance_file = os.path.join(session_folder, f"{task_name}_{participant_name}_performance.json")
+        try:
+            with open(performance_file, 'w') as f:
+                json.dump(performance, f, indent=2)
+        except Exception as e:
+            print("Failed to save performance data:", e)
         el_tracker.close()
 
     pylink.closeGraphics()

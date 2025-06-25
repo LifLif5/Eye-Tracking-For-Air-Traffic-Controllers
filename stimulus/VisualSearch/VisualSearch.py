@@ -10,7 +10,7 @@ import os
 
 import pylink
 
-from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK ,BLUE
+from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK ,BLUE, DUMMY_MODE
 
 # Initialize pygame
 pygame.init()
@@ -84,12 +84,7 @@ def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_
     el_tracker.sendMessage(f"TRIALID {trial_count}")
     el_tracker.sendMessage(f"TRIAL_START {trial_count}")
     screen.fill(WHITE)
-    focus_text = font.render("+", True, BLACK)
-    focus_rect = focus_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
-    screen.blit(focus_text, focus_rect.topleft)
-    el_tracker.sendMessage("FIX_POINT_DRAWN")
-    pygame.display.flip()
-    time.sleep(1)
+
 
     if use_saved_config:
         trial_data = load_trial_config(SEARCH_TYPE, trial_count)
@@ -134,6 +129,15 @@ def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_
         }
         save_trial_config(SEARCH_TYPE, trial_data)
 
+    focus_text = font.render("+", True, BLACK)
+    
+    focus_rect = focus_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
+    screen.blit(focus_text, focus_rect.topleft)
+    el_tracker.sendMessage("FIX_POINT_DRAWN")
+    pygame.display.flip()
+    if not DUMMY_MODE:
+        el_tracker.doDriftCorrect(WIDTH // 2,  HEIGHT // 2, 0, 0)
+    time.sleep(1)
     # Draw stimuli
     screen.fill(WHITE)
     for d in distractors:
@@ -167,58 +171,94 @@ def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_
     return -1
 
 
-def main_visual_search_experiment(el_tracker: pylink.EyeLink):
+def main_visual_search_experiment():
+    el_tracker = pylink.getEYELINK()
     performance = []
-    num_trials = 1
-    num_distractors = [7, 17, 31, 65, 119, 189]
+    num_trials = 5
+    # num_distractors = [7, 17, 31, 65, 119, 189]
+    num_distractors = [7, 31, 119]
+    
     trial_count = 0
-    display_instructions([
-        "POP OUT SEARCH TASK"
-    ])
-    el_tracker.setOfflineMode()
-    el_tracker.startRecording(1, 1, 1, 1)
-    pylink.pumpDelay(100)  # allow tracker to stabilize
-    for distractors in num_distractors:
-        for _ in range(num_trials):
-            performance.append(search_trial(trial_count, el_tracker,"pop_out", distractors, use_saved_config=True))
-            trial_count += 1
-    pylink.pumpDelay(100)
-    el_tracker.stopRecording()
 
-
+    # --- Phase 1: Pop-out search ---
+    pylink.flushGetkeyQueue()
     display_instructions([
         "Welcome to the Visual Search Task!",
         "Each trial you will see a + sign in the center of the screen.",
         "This is your fixation point.",
         "After a short delay, you will see a set of letters.",
-        "Your task is to find the T letter and press it as quickly as possible.",
+        "Your task is to find the RED T letter and press it as quickly as possible.",
+        "",
         "Press any key to start the experiment..."
     ])
+
     el_tracker.setOfflineMode()
+    pylink.msecDelay(50)
     el_tracker.startRecording(1, 1, 1, 1)
-    pylink.pumpDelay(100)  # allow tracker to stabilize
+    pylink.pumpDelay(100)
+    el_tracker.sendMessage("PHASE1_POP_OUT_START")
+
     for distractors in num_distractors:
         for _ in range(num_trials):
-            performance.append(search_trial(trial_count, el_tracker,"feature", distractors, use_saved_config=True))
+            performance.append(search_trial(trial_count, el_tracker, "pop_out", distractors, use_saved_config=False))
             trial_count += 1
-    pylink.pumpDelay(100)
+
+    el_tracker.sendMessage("PHASE1_POP_OUT_END")
     el_tracker.stopRecording()
+    pylink.pumpDelay(100)
+
+    # --- Phase 2: Feature search ---
+    pylink.flushGetkeyQueue()
     display_instructions([
         "Great Job!",
         "Now we will do a more difficult task.",
-        "You will see a set of letters, some of which are T and some are L.",
-        "Your task is to find a BLUE T OR a RED L and press it as quickly as possible.",
+        "All letters will be black.",
+        "There will be many L letters and only one T letter.",
+        "Your task is to find the T and press it as quickly as possible.",
+        "",
         "Press any key to start the experiment..."
     ])
+
     el_tracker.setOfflineMode()
+    pylink.msecDelay(50)
     el_tracker.startRecording(1, 1, 1, 1)
-    pylink.pumpDelay(100)  # allow tracker to stabilize
+    pylink.pumpDelay(100)
+    el_tracker.sendMessage("PHASE2_FEATURE_SEARCH_START")
+
     for distractors in num_distractors:
         for _ in range(num_trials):
-            performance.append(search_trial(trial_count, el_tracker,"conjunction", distractors, use_saved_config=True))
+            performance.append(search_trial(trial_count, el_tracker, "feature", distractors, use_saved_config=False))
             trial_count += 1
 
-    pylink.pumpDelay(100)
+    el_tracker.sendMessage("PHASE2_FEATURE_SEARCH_END")
     el_tracker.stopRecording()
-    print(performance)
+    pylink.pumpDelay(100)
 
+    # --- Phase 3: Conjunction search ---
+    pylink.flushGetkeyQueue()
+    display_instructions([
+        "Great Job!",
+        "Now we move to an even harder task.",
+        "You will see a set of letters, some of which are T and some are L.",
+        "Your task is to find a BLUE T OR a RED L and press it as quickly as possible.",
+        "",
+        "Press any key to start the experiment..."
+    ])
+
+    el_tracker.setOfflineMode()
+    pylink.msecDelay(50)
+    el_tracker.startRecording(1, 1, 1, 1)
+    pylink.pumpDelay(100)
+    el_tracker.sendMessage("PHASE3_CONJUNCTION_SEARCH_START")
+
+    for distractors in num_distractors:
+        for _ in range(num_trials):
+            performance.append(search_trial(trial_count, el_tracker, "conjunction", distractors, use_saved_config=False))
+            trial_count += 1
+
+    el_tracker.sendMessage("PHASE3_CONJUNCTION_SEARCH_END")
+    el_tracker.stopRecording()
+    pylink.pumpDelay(100)
+
+    # --- End of experiment ---
+    return performance
