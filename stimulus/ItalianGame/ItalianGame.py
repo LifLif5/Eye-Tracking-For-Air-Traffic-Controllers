@@ -123,13 +123,13 @@ def prompt_numeric_input(screen, font, question_text, position=(750, 650)):
     input_text = ""
     active = True
 
-    # Pre-render the question text
     question_surface = font.render(question_text, True, BLACK)
 
     while active:
+        # Draw the question
         screen.blit(question_surface, position)
 
-        # Render input box
+        # Draw the input box
         input_box = pygame.Rect(position[0], position[1] + 40, 200, 36)
         pygame.draw.rect(screen, (200, 200, 200), input_box)
         text_surface = font.render(input_text, True, BLACK)
@@ -141,10 +141,11 @@ def prompt_numeric_input(screen, font, question_text, position=(750, 650)):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                return None  # Exit condition
+                return None  # Preserve quit behaviour
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
-                    return input_text  # Return the numeric string
+                    # Empty input → −1, otherwise convert to int
+                    return -1 if input_text == "" else int(input_text)
                 elif event.key == pygame.K_BACKSPACE:
                     input_text = input_text[:-1]
                 elif event.unicode.isdigit():

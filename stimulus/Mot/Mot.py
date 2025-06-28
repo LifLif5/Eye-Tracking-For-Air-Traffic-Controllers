@@ -47,15 +47,29 @@ if os.path.exists(CONFIG_PATH):
     with open(CONFIG_PATH, "r") as f:
         config = yaml.safe_load(f)
 else:
+    combos = [
+    (15, 4, 7, 7),   
+    (17, 4, 7, 7),
+    (19, 4, 7, 7),
+    (21, 4, 7, 7),
+    (23, 4, 7, 7),
+    (15, 5, 7, 7),
+    (17, 5, 7, 7),
+    (15, 6, 7, 7),
+    (17, 6, 7, 7),
+    (15, 7, 7, 7),
+    (17, 7, 7, 7),
+    (17, 4, 7, 7)   
+    ]
+
     config = {
-    "trials": [{"params": list(p), "locations": None, "directions": None, "targets": None} for p in [
-        [10, 4, 10, 5], [12, 4, 10, 5], [14, 4, 10, 5], [16, 4, 10, 5], [18, 4, 10, 5],
-        [20, 4, 5, 5], [22, 4, 5, 5], [24, 4, 5, 5], [26, 4, 5, 5], [28, 4, 5, 5],
-        [11, 5, 10, 5], [11, 5, 10, 6], [11, 5, 5, 8], [11, 5, 5, 9], [11, 5, 5, 10],
-        [13, 6, 10, 5], [13, 6, 10, 6], [13, 6, 5, 8], [13, 6, 5, 9], [13, 6, 5, 10],
-        [15, 7, 10, 5], [15, 7, 10, 6], [15, 7, 5, 8], [15, 7, 5, 9], [15, 7, 5, 10]
-    ]]
-}
+        "trials": [
+            {"params": [num_objects, targets, duration, speed],
+            "locations": None, "directions": None, "targets": None}
+            for (num_objects, targets, duration, speed) in combos
+            for _ in range(1)          # 3 trials each
+        ]
+    }
 
     
 
@@ -212,7 +226,7 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
                         screen.blit(font.render(mark, True, color), font.render(mark, True, color).get_rect(center=objects[i]["pos"]))
                     
                     pygame.display.flip()
-                    pygame.time.wait(2000)  # Optional: short pause before continuing
+                    pygame.time.wait(2000)  
                     collecting = False
 
     # Show score
@@ -221,7 +235,7 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
     result = font.render(f'Your score: {score}/{num_targets}', True, WHITE)
     screen.blit(result, result.get_rect(center=(WIDTH // 2, HEIGHT // 2)))
     pygame.display.flip()
-    pygame.time.wait(3000)
+    pygame.time.wait(1000)
     el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
     return (score, num_targets)
 
@@ -241,8 +255,8 @@ def main_mot_experiment():
         el_tracker.setOfflineMode()
         el_tracker.startRecording(1, 1, 1, 1)
         pylink.pumpDelay(100)  # allow tracker to stabilize
-        # for i in range(len(config["trials"])):
-        for i in range(5):
+        for i in range(len(config["trials"])):
+        # for i in range(5):
             performance.append(mot_trial(el_tracker, i))
 
         pylink.pumpDelay(100)

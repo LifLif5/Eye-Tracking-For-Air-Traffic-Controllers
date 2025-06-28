@@ -6,7 +6,7 @@ import tkinter as tk
 import math
 import json
 import os
-
+import glob
 
 import pylink
 
@@ -23,6 +23,7 @@ USE_NOISE = True  # Set to False for exact center, True for jittered
 T_SHAPE = "T"
 L_SHAPE = "L"
 FILE_LOCATION = "stimulus/VisualSearch/"
+WALDO_FOLDER = "stimulus/VisualSearch/waldo_images/"
 # Initialize screen
 screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption("Visual Search Task")
@@ -69,16 +70,31 @@ def wait_for_keypress():
                 exit()
 
 
-def display_instructions(lines):
+def display_instructions(lines, waldo_image=False):
     screen.fill(WHITE)
     y_offset = 100
     for line in lines:
         txt_surf = instructions_font.render(line, True, (0, 0, 0))
         screen.blit(txt_surf, (50, y_offset))
         y_offset += 50
+
+    if waldo_image:
+        # Load and display example Waldo image
+        example_path = os.path.join(WALDO_FOLDER, "waldo_example.png")
+        if os.path.exists(example_path):
+            waldo_img = pygame.image.load(example_path).convert_alpha()
+            # Scale to width = 200 px
+            w_ratio = 200 / waldo_img.get_width()
+            new_size = (200, int(waldo_img.get_height() * w_ratio))
+            waldo_img = pygame.transform.scale(waldo_img, new_size)
+
+            # Blit to bottom center
+            screen.blit(waldo_img, (WIDTH//2 - new_size[0]//2, HEIGHT - new_size[1] - 50))
+        else:
+            print("Example Waldo image not found at", example_path)
+
     pygame.display.flip()
     wait_for_keypress()
-
 
 def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_config=False):
     el_tracker.sendMessage(f"TRIALID {trial_count}")
@@ -163,7 +179,7 @@ def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_
             if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
                 pygame.quit()
                 sys.exit()
-            elif event.type == pygame.MOUSEBUTTONDOWN:
+            elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:  # Left mouse button
                 el_tracker.sendMessage(f"!LEFT_MOUSE_DOWN {x} {y}") 
                 el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
                 x, y = event.pos
@@ -171,16 +187,63 @@ def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_
                 if dist <= FONT_SIZE:
                     return time.time() - start_time
                 else:
-                    return 30 + time.time() - start_time
+                    # keep going; wrong click
+                    pass
+            elif event.type == pygame.MOUSEBUTTONUP and event.button == 1:  # Left mouse button up
+                el_tracker.sendMessage(f"!LEFT_MOUSE_UP {x} {y}")
+
     return -1
 
+
+def waldo_trial(trial_id, el_tracker, image_surf, bbox, timeout=20):
+    """Display one Where's Waldo scene and return RT (-1 if timeout)."""
+    el_tracker.sendMessage(f"TRIALID {trial_id}")
+
+    screen.fill(WHITE)
+    focus_text = font.render("+", True, BLACK)
+    focus_rect = focus_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
+    screen.blit(focus_text, focus_rect.topleft)
+    el_tracker.sendMessage("FIX_POINT_DRAWN")
+    pygame.display.flip()
+    if not DUMMY_MODE:
+        el_tracker.doDriftCorrect(WIDTH // 2,  HEIGHT // 2, 0, 0)
+
+    screen.fill(WHITE)
+    screen.blit(image_surf, (0, 0))
+    pygame.display.flip()
+
+    start = time.time()
+    pygame.event.clear()
+
+    el_tracker.sendMessage(f"TRIAL_START {trial_id}")
+
+    while time.time() - start < timeout:
+        x, y = pygame.mouse.get_pos()
+        el_tracker.sendMessage(f"{MOUSE_POS_MSG} {x} {y}")
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT or (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
+                pygame.quit(); sys.exit()
+            elif event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+                x, y = event.pos
+                el_tracker.sendMessage(f"!LEFT_MOUSE_DOWN {x} {y}")
+                if bbox.collidepoint(x, y):
+                    el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
+                    return time.time() - start    # hit
+                else:
+                    # keep going; wrong click
+                    pass
+            elif event.type == pygame.MOUSEBUTTONUP and event.button == 1:  # Left mouse button up
+                el_tracker.sendMessage(f"!LEFT_MOUSE_UP {x} {y}")
+    el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_TIMEOUT)
+    return -1
 
 def main_visual_search_experiment():
     el_tracker = pylink.getEYELINK()
     performance = []
-    num_trials = 1
+    num_trials = 8
     # num_distractors = [7, 17, 31, 65, 119, 189]
-    num_distractors = [7, 31, 119]
+    num_distractors = [7, 31, 65]
     
     trial_count = 0
 
@@ -263,6 +326,50 @@ def main_visual_search_experiment():
     el_tracker.sendMessage("PHASE3_CONJUNCTION_SEARCH_END")
     el_tracker.stopRecording()
     pylink.pumpDelay(100)
+
+
+    # ----------------------------------------------------------
+    # --- Phase 4: Waldo scenes ---  
+    #
+    # preload images & bboxes
+    with open(WALDO_FOLDER + "waldo_boxes.json", "r") as f:
+        waldo_boxes = json.load(f)
+    waldo_imgs = sorted(glob.glob(WALDO_FOLDER + "*.jpg"))[:10]   # 10 scenes
+
+    # instructions
+    display_instructions([
+        "Last part!",
+        "You will see crowded cartoon scenes.",
+        "Find WALDO (example below) and click him.",
+        "If you cannot find him within 20 s the scene will advance.",
+        "",
+        "Press any key to continue..."
+    ], waldo_image=True)
+
+    el_tracker.setOfflineMode()
+    pylink.msecDelay(50)
+    el_tracker.startRecording(1, 1, 1, 1)
+    el_tracker.sendMessage("PHASE4_WALDO_START")
+
+    for img_path in waldo_imgs:
+        surf = pygame.image.load(img_path).convert()
+        # scale to full screen
+        surf = pygame.transform.scale(surf, (WIDTH, HEIGHT))
+        # bbox from JSON; adjust if the image was scaled
+        bx, by, bw, bh = waldo_boxes[os.path.basename(img_path)]
+        scale_x = WIDTH  / surf.get_width()
+        scale_y = HEIGHT / surf.get_height()
+        bbox = pygame.Rect(bx*scale_x, by*scale_y, bw*scale_x, bh*scale_y)
+
+        rt = waldo_trial(trial_count, el_tracker, surf, bbox, timeout=12)
+        performance.append(rt)
+        trial_count += 1
+
+    el_tracker.sendMessage("PHASE4_WALDO_END")
+    el_tracker.stopRecording()
+    pylink.pumpDelay(100)
+    # ----------------------------------------------------------
+
 
     # --- End of experiment ---
     return performance

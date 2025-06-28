@@ -42,19 +42,19 @@ print(f"Running in dummy mode: {dummy_mode}")
 set_dummy_mode_in_tracker(dummy_mode)
 
 
-el_tracker, edf_filename = setup_and_calibrate_tracker("MOT")
-mot_performance = main_mot_experiment()
-terminate_task("MOT", mot_performance)
+# el_tracker, edf_filename = setup_and_calibrate_tracker("MOT")
+# mot_performance = main_mot_experiment()
+# terminate_task("MOT", mot_performance)
 
 
-el_tracker, edf_filename = setup_and_calibrate_tracker("REACTION")
-reaction_performance = main_abrupt_onset_experiment()
-terminate_task("REACTION", reaction_performance)
+# el_tracker, edf_filename = setup_and_calibrate_tracker("REACTION")
+# reaction_performance = main_abrupt_onset_experiment()
+# terminate_task("REACTION", reaction_performance)
 
 
-el_tracker, edf_filename = setup_and_calibrate_tracker("SEARCH")
-visual_search_performance = main_visual_search_experiment()
-terminate_task("SEARCH", visual_search_performance)
+# el_tracker, edf_filename = setup_and_calibrate_tracker("SEARCH")
+# visual_search_performance = main_visual_search_experiment()
+# terminate_task("SEARCH", visual_search_performance)
 
 
 el_tracker, edf_filename = setup_and_calibrate_tracker("GAME")
