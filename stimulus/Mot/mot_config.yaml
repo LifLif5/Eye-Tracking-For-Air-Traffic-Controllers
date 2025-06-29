@@ -1,0 +1,161 @@
+trials:
+- directions:
+  - - -0.9967655360846293
+    - 0.8428827594503028
+  - - -0.034959924652119945
+    - 0.2598681900687112
+  - - -0.11272336037697905
+    - 0.33742774834952916
+  - - 0.7835929656539053
+    - -0.03503076770944835
+  - - -0.15925969252557248
+    - 0.6314277219636479
+  - - -0.09320302888195697
+    - -0.25490931500350755
+  - - -0.9642039854300124
+    - 0.7380502777449511
+  - - -0.5747861821000904
+    - -0.016408566280884385
+  - - 0.8579167829886125
+    - -0.7294581228135184
+  - - -0.3386373235654838
+    - -0.42367076961969863
+  - - 0.6508134814238731
+    - 0.18920675774921225
+  - - -0.9632855593132494
+    - 0.9240883950153784
+  - - -0.4140634364895339
+    - -0.9294057067442705
+  - - 0.6211978625187102
+    - 0.13971659698356653
+  - - -0.1478257402381602
+    - -0.7322099362037207
+  locations:
+  - - 231
+    - 1034
+  - - 1959
+    - 498
+  - - 1866
+    - 279
+  - - 1524
+    - 587
+  - - 829
+    - 491
+  - - 567
+    - 129
+  - - 829
+    - 204
+  - - 574
+    - 615
+  - - 492
+    - 1039
+  - - 930
+    - 946
+  - - 140
+    - 278
+  - - 1217
+    - 190
+  - - 1179
+    - 656
+  - - 1467
+    - 126
+  - - 193
+    - 520
+  params:
+  - 15
+  - 4
+  - 7
+  - 7
+  targets:
+  - 3
+  - 12
+  - 8
+  - 11
+- directions: null
+  locations: null
+  params:
+  - 17
+  - 4
+  - 7
+  - 7
+  targets: null
+- directions: null
+  locations: null
+  params:
+  - 19
+  - 4
+  - 7
+  - 7
+  targets: null
+- directions: null
+  locations: null
+  params:
+  - 21
+  - 4
+  - 7
+  - 7
+  targets: null
+- directions: null
+  locations: null
+  params:
+  - 23
+  - 4
+  - 7
+  - 7
+  targets: null
+- directions: null
+  locations: null
+  params:
+  - 15
+  - 5
+  - 7
+  - 7
+  targets: null
+- directions: null
+  locations: null
+  params:
+  - 17
+  - 5
+  - 7
+  - 7
+  targets: null
+- directions: null
+  locations: null
+  params:
+  - 15
+  - 6
+  - 7
+  - 7
+  targets: null
+- directions: null
+  locations: null
+  params:
+  - 17
+  - 6
+  - 7
+  - 7
+  targets: null
+- directions: null
+  locations: null
+  params:
+  - 15
+  - 7
+  - 7
+  - 7
+  targets: null
+- directions: null
+  locations: null
+  params:
+  - 17
+  - 7
+  - 7
+  - 7
+  targets: null
+- directions: null
+  locations: null
+  params:
+  - 17
+  - 4
+  - 7
+  - 7
+  targets: null

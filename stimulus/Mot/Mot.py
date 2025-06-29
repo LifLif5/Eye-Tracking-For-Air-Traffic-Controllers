@@ -67,7 +67,7 @@ else:
             {"params": [num_objects, targets, duration, speed],
             "locations": None, "directions": None, "targets": None}
             for (num_objects, targets, duration, speed) in combos
-            for _ in range(1)          # 3 trials each
+            for _ in range(1)          # TODO 3 trials each
         ]
     }
 
@@ -118,6 +118,8 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
     screen.blit(focus_text, focus_rect.topleft)
     el_tracker.sendMessage("FIX_POINT_DRAWN")
     pygame.display.flip()
+    pygame.event.pump()
+    pygame.time.wait(50)
     if not DUMMY_MODE:
         el_tracker.doDriftCorrect(WIDTH // 2,  HEIGHT // 2, 0, 0)
 

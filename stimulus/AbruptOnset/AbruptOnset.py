@@ -19,7 +19,7 @@ DISTRACTOR_LETTER = '7'
 
 FIXATION_TIME = 1.0
 MAX_TRIAL_DURATION = 10.0
-NUM_TRIALS = 50
+NUM_TRIALS = 20 #TODO 50
 DIST_FROM_CENTER = 350  # Radius from center for letter placement
 
 pygame.init()

@@ -241,7 +241,7 @@ def waldo_trial(trial_id, el_tracker, image_surf, bbox, timeout=20):
 def main_visual_search_experiment():
     el_tracker = pylink.getEYELINK()
     performance = []
-    num_trials = 8
+    num_trials = 1 # TODO 8
     # num_distractors = [7, 17, 31, 65, 119, 189]
     num_distractors = [7, 31, 65]
     

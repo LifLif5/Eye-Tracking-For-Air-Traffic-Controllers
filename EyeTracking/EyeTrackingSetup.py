@@ -270,8 +270,9 @@ def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" :
         print('ERROR:', err)
         el_tracker.exitCalibration()
         
-    if not dummy_mode:
-        pylink.setDriftCorrectSounds("off")
+    # if not dummy_mode:
+    #     pylink.pumpDelay(100)  # wait for the tracker to settle
+    #     pylink.setDriftCorrectSounds("off")
 
     
     pygame.mouse.set_visible(True)  # hide mouse cursor
