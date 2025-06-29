@@ -121,7 +121,13 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
     pygame.event.pump()
     pygame.time.wait(50)
     if not DUMMY_MODE:
-        el_tracker.doDriftCorrect(WIDTH // 2,  HEIGHT // 2, 0, 0)
+        try:
+            error = el_tracker.doDriftCorrect(WIDTH // 2,  HEIGHT // 2, 0, 1)
+            if error is pylink.ESC_KEY:
+                             el_tracker.sendMessage(f"DRIFT_CORRECTION_FAILED")
+        except:
+             pass
+        
 
     screen.fill(BLACK)
     for i, obj in enumerate(objects):
