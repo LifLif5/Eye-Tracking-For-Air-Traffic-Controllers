@@ -73,6 +73,10 @@ else:
 
 def mot_drift_correction(el_tracker: pylink.EyeLink):
     if not DUMMY_MODE:
+                # Stop any existing recording cleanly before drift correction
+        if el_tracker.isRecording():
+            el_tracker.stopRecording()
+            pylink.msecDelay(100)  # wait for recording to stop fully
         screen.fill(BLACK)
         focus_text = font.render("+", True, WHITE)
         
@@ -89,6 +93,9 @@ def mot_drift_correction(el_tracker: pylink.EyeLink):
                              el_tracker.sendMessage(f"DRIFT_CORRECTION_FAILED")
         except:
              pass
+                # After drift correction, start recording explicitly
+        el_tracker.startRecording(1, 1, 1, 1)
+        pylink.pumpDelay(100)  # allow tracker to start recordin
 
 def save_config():
     with open(CONFIG_PATH, "w") as f:
