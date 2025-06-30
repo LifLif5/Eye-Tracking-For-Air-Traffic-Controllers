@@ -8,10 +8,10 @@ from ..Utils import  HEIGHT,WIDTH, WHITE, RED, GREEN, BLACK, DUMMY_MODE
 
 BACKGROUND_COLOR = (230, 230, 230)
 FIXATION_COLOR = (0, 0, 0)
-FIXATION_SIZE = 20  # Size of the + sign
+FIXATION_SIZE = 40  # Size of the + sign
 
 LETTER_COLOR = (50, 50, 180)
-LETTER_FONT_SIZE = 48
+LETTER_FONT_SIZE = 30
 TARGET_LETTERS = ['4', '5', '6']
 VALID_KEYS = [pygame.K_4, pygame.K_5, pygame.K_6, pygame.K_7,
                pygame.K_KP4, pygame.K_KP5, pygame.K_KP6, pygame.K_KP7]
@@ -20,13 +20,15 @@ DISTRACTOR_LETTER = '7'
 FIXATION_TIME = 1.0
 MAX_TRIAL_DURATION = 10.0
 NUM_TRIALS = 20 #TODO 50
-DIST_FROM_CENTER = 350  # Radius from center for letter placement
+DIST_FROM_CENTER = 450  # Radius from center for letter placement
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption("Digit Identification Task")
 clock = pygame.time.Clock()
-font = pygame.font.SysFont(None, LETTER_FONT_SIZE)
+fixation_font = pygame.font.SysFont(None, FIXATION_SIZE)
+instruction_font = pygame.font.SysFont(None, 40)  # Main font for instructions and messages
+letter_font = pygame.font.SysFont(None, LETTER_FONT_SIZE)
 
 def build_config_file():
     rng = random.Random()  # Independent random generator instance
@@ -51,13 +53,13 @@ def load_pair_by_index(index, filename="stimulus/AbruptOnset/config_pairs.json")
     return pair["letter"], float(pair["angle"])
 
 def draw_fixation(cx, cy):
-    focus_text = font.render("+", True, FIXATION_COLOR)
+    focus_text = fixation_font.render("+", True, FIXATION_COLOR)
     focus_rect = focus_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
     screen.blit(focus_text, focus_rect.topleft)
 
 
 def draw_letter(letter, x, y):
-    text_surf = font.render(letter, True, LETTER_COLOR)
+    text_surf = letter_font.render(letter, True, LETTER_COLOR)
     text_rect = text_surf.get_rect(center=(x, y))
     screen.blit(text_surf, text_rect)
 
@@ -79,7 +81,7 @@ def display_instructions(lines):
     screen.fill(BACKGROUND_COLOR)
     y_offset = 100
     for line in lines:
-        txt_surf = font.render(line, True, (0, 0, 0))
+        txt_surf = instruction_font.render(line, True, (0, 0, 0))
         screen.blit(txt_surf, (50, y_offset))
         y_offset += 50
     pygame.display.flip()
@@ -161,6 +163,7 @@ def main_abrupt_onset_experiment():
     # Flush keypress queue to avoid skipping screens
     pylink.flushGetkeyQueue()
 
+    pygame.mouse.set_visible(False)
     # Instructions before Phase 1
     display_instructions([
         "Digit Identification Task",
@@ -191,7 +194,7 @@ def main_abrupt_onset_experiment():
     pylink.flushGetkeyQueue()
     display_instructions([
         "Phase 2: Distractor Digits",
-        "Now you'll see extra digits (9s) appearing along with the target.",
+        "Now you'll see extra digits (7s) appearing along with the target.",
         "Focus on the correct digit (4, 5, or 6) and ignore the rest.",
         "Press any key to begin..."
     ])

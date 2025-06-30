@@ -71,7 +71,24 @@ else:
         ]
     }
 
-    
+def mot_drift_correction(el_tracker: pylink.EyeLink):
+    if not DUMMY_MODE:
+        screen.fill(BLACK)
+        focus_text = font.render("+", True, WHITE)
+        
+        focus_rect = focus_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
+        screen.blit(focus_text, focus_rect.topleft)
+        el_tracker.sendMessage("FIX_POINT_DRAWN")
+        pygame.display.flip()
+        pygame.event.pump()
+        pygame.time.wait(50)
+
+        try:
+            error = el_tracker.doDriftCorrect(WIDTH // 2,  HEIGHT // 2, 0, 1)
+            if error is pylink.ESC_KEY:
+                             el_tracker.sendMessage(f"DRIFT_CORRECTION_FAILED")
+        except:
+             pass
 
 def save_config():
     with open(CONFIG_PATH, "w") as f:
@@ -111,24 +128,6 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
     el_tracker.sendMessage(f"TRIAL_START {trial_index}")
 
     # Display initial targets AFTER recording has started
-    screen.fill(BLACK)
-    focus_text = font.render("+", True, WHITE)
-    
-    focus_rect = focus_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
-    screen.blit(focus_text, focus_rect.topleft)
-    el_tracker.sendMessage("FIX_POINT_DRAWN")
-    pygame.display.flip()
-    pygame.event.pump()
-    pygame.time.wait(50)
-    if not DUMMY_MODE:
-        try:
-            error = el_tracker.doDriftCorrect(WIDTH // 2,  HEIGHT // 2, 0, 1)
-            if error is pylink.ESC_KEY:
-                             el_tracker.sendMessage(f"DRIFT_CORRECTION_FAILED")
-        except:
-             pass
-        
-
     screen.fill(BLACK)
     for i, obj in enumerate(objects):
         color = RED if i in target_indices else WHITE
@@ -265,6 +264,7 @@ def main_mot_experiment():
         pylink.pumpDelay(100)  # allow tracker to stabilize
         for i in range(len(config["trials"])):
         # for i in range(5):
+            mot_drift_correction(el_tracker)
             performance.append(mot_trial(el_tracker, i))
 
         pylink.pumpDelay(100)

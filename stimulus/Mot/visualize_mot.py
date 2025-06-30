@@ -33,8 +33,8 @@ def quit_check(events):
 def mot_trial(trial_index, gaze_data, messages):
 
     trial = config["trials"][trial_index]
-    num_objects, num_targets = trial["params"]
-    radius, speed = 20, 5
+    num_objects, num_targets, trial_duration, speed = trial["params"]
+    radius = 20
 
     # Normalize directions
     dirs = []
@@ -107,7 +107,7 @@ def mot_trial(trial_index, gaze_data, messages):
     replay_loop(2000, draw_objects=False)
 
     # Phase 2: Movement + gaze
-    replay_loop(10000, draw_objects=True)
+    replay_loop(trial_duration * 1000, draw_objects=True)
 
     # Phase 3: Prompt
     text = font.render('Click on the targets!', True, GREEN)

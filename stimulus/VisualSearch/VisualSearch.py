@@ -235,7 +235,7 @@ def waldo_trial(trial_id, el_tracker, image_surf, bbox, timeout=20):
                     pass
             elif event.type == pygame.MOUSEBUTTONUP and event.button == 1:  # Left mouse button up
                 el_tracker.sendMessage(f"!LEFT_MOUSE_UP {x} {y}")
-    el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_TIMEOUT)
+    el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
     return -1
 
 def main_visual_search_experiment():
