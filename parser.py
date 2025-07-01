@@ -8,20 +8,13 @@ from stimulus import Utils
 
 
 class AscParser:
-    """Parser for EDF2ASC *\*.asc* eye-tracking logs.
+    """Parser for EDF2ASC *\*.asc* eye‑tracking logs supporting mono and binocular recordings.
 
-    The class extracts core metadata and splits the continuous sample stream
-    into trials using the conventional *TRIALID* / *END* markers written by
-    SR-Research EyeLink.
-
-    It currently supports **two** common ways sample rate is expressed:
-
-    1. Classic *MSG … SAMPLE_RATE <Hz>* line (older EyeLink firmware).
-    2. Block header lines such as ``EVENTS … RATE 1000.00 …`` or
-       ``SAMPLES … RATE 500.00 …`` (newer EDF2ASC default output).
-
-    Extend or adapt the regular expressions below if your lab logs custom
-    messages.
+    Besides the classic four‑column sample format (time, x, y, pupil), this parser
+    detects and handles binocular lines that add a second triplet (x, y, pupil)
+    for the other eye.  Columns are mapped to ``_l`` and ``_r`` suffixed fields
+    when both eyes are present; otherwise the unsuffixed ``x``, ``y`` and
+    ``pupil`` columns are retained for backward compatibility.
     """
 
     # ------------------------------------------------------------------
@@ -35,8 +28,12 @@ class AscParser:
     )
     _RE_TRIAL_START = re.compile(r"^MSG\s+\d+\s+TRIALID\s+(\S+)")
     _RE_TRIAL_END = re.compile(r"^MSG\s+\d+\s+(?:END|STOP)")
+
+    # Support both mono (4 tokens) and binocular (7 tokens) samples.
     _RE_SAMPLE = re.compile(
-        r"^(\d+)\s+(-?\d+\.?\d*)\s+(-?\d+\.?\d*)\s+(-?\d+\.?\d*)"
+        r"^(\d+)"                       # time stamp
+        r"\s+(-?\d+\.?\d*)\s+(-?\d+\.?\d*)\s+(-?\d+\.?\d*)"  # eye L or mono
+        r"(?:\s+(-?\d+\.?\d*)\s+(-?\d+\.?\d*)\s+(-?\d+\.?\d*))?"  # opt. eye R
     )
 
     def __init__(self, filepath: str | Path):
@@ -45,51 +42,61 @@ class AscParser:
         self.screen_height: Optional[int] = None
         self.sample_rate: Optional[int] = None
         self.trials: Dict[str, List[Dict[str, float | int]]] = defaultdict(list)
+        self.eye_mode: Optional[str] = None  # "mono" | "binocular"
         self._parse_file()
 
     # ------------------------------------------------------------------
     # Public helpers
     # ------------------------------------------------------------------
     def get_screen_dims(self) -> Tuple[int | None, int | None]:
-        """Return *(width, height)* of the recorded display in pixels."""
         return self.screen_width, self.screen_height
 
     def get_sample_rate(self) -> Optional[int]:
-        """Nominal sampling rate in Hz (integer) or *None* if not found."""
         return self.sample_rate
 
     def list_trials(self) -> List[str]:
-        """All trial identifiers in their original encounter order."""
         return list(self.trials.keys())
 
     def to_dataframe(self, trial_id: str) -> pd.DataFrame:
-        """Return a *pandas.DataFrame* (indexed by time) for one trial."""
         if trial_id not in self.trials:
             raise KeyError(f"Trial '{trial_id}' not found.")
+
         df = pd.DataFrame(self.trials[trial_id])
 
-        # Normalize x and y to screen dimensions using Utils
-        df["x"] = df["x"] / self.screen_width * Utils.WIDTH if self.screen_width else df["x"]
-        df["y"] = df["y"] / self.screen_height * Utils.HEIGHT if self.screen_height else df["y"]
+        # ------------------------------------------------------------------
+        # Coordinate normalisation
+        # ------------------------------------------------------------------
+        if self.screen_width and self.screen_height:
+            # Identify all x/y columns dynamically so we also catch *_l / *_r
+            for col in df.columns:
+                if col.startswith("x"):
+                    df[col] = df[col] / self.screen_width * Utils.WIDTH
+                elif col.startswith("y"):
+                    df[col] = df[col] / self.screen_height * Utils.HEIGHT
+
+        # Add convenience average columns if binocular
+        if {"x_l", "x_r"}.issubset(df.columns):
+            df["x"] = df[["x_l", "x_r"]].mean(axis=1)
+            df["y"] = df[["y_l", "y_r"]].mean(axis=1)
+            df["pupil"] = df[["pupil_l", "pupil_r"]].mean(axis=1)
 
         return df.set_index("time")
 
     def summary(self) -> dict:
-        """Lightweight summary useful for sanity checks and logging."""
         return {
             "file": str(self.filepath),
             "screen_width": self.screen_width,
             "screen_height": self.screen_height,
             "sample_rate": self.sample_rate,
+            "eye_mode": self.eye_mode,
             "n_trials": len(self.trials),
         }
-    
+
     def get_messages(self, trial_id: str) -> List[Tuple[int, str]]:
-        """Return list of (timestamp, message) tuples for the trial."""
-        messages = []
+        messages: List[Tuple[int, str]] = []
         with self.filepath.open("r", encoding="utf-8", errors="ignore") as fh:
             recording = False
-            current_trial = None
+            current_trial: Optional[str] = None
             for line in fh:
                 line = line.strip()
                 if line.startswith("MSG"):
@@ -105,7 +112,7 @@ class AscParser:
                     elif recording:
                         messages.append((ts, msg))
         return messages
-    
+
     # ------------------------------------------------------------------
     # Internal parsing routine
     # ------------------------------------------------------------------
@@ -118,9 +125,9 @@ class AscParser:
                 if not line:
                     continue
 
-                # ------------------------------------------------------
-                # Meta‑messages
-                # ------------------------------------------------------
+                # ----------------------------------------------------------
+                # Meta messages
+                # ----------------------------------------------------------
                 if self.screen_width is None:
                     m = self._RE_DISPLAY.search(line)
                     if m:
@@ -131,13 +138,12 @@ class AscParser:
                 if self.sample_rate is None:
                     m = self._RE_SR_MSG.match(line) or self._RE_SR_BLOCK.match(line)
                     if m:
-                        # Round to nearest integer so "1000.00" ➜ 1000
                         self.sample_rate = int(round(float(m.group(1))))
                         continue
 
-                # ------------------------------------------------------
+                # ----------------------------------------------------------
                 # Trial boundaries
-                # ------------------------------------------------------
+                # ----------------------------------------------------------
                 m = self._RE_TRIAL_START.match(line)
                 if m:
                     current_trial = m.group(1)
@@ -147,20 +153,44 @@ class AscParser:
                     current_trial = None
                     continue
 
-                # ------------------------------------------------------
-                # Continuous sample stream (within a trial only)
-                # ------------------------------------------------------
+                # ----------------------------------------------------------
+                # Continuous sample stream
+                # ----------------------------------------------------------
                 if current_trial is not None:
                     m = self._RE_SAMPLE.match(line)
                     if m:
-                        ts, x, y, pupil = m.groups()
-                        self.trials[current_trial].append(
-                            {
-                                "time": int(ts),
-                                "x": float(x),
-                                "y": float(y),
-                                "pupil": float(pupil),
-                            }
-                        )
+                        (
+                            ts,
+                            x_l,
+                            y_l,
+                            pupil_l,
+                            x_r,
+                            y_r,
+                            pupil_r,
+                        ) = m.groups()
 
+                        sample = {
+                            "time": int(ts),
+                            "x_l": float(x_l),
+                            "y_l": float(y_l),
+                            "pupil_l": float(pupil_l),
+                        }
 
+                        if x_r is not None:
+                            # Binocular: add second eye and flag mode
+                            sample.update(
+                                {
+                                    "x_r": float(x_r),
+                                    "y_r": float(y_r),
+                                    "pupil_r": float(pupil_r),
+                                }
+                            )
+                            self.eye_mode = "binocular"
+                        else:
+                            # Monocular: compact field names for backward compat
+                            sample["x"] = sample.pop("x_l")
+                            sample["y"] = sample.pop("y_l")
+                            sample["pupil"] = sample.pop("pupil_l")
+                            self.eye_mode = self.eye_mode or "mono"
+
+                        self.trials[current_trial].append(sample)
