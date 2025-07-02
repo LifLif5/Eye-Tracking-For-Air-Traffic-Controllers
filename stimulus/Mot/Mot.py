@@ -6,7 +6,7 @@ import yaml
 import os
 import pylink
 from MouseMovements.MouseTracker import MouseRecorder
-from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK, YELLOW, DUMMY_MODE,MOUSE_POS_MSG
+from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK, YELLOW, DUMMY_MODE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER
 
 
 # Init pygame
@@ -14,7 +14,10 @@ pygame.init()
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption("Multi-Object Tracking (MOT)")
-font = pygame.font.SysFont(None, 40)
+font = pygame.font.SysFont(None, int(40 * DISPLAY_SIZE_MULTIPLIER))
+
+BALL_RADIUS = int(20 * DISPLAY_SIZE_MULTIPLIER)
+
 
 def show_explanation_screen(images):
     """Display the instruction screens with navigation and start the game on Enter at the last screen.
@@ -109,8 +112,7 @@ def quit_check(events):
 def mot_trial(el_tracker : pylink.EyeLink, trial_index):
     trial = config["trials"][trial_index]
     num_objects, num_targets, trial_duration, speed= trial["params"]
-    radius = 20
-
+    speed = int(speed * DISPLAY_SIZE_MULTIPLIER)  # Scale speed for display size
     # Generate if None
     if not trial["locations"]:
         trial["locations"] = [list(pos) for pos in generate_grid_positions(num_objects, jitter=True)]
@@ -138,7 +140,7 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
     screen.fill(BLACK)
     for i, obj in enumerate(objects):
         color = RED if i in target_indices else WHITE
-        pygame.draw.circle(screen, color, obj["pos"], radius)
+        pygame.draw.circle(screen, color, obj["pos"], BALL_RADIUS)
     pygame.display.flip()
 
     # pygame.image.save(screen, "mot1.png") 
@@ -161,11 +163,11 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
         for obj in objects:
             obj["pos"][0] += int(obj["dir"][0])
             obj["pos"][1] += int(obj["dir"][1])
-            if obj["pos"][0] <= radius or obj["pos"][0] >= WIDTH - radius:
+            if obj["pos"][0] <= BALL_RADIUS or obj["pos"][0] >= WIDTH - BALL_RADIUS:
                 obj["dir"][0] *= -1
-            if obj["pos"][1] <= radius or obj["pos"][1] >= HEIGHT - radius:
+            if obj["pos"][1] <= BALL_RADIUS or obj["pos"][1] >= HEIGHT - BALL_RADIUS:
                 obj["dir"][1] *= -1
-            pygame.draw.circle(screen, WHITE, obj["pos"], radius)
+            pygame.draw.circle(screen, WHITE, obj["pos"], BALL_RADIUS)
 
             # # Draw arrow to indicate direction
             # pos = np.array(obj["pos"])
@@ -222,12 +224,12 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
                 for i, obj in enumerate(objects):
                     if i in clicked:
                         continue
-                    if np.linalg.norm(np.array(obj["pos"]) - mouse_pos) <= radius:
+                    if np.linalg.norm(np.array(obj["pos"]) - mouse_pos) <= BALL_RADIUS:
                         clicked.append(i)
                         count += 1
 
                         # Indicate selection with yellow circle
-                        pygame.draw.circle(screen, YELLOW, obj["pos"], radius)
+                        pygame.draw.circle(screen, YELLOW, obj["pos"], BALL_RADIUS)
                         pygame.display.flip()
                         
                 if count >= num_targets:

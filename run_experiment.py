@@ -1,3 +1,8 @@
+import ctypes
+ctypes.windll.user32.SetProcessDPIAware()  # Ensure high DPI awareness for Windows
+
+
+
 from stimulus.Mot.Mot import main_mot_experiment
 from stimulus.VisualSearch.VisualSearch import main_visual_search_experiment
 from stimulus.AbruptOnset.AbruptOnset import main_abrupt_onset_experiment
@@ -31,7 +36,6 @@ import argparse
 
 #     # Close the graphics environment to allow future setup
 #     pylink.closeGraphics()
-
 
 
 parser = argparse.ArgumentParser(description="Run experiment with optional dummy mode.")

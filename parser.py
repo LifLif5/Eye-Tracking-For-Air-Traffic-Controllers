@@ -35,6 +35,8 @@ class AscParser:
         r"\s+(-?\d+\.?\d*)\s+(-?\d+\.?\d*)\s+(-?\d+\.?\d*)"  # eye L or mono
         r"(?:\s+(-?\d+\.?\d*)\s+(-?\d+\.?\d*)\s+(-?\d+\.?\d*))?"  # opt. eye R
     )
+    _RE_SBLINK = re.compile(r"^SBLINK\s+(\w)\s+(\d+)")
+
 
     def __init__(self, filepath: str | Path):
         self.filepath: Path = Path(filepath)
@@ -43,6 +45,8 @@ class AscParser:
         self.sample_rate: Optional[int] = None
         self.trials: Dict[str, List[Dict[str, float | int]]] = defaultdict(list)
         self.eye_mode: Optional[str] = None  # "mono" | "binocular"
+        self.blinks: Dict[str, List[dict]] = defaultdict(list)
+        self.blink_active: Dict[str, Dict[str, bool]] = defaultdict(lambda: {'L': False, 'R': False})
         self._parse_file()
 
     # ------------------------------------------------------------------
@@ -153,6 +157,26 @@ class AscParser:
                     current_trial = None
                     continue
 
+                # Blink start marker
+                m = self._RE_SBLINK.match(line)
+                if m:
+                    eye, ts = m.groups()
+                    self.blinks[current_trial].append({
+                        "eye": eye,
+                        "start": int(ts)
+                    })
+                    # Mark blink active for this eye
+                    self.blink_active[current_trial][eye] = True
+                    continue
+
+                # Sample line with dots (blink in progress)
+                if "." in line:
+                    # Optional: parse this sample line and add blink info
+                    continue
+                else:
+                    # Reset blink status if needed
+                    self.blink_active[current_trial]['L'] = False
+                    self.blink_active[current_trial]['R'] = False
                 # ----------------------------------------------------------
                 # Continuous sample stream
                 # ----------------------------------------------------------

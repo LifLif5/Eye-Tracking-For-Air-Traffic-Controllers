@@ -8,9 +8,9 @@ import argparse
 pygame.init()
 screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 WIDTH, HEIGHT = screen.get_size()
+print(f"Screen dimensions: {WIDTH}x{HEIGHT}")
 
-
-
+DISPLAY_SIZE_MULTIPLIER = 1.75
 # Colors
 WHITE, RED, GREEN, BLACK = (255,255,255), (255,0,0), (0,255,0), (0,0,0)
 BLUE = (0, 0, 255)

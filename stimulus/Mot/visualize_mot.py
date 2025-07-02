@@ -164,6 +164,7 @@ def mot_trial(
                 gaze_l_ptr += 1
             if gaze_l_ptr:
                 gx, gy = gaze_left[gaze_l_ptr - 1, 1:].astype(int)
+                print(f"[Gaze @ {elapsed} ms]: ({gx}, {gy})")
                 pygame.draw.circle(screen, GREEN, (gx, gy), 8, 2)
 
             # --------------------------------------------------

@@ -70,7 +70,7 @@ def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" :
     # get the screen resolution natively supported by the monitor
     scn_width, scn_height = Utils.WIDTH, Utils.HEIGHT
     pygame.display.set_caption("Enter EDF filename")
-    font = pygame.font.SysFont('Arial', 32)
+    font = pygame.font.SysFont('Arial', 55)
 
     if participant_name == "":
         allowed_char = ascii_letters + digits + '_'
@@ -88,14 +88,14 @@ def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" :
 
             for i, line in enumerate(prompt_lines):
                 line_surf = font.render(line, True, (0, 0, 0))
-                win.blit(line_surf, (50, 50 + i * 40))
+                win.blit(line_surf, (50, 50 + i * 70))
 
             input_surf = font.render('> ' + participant_name, True, (0, 0, 0))
-            win.blit(input_surf, (50, 200))
+            win.blit(input_surf, (50, 300))
 
             if error_msg:
                 err_surf = font.render(error_msg, True, (200, 0, 0))
-                win.blit(err_surf, (50, 260))
+                win.blit(err_surf, (50, 400))
 
             pygame.display.flip()
 
@@ -233,6 +233,8 @@ def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" :
     # see the EyeLink Installation Guide, "Customizing Screen Settings"
     el_coords = "screen_pixel_coords = 0 0 %d %d" % (scn_width - 1, scn_height - 1)
     el_tracker.sendCommand(el_coords)
+    el_tracker.sendCommand("binocular_enabled = YES")
+
 
     # Write a DISPLAY_COORDS message to the EDF file
     # Data Viewer needs this piece of info for proper visualization, see Data
