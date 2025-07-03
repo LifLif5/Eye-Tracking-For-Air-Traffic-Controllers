@@ -6,7 +6,8 @@ import yaml
 import os
 import pylink
 from MouseMovements.MouseTracker import MouseRecorder
-from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK, YELLOW, DUMMY_MODE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER
+from ..Utils import generate_grid_positions, drift_correction
+from ..Utils import HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK, YELLOW, DUMMY_MODE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER
 
 
 # Init pygame
@@ -244,6 +245,7 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
                     pygame.display.flip()
                     pygame.time.wait(2000)  
                     collecting = False
+        clock.tick(30)
 
     # Show score
     score = len(set(clicked) & set(target_indices))
@@ -273,7 +275,7 @@ def main_mot_experiment():
         pylink.pumpDelay(100)  # allow tracker to stabilize
         for i in range(len(config["trials"])):
         # for i in range(5):
-            mot_drift_correction(el_tracker)
+            drift_correction(el_tracker)
             performance.append(mot_trial(el_tracker, i))
 
         pylink.pumpDelay(100)

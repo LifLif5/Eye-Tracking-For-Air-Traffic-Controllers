@@ -5,6 +5,8 @@ import tkinter as tk
 import pygame
 import argparse
 
+import pylink
+
 pygame.init()
 screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 WIDTH, HEIGHT = screen.get_size()
@@ -43,3 +45,50 @@ def generate_grid_positions(n_items, jitter=True):
             grid_positions.append((int(x), int(y)))
     random.shuffle(grid_positions)
     return grid_positions
+
+
+def drift_correction(el_tracker: pylink.EyeLink) -> int:
+    """
+    Binocular drift-correction wrapper for EyeLink 1000.
+    Never raises; returns the numeric result that EyeLink itself provides.
+
+        0   success
+       27   ESC pressed – tracker entered Setup (because allowSetup=1)
+       -1   timeout / tracking error
+       -2   SDK or I/O exception caught locally
+
+    The calling code can decide what to do with the return value
+    (e.g. retry, quick recalibration, or abort the trial).
+    """
+    if DUMMY_MODE:           # simulated connection
+        return 0
+
+    # 1  stop any current recording cleanly
+    if el_tracker.isRecording():
+        el_tracker.stopRecording()
+        pylink.pumpDelay(50)
+
+    # 2  switch to idle so drift-correction is accepted
+    el_tracker.setOfflineMode()
+    pylink.pumpDelay(50)
+
+    # 3  run drift-correction at screen centre
+    try:
+        result = el_tracker.doDriftCorrect(
+            WIDTH // 2, HEIGHT // 2,
+            draw=1,            # EyeLink draws the fixation dot
+            allowSetup=1       # ESC opens full Setup/Camera screen
+        )                       # returns 0 (OK) or 27 (ESC) :contentReference[oaicite:3]{index=3}
+    except Exception as exc:    # network or SDK glitch
+        el_tracker.sendMessage(f"PY_DRIFTCORR_EXCEPTION {exc}")
+        result = -2
+
+    # 4  always restart recording so the next trial has eye data
+    el_tracker.startRecording(1, 1, 1, 1)
+    pylink.pumpDelay(100)
+
+    # 5  log non-zero outcomes for later inspection
+    if result != 0:
+        el_tracker.sendMessage(f"DRIFTCORR_RESULT {result}")
+
+    return result

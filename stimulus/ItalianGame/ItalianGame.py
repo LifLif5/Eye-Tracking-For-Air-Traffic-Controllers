@@ -11,7 +11,7 @@ from . import CommonConsts as Consts
 from .Animal import Animal, Weapon
 from typing import List
 from . import AssetLoader as Assets
-from ..Utils import HEIGHT,WIDTH, WHITE, BLACK, RED, BLUE, GREEN, DUMMY_MODE,MOUSE_POS_MSG
+from ..Utils import HEIGHT,WIDTH, WHITE, BLACK, RED, BLUE, GREEN, DUMMY_MODE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER
 
 
 
@@ -64,8 +64,8 @@ def update_weapon_status(weapon: Weapon) -> None:
             weapon.deactivate()
 
 # Initialize weapons
-Bombardino_Crocodillo = Weapon(name="Bombardino_Crocodillo", ammo=10, cooldown=10000, maximum_time_active=10000, range=400)
-Bombini_Gusini = Weapon(name="Bombini_Gusini", ammo=5, cooldown=5000, maximum_time_active=10000, range=250)
+Bombardino_Crocodillo = Weapon(name="Bombardino_Crocodillo", ammo=10, cooldown=10000, maximum_time_active=10000, range=400 * DISPLAY_SIZE_MULTIPLIER)
+Bombini_Gusini = Weapon(name="Bombini_Gusini", ammo=5, cooldown=5000, maximum_time_active=10000, range=250 * DISPLAY_SIZE_MULTIPLIER)
 
 def draw_object(image: pygame.Surface, x: float, y: float) -> None:
     screen.blit(image, (x, y))
@@ -119,7 +119,7 @@ def shoot(weapon: Weapon, mouse_x: int, mouse_y: int, animals : List[Animal]) ->
                 return True
     return False
 
-def prompt_numeric_input(screen, font, question_text, position=(750, 650)):
+def prompt_numeric_input(screen, font, question_text, position=(750 * DISPLAY_SIZE_MULTIPLIER, 650 * DISPLAY_SIZE_MULTIPLIER)):
     input_text = ""
     active = True
 
@@ -130,10 +130,10 @@ def prompt_numeric_input(screen, font, question_text, position=(750, 650)):
         screen.blit(question_surface, position)
 
         # Draw the input box
-        input_box = pygame.Rect(position[0], position[1] + 40, 200, 36)
+        input_box = pygame.Rect(position[0], position[1] + 40, 200 * DISPLAY_SIZE_MULTIPLIER, 36 * DISPLAY_SIZE_MULTIPLIER)
         pygame.draw.rect(screen, (200, 200, 200), input_box)
         text_surface = font.render(input_text, True, BLACK)
-        screen.blit(text_surface, (input_box.x + 5, input_box.y + 5))
+        screen.blit(text_surface, (input_box.x + 5 * DISPLAY_SIZE_MULTIPLIER, input_box.y + 5 *  DISPLAY_SIZE_MULTIPLIER))
         pygame.draw.rect(screen, BLACK, input_box, 2)
 
         pygame.display.flip()
@@ -192,6 +192,7 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
     el_tracker.sendMessage(f"TRIALID {trial_index}")
     el_tracker.sendMessage(f"TRIAL_START {trial_index}")
 
+    clock = pygame.time.Clock()  # Create a clock to control the frame rate
     while running and (seconds_counter <Consts.NUMBER_OF_ANIMALS_IN_TRIAL or len(animals) != 0):
         screen.blit(Assets.background_image, (0, 0))  # Draw background
         screen.blit(Assets.home_base_image, Consts.HOME_BASE_POS)  # Draw home base
@@ -203,27 +204,27 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
 
         # Display weapon images if active
         if Bombardino_Crocodillo.is_active:
-            draw_weapon(Assets.Bombardino_Crocodillo_image, Consts.HOME_BASE_POS[0], Consts.HOME_BASE_POS[1] + 50)  # Adjust position
+            draw_weapon(Assets.Bombardino_Crocodillo_image, Consts.HOME_BASE_POS[0], Consts.HOME_BASE_POS[1] + 50 * DISPLAY_SIZE_MULTIPLIER)  # Adjust position
         if Bombini_Gusini.is_active:
-            draw_weapon(Assets.Bombini_Gusini_image, Consts.HOME_BASE_POS[0], Consts.HOME_BASE_POS[1] - 80)  # Adjust position
+            draw_weapon(Assets.Bombini_Gusini_image, Consts.HOME_BASE_POS[0], Consts.HOME_BASE_POS[1] - 80 * DISPLAY_SIZE_MULTIPLIER)  # Adjust position
 
         # Display player's health
         health_text = font.render(f"Health: {player_health}", True, WHITE)  # Changed color to white
-        screen.blit(health_text, (WIDTH * 0.45, 10))
+        screen.blit(health_text, (WIDTH * 0.45, 10 * DISPLAY_SIZE_MULTIPLIER))
 
         # display weapon cooldowns
         bombardino_cooldown = max(0, Bombardino_Crocodillo.cooldown - (pygame.time.get_ticks() - Bombardino_Crocodillo.last_used))
         bombini_cooldown = max(0, Bombini_Gusini.cooldown - (pygame.time.get_ticks() - Bombini_Gusini.last_used))
         bombardino_cooldown_text = font.render(f"Crocodilo Cooldown: {bombardino_cooldown / 1000:.1f} seconds", True, WHITE)
-        screen.blit(bombardino_cooldown_text, (10, 10))
+        screen.blit(bombardino_cooldown_text, (10 * DISPLAY_SIZE_MULTIPLIER, 10 * DISPLAY_SIZE_MULTIPLIER))
         bombini_cooldown_text = font.render(f"Gusini Cooldown: {bombini_cooldown / 1000:.1f} seconds", True, WHITE)
-        screen.blit(bombini_cooldown_text, (10, 50))
+        screen.blit(bombini_cooldown_text, (10 * DISPLAY_SIZE_MULTIPLIER, 50 * DISPLAY_SIZE_MULTIPLIER))
 
         # display weapon ammo
         bombardino_ammo_text = font.render(f"Crocodilo Ammo: {Bombardino_Crocodillo.ammo}", True, WHITE)
-        screen.blit(bombardino_ammo_text, (WIDTH* 0.8, 10))
+        screen.blit(bombardino_ammo_text, (WIDTH* 0.8, 10 * DISPLAY_SIZE_MULTIPLIER))
         bombini_ammo_text = font.render(f"Gusini Ammo: {Bombini_Gusini.ammo}", True, WHITE)
-        screen.blit(bombini_ammo_text, (WIDTH* 0.8, 50))
+        screen.blit(bombini_ammo_text, (WIDTH* 0.8, 50 * DISPLAY_SIZE_MULTIPLIER))
         
 
         # # Display weapon ammo and status
@@ -344,8 +345,7 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
         #     take_image = False
             
         pygame.display.flip()
-        pygame.time.delay(30)  # Smooth animation
-
+        clock.tick(30)
     # game finished
     # Display game over screen
     if player_health <= 0:
@@ -361,7 +361,7 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
     game_over_x = (WIDTH - game_over_text.get_width()) // 2
     game_over_y = (HEIGHT - game_over_text.get_height()) // 2
     final_score_x = (WIDTH - final_score_text.get_width()) // 2
-    final_score_y = game_over_y + game_over_text.get_height() + 20
+    final_score_y = game_over_y + game_over_text.get_height() + 20 * DISPLAY_SIZE_MULTIPLIER
 
     # Display the texts
     screen.fill(WHITE)  # White background
@@ -398,27 +398,19 @@ def main_italian_game_experiment():
     # Call the explanation screen before starting the game loop
     show_explanation_screen(Assets.instruction_images[0:4])
     drift_correction(el_tracker)
-    el_tracker.setOfflineMode()
-    el_tracker.startRecording(1, 1, 1, 1)
-    pylink.pumpDelay(100)  # allow tracker to stabilize
+
     performance.append(game_round(0, el_tracker))
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
 
     show_explanation_screen(Assets.instruction_images[4:5])
     drift_correction(el_tracker)
-    el_tracker.setOfflineMode()
-    el_tracker.startRecording(1, 1, 1, 1)
-    pylink.pumpDelay(100)  # allow tracker to stabilize
     performance.append(game_round(1, el_tracker, beep_distractions= True))
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
 
     show_explanation_screen(Assets.instruction_images[5:6])
     drift_correction(el_tracker)
-    el_tracker.setOfflineMode()
-    el_tracker.startRecording(1, 1, 1, 1)
-    pylink.pumpDelay(100)  # allow tracker to stabilize
     performance.append(game_round(2, el_tracker, visual_distractions=True))
     pylink.pumpDelay(100)
     el_tracker.stopRecording()

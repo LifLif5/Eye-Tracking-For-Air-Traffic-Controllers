@@ -10,13 +10,13 @@ import glob
 
 import pylink
 
-from ..Utils import generate_grid_positions, HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK ,BLUE, DUMMY_MODE,MOUSE_POS_MSG
+from ..Utils import generate_grid_positions, drift_correction, HEIGHT,WIDTH,WHITE, BLACK,RED,BLUE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER
 
 # Initialize pygame
 pygame.init()
 
 # Parameters
-FONT_SIZE = 40
+FONT_SIZE = 40 * DISPLAY_SIZE_MULTIPLIER
 USE_NOISE = True  # Set to False for exact center, True for jittered
 
 # Shapes
@@ -75,8 +75,8 @@ def display_instructions(lines, waldo_image=False):
     y_offset = 100
     for line in lines:
         txt_surf = instructions_font.render(line, True, (0, 0, 0))
-        screen.blit(txt_surf, (50, y_offset))
-        y_offset += 50
+        screen.blit(txt_surf, (50 * DISPLAY_SIZE_MULTIPLIER, y_offset))
+        y_offset += 50 * DISPLAY_SIZE_MULTIPLIER
 
     if waldo_image:
         # Load and display example Waldo image
@@ -84,8 +84,8 @@ def display_instructions(lines, waldo_image=False):
         if os.path.exists(example_path):
             waldo_img = pygame.image.load(example_path).convert_alpha()
             # Scale to width = 200 px
-            w_ratio = 200 / waldo_img.get_width()
-            new_size = (200, int(waldo_img.get_height() * w_ratio))
+            w_ratio = 200 * DISPLAY_SIZE_MULTIPLIER / waldo_img.get_width()
+            new_size = (200 * DISPLAY_SIZE_MULTIPLIER, int(waldo_img.get_height() * w_ratio))
             waldo_img = pygame.transform.scale(waldo_img, new_size)
 
             # Blit to bottom center
@@ -118,7 +118,7 @@ def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_
             if SEARCH_TYPE == "feature":
                 distractors.append({"shape": "L_SHAPE", "color": "BLACK", "angle": angle, "pos": pos})
             elif SEARCH_TYPE == "pop_out":
-                distractors.append({"shape": "L_SHAPE", "color": "BLACK", "angle": 0, "pos": pos})
+                distractors.append({"shape": "T_SHAPE", "color": "BLACK", "angle": 0, "pos": pos})
             else:
                 if random.random() < 0.5:
                     distractors.append({"shape": "L_SHAPE", "color": "BLUE", "angle": angle, "pos": pos})
@@ -150,9 +150,7 @@ def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_
     screen.blit(focus_text, focus_rect.topleft)
     el_tracker.sendMessage("FIX_POINT_DRAWN")
     pygame.display.flip()
-    if not DUMMY_MODE:
-        el_tracker.doDriftCorrect(WIDTH // 2,  HEIGHT // 2, 0, 0)
-    time.sleep(1)
+    pygame.time.wait(1000)
     # Draw stimuli
     screen.fill(WHITE)
     for d in distractors:
@@ -165,6 +163,8 @@ def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_
 
     el_tracker.sendMessage("LETTERS_DRAWN")
     pygame.display.flip()
+
+    clock = pygame.time.Clock()
 
     # Event loop
     pygame.event.clear()
@@ -191,6 +191,10 @@ def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_
                     pass
             elif event.type == pygame.MOUSEBUTTONUP and event.button == 1:  # Left mouse button up
                 el_tracker.sendMessage(f"!LEFT_MOUSE_UP {x} {y}")
+         
+        clock.tick(30)  # Limit to 30 FPS
+        
+    el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
 
     return -1
 
@@ -205,12 +209,13 @@ def waldo_trial(trial_id, el_tracker, image_surf, bbox, timeout=20):
     screen.blit(focus_text, focus_rect.topleft)
     el_tracker.sendMessage("FIX_POINT_DRAWN")
     pygame.display.flip()
-    if not DUMMY_MODE:
-        el_tracker.doDriftCorrect(WIDTH // 2,  HEIGHT // 2, 0, 0)
+    pygame.time.wait(1000)
 
     screen.fill(WHITE)
     screen.blit(image_surf, (0, 0))
     pygame.display.flip()
+
+    clock = pygame.time.Clock()
 
     start = time.time()
     pygame.event.clear()
@@ -235,6 +240,9 @@ def waldo_trial(trial_id, el_tracker, image_surf, bbox, timeout=20):
                     pass
             elif event.type == pygame.MOUSEBUTTONUP and event.button == 1:  # Left mouse button up
                 el_tracker.sendMessage(f"!LEFT_MOUSE_UP {x} {y}")
+
+        clock.tick(30)  # Limit to 30 FPS
+
     el_tracker.sendMessage("TRIAL_RESULT %d" % pylink.TRIAL_OK)
     return -1
 
@@ -259,13 +267,10 @@ def main_visual_search_experiment():
         "Press any key to start the experiment..."
     ])
 
-    el_tracker.setOfflineMode()
-    pylink.msecDelay(50)
-    el_tracker.startRecording(1, 1, 1, 1)
-    pylink.pumpDelay(100)
     el_tracker.sendMessage("PHASE1_POP_OUT_START")
 
     for distractors in num_distractors:
+        drift_correction(el_tracker)  # Ensure tracker is calibrated
         for _ in range(num_trials):
             performance.append(search_trial(trial_count, el_tracker, "pop_out", distractors, use_saved_config=False))
             trial_count += 1
@@ -286,13 +291,10 @@ def main_visual_search_experiment():
         "Press any key to start the experiment..."
     ])
 
-    el_tracker.setOfflineMode()
-    pylink.msecDelay(50)
-    el_tracker.startRecording(1, 1, 1, 1)
-    pylink.pumpDelay(100)
     el_tracker.sendMessage("PHASE2_FEATURE_SEARCH_START")
 
     for distractors in num_distractors:
+        drift_correction(el_tracker)  # Ensure tracker is calibrated
         for _ in range(num_trials):
             performance.append(search_trial(trial_count, el_tracker, "feature", distractors, use_saved_config=False))
             trial_count += 1
@@ -312,13 +314,10 @@ def main_visual_search_experiment():
         "Press any key to start the experiment..."
     ])
 
-    el_tracker.setOfflineMode()
-    pylink.msecDelay(50)
-    el_tracker.startRecording(1, 1, 1, 1)
-    pylink.pumpDelay(100)
     el_tracker.sendMessage("PHASE3_CONJUNCTION_SEARCH_START")
 
     for distractors in num_distractors:
+        drift_correction(el_tracker)  # Ensure tracker is calibrated
         for _ in range(num_trials):
             performance.append(search_trial(trial_count, el_tracker, "conjunction", distractors, use_saved_config=False))
             trial_count += 1
@@ -341,14 +340,12 @@ def main_visual_search_experiment():
         "Last part!",
         "You will see crowded cartoon scenes.",
         "Find WALDO (example below) and click him.",
-        "If you cannot find him within 20 s the scene will advance.",
+        "If you cannot find him within 30 s the scene will advance.",
         "",
         "Press any key to continue..."
     ], waldo_image=True)
 
-    el_tracker.setOfflineMode()
-    pylink.msecDelay(50)
-    el_tracker.startRecording(1, 1, 1, 1)
+
     el_tracker.sendMessage("PHASE4_WALDO_START")
 
     for img_path in waldo_imgs:
@@ -361,6 +358,8 @@ def main_visual_search_experiment():
         scale_y = HEIGHT / surf.get_height()
         bbox = pygame.Rect(bx*scale_x, by*scale_y, bw*scale_x, bh*scale_y)
 
+        # drift correction
+        drift_correction(el_tracker)  # Ensure tracker is calibrated
         rt = waldo_trial(trial_count, el_tracker, surf, bbox, timeout=12)
         performance.append(rt)
         trial_count += 1

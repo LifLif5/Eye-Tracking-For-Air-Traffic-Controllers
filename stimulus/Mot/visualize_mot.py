@@ -237,7 +237,7 @@ def visualize_mot_experiment(asc_data_parsed: AscParser, n_trials: int | None = 
     try:
         trial_ids = asc_data_parsed.list_trials()
         n_trials = n_trials or len(trial_ids)
-
+        print(f"Visualising {n_trials} trials out of {len(trial_ids)} total trials.")
         for i in range(n_trials):
             trial_id = str(trial_ids[i])
             df = asc_data_parsed.to_dataframe(trial_id)  # already normalised

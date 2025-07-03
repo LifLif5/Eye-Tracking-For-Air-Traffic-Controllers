@@ -4,14 +4,14 @@ import time
 import math
 import pylink
 import json
-from ..Utils import  HEIGHT,WIDTH, WHITE, RED, GREEN, BLACK, DUMMY_MODE
+from ..Utils import drift_correction, HEIGHT,WIDTH, WHITE, RED, GREEN, BLACK, DUMMY_MODE, DISPLAY_SIZE_MULTIPLIER
 
 BACKGROUND_COLOR = (230, 230, 230)
 FIXATION_COLOR = (0, 0, 0)
-FIXATION_SIZE = 40  # Size of the + sign
+FIXATION_SIZE = 40  * DISPLAY_SIZE_MULTIPLIER # Size of the + sign
 
 LETTER_COLOR = (50, 50, 180)
-LETTER_FONT_SIZE = 30
+LETTER_FONT_SIZE = 30  * DISPLAY_SIZE_MULTIPLIER
 TARGET_LETTERS = ['4', '5', '6']
 VALID_KEYS = [pygame.K_4, pygame.K_5, pygame.K_6, pygame.K_7,
                pygame.K_KP4, pygame.K_KP5, pygame.K_KP6, pygame.K_KP7]
@@ -20,14 +20,14 @@ DISTRACTOR_LETTER = '7'
 FIXATION_TIME = 1.0
 MAX_TRIAL_DURATION = 10.0
 NUM_TRIALS = 20 #TODO 50
-DIST_FROM_CENTER = 450  # Radius from center for letter placement
+DIST_FROM_CENTER = 450  * DISPLAY_SIZE_MULTIPLIER # Radius from center for letter placement
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption("Digit Identification Task")
 clock = pygame.time.Clock()
 fixation_font = pygame.font.SysFont(None, FIXATION_SIZE)
-instruction_font = pygame.font.SysFont(None, 40)  # Main font for instructions and messages
+instruction_font = pygame.font.SysFont(None, FIXATION_SIZE)  # Main font for instructions and messages
 letter_font = pygame.font.SysFont(None, LETTER_FONT_SIZE)
 
 def build_config_file():
@@ -101,8 +101,6 @@ def run_trial(el_tracker : pylink.EyeLink, trial_index ,with_distractors=False):
     el_tracker.sendMessage(f"TRIALID {trial_index}")
     el_tracker.sendMessage(f"TRIAL_START {trial_index}")
     draw_fixation(cx, cy)
-    if not DUMMY_MODE:
-        el_tracker.doDriftCorrect(cx, cy, 0, 0)
     el_tracker.sendMessage("FIX_POINT_DRAWN")
     pygame.display.flip()
 
@@ -173,15 +171,14 @@ def main_abrupt_onset_experiment():
     ])
 
     # Start Phase 1 Recording
-    el_tracker.setOfflineMode()
-    pylink.msecDelay(50)
-    el_tracker.startRecording(1, 1, 1, 1)
-    pylink.pumpDelay(100)
+
     el_tracker.sendMessage("PHASE1_START")
 
     reaction_times = []
     trial_count = 0
     for _ in range(NUM_TRIALS):
+        if trial_count %10 ==0:
+            drift_correction(el_tracker)
         rt = run_trial(el_tracker, trial_count, with_distractors=False)
         reaction_times.append(rt)
         trial_count += 1
@@ -200,13 +197,11 @@ def main_abrupt_onset_experiment():
     ])
 
     # Start Phase 2 Recording
-    el_tracker.setOfflineMode()
-    pylink.msecDelay(50)
-    el_tracker.startRecording(1, 1, 1, 1)
-    pylink.pumpDelay(100)
     el_tracker.sendMessage("PHASE2_START")
 
     for _ in range(NUM_TRIALS):
+        if trial_count %10 ==0:
+            drift_correction(el_tracker)
         rt = run_trial(el_tracker, trial_count, with_distractors=True)
         reaction_times.append(rt)
         trial_count += 1
