@@ -11,7 +11,7 @@ from . import CommonConsts as Consts
 from .Animal import Animal, Weapon
 from typing import List
 from . import AssetLoader as Assets
-from ..Utils import HEIGHT,WIDTH, WHITE, BLACK, RED, BLUE, GREEN, DUMMY_MODE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER
+from ..Utils import show_explanation_screen, drift_correction, HEIGHT,WIDTH, WHITE, BLACK, RED, BLUE, GREEN, DUMMY_MODE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER
 
 
 
@@ -30,31 +30,6 @@ pygame.display.set_caption("Eye Tracking Experiment")
 # Font for displaying health
 font = pygame.font.Font(None, Consts.FONT_SIZE)
 
-
-def show_explanation_screen(images):
-    """Display the instruction screens with navigation and start the game on Enter at the last screen.
-
-    Args:
-        images (list): A list of Pygame surface objects representing instruction images.
-    """
-    current_page = 0
-    total_pages = len(images)
-
-    while True:
-        screen.blit(images[current_page], (0, 0))
-        pygame.display.flip()
-
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                exit()
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT and current_page < total_pages - 1:
-                    current_page += 1
-                elif event.key == pygame.K_RIGHT and current_page > 0:
-                    current_page -= 1
-                elif event.key == pygame.K_RETURN and current_page == total_pages - 1:
-                    return
 
 def update_weapon_status(weapon: Weapon) -> None:
     """Deactivate the weapon if its active time has expired or ammo is 0."""
@@ -143,7 +118,7 @@ def prompt_numeric_input(screen, font, question_text, position=(750 * DISPLAY_SI
                 pygame.quit()
                 return None  # Preserve quit behaviour
             elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_RETURN:
+                if event.key == pygame.K_RETURN or event.key == pygame.K_KP_ENTER:
                     # Empty input → −1, otherwise convert to int
                     return -1 if input_text == "" else int(input_text)
                 elif event.key == pygame.K_BACKSPACE:
@@ -151,16 +126,6 @@ def prompt_numeric_input(screen, font, question_text, position=(750 * DISPLAY_SI
                 elif event.unicode.isdigit():
                     input_text += event.unicode
 
-def drift_correction(el_tracker: pylink.EyeLink):
-    screen.fill(WHITE)  # White background
-    focus_text = font.render("+", True, BLACK)
-    
-    focus_rect = focus_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
-    screen.blit(focus_text, focus_rect.topleft)
-    el_tracker.sendMessage("FIX_POINT_DRAWN")
-    pygame.display.flip()
-    if not DUMMY_MODE:
-        el_tracker.doDriftCorrect(WIDTH // 2,  HEIGHT // 2, 0, 0)
 #####################################################################
 def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool = False, visual_distractions: bool = False):
 

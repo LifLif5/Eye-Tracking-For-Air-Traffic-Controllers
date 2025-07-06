@@ -360,7 +360,7 @@ def main_visual_search_experiment():
 
         # drift correction
         drift_correction(el_tracker)  # Ensure tracker is calibrated
-        rt = waldo_trial(trial_count, el_tracker, surf, bbox, timeout=12)
+        rt = waldo_trial(trial_count, el_tracker, surf, bbox)
         performance.append(rt)
         trial_count += 1
 

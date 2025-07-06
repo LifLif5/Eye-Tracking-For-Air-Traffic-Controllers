@@ -92,3 +92,30 @@ def drift_correction(el_tracker: pylink.EyeLink) -> int:
         el_tracker.sendMessage(f"DRIFTCORR_RESULT {result}")
 
     return result
+
+
+
+def show_explanation_screen(images):
+    """Display the instruction screens with navigation and start the game on Enter at the last screen.
+
+    Args:
+        images (list): A list of Pygame surface objects representing instruction images.
+    """
+    current_page = 0
+    total_pages = len(images)
+
+    while True:
+        screen.blit(images[current_page], (0, 0))
+        pygame.display.flip()
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                exit()
+            if event.type == pygame.KEYDOWN:
+                if (event.key == pygame.K_LEFT or event.key ==  pygame.K_KP_4)  and current_page < total_pages - 1:
+                    current_page += 1
+                elif (event.key == pygame.K_RIGHT or event.key ==  pygame.K_KP_6) and current_page > 0:
+                    current_page -= 1
+                elif (event.key == pygame.K_RETURN or event.key ==  pygame.K_KP_ENTER) and current_page == total_pages - 1:
+                    return

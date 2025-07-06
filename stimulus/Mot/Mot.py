@@ -6,7 +6,7 @@ import yaml
 import os
 import pylink
 from MouseMovements.MouseTracker import MouseRecorder
-from ..Utils import generate_grid_positions, drift_correction
+from ..Utils import generate_grid_positions, drift_correction, show_explanation_screen
 from ..Utils import HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK, YELLOW, DUMMY_MODE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER
 
 
@@ -20,30 +20,6 @@ font = pygame.font.SysFont(None, int(40 * DISPLAY_SIZE_MULTIPLIER))
 BALL_RADIUS = int(20 * DISPLAY_SIZE_MULTIPLIER)
 
 
-def show_explanation_screen(images):
-    """Display the instruction screens with navigation and start the game on Enter at the last screen.
-
-    Args:
-        images (list): A list of Pygame surface objects representing instruction images.
-    """
-    current_page = 0
-    total_pages = len(images)
-
-    while True:
-        screen.blit(images[current_page], (0, 0))
-        pygame.display.flip()
-
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                exit()
-            if event.type == pygame.KEYDOWN:
-                if (event.key == pygame.K_LEFT or event.key ==  pygame.K_KP_4)  and current_page < total_pages - 1:
-                    current_page += 1
-                elif (event.key == pygame.K_RIGHT or event.key ==  pygame.K_KP_6) and current_page > 0:
-                    current_page -= 1
-                elif (event.key == pygame.K_RETURN or event.key ==  pygame.K_KP_ENTER) and current_page == total_pages - 1:
-                    return
                 
 # Load or initialize config
 CONFIG_PATH = "stimulus\\MOT\\mot_config.yaml"
