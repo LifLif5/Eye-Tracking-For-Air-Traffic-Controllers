@@ -82,13 +82,6 @@ class AscParser:
 
         df = pd.DataFrame(self.trials[trial_id])
 
-        # normalise coords
-        if self.screen_width and self.screen_height:
-            for col in df.columns:
-                if col.startswith("x"):
-                    df[col] = df[col] / self.screen_width * Utils.WIDTH
-                elif col.startswith("y"):
-                    df[col] = df[col] / self.screen_height * Utils.HEIGHT
 
         # binocular convenience cols
         if {"x_l", "x_r"}.issubset(df.columns):

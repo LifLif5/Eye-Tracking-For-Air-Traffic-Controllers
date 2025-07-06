@@ -1,5 +1,6 @@
 import pygame, json, os, glob
-
+import ctypes
+ctypes.windll.user32.SetProcessDPIAware()  # Ensure high DPI awareness for Windows
 # Setup
 IMG_FOLDER = "stimulus/VisualSearch/waldo_images"
 SAVE_PATH  = os.path.join(IMG_FOLDER, "waldo_boxes.json")

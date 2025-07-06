@@ -64,8 +64,8 @@ def update_weapon_status(weapon: Weapon) -> None:
             weapon.deactivate()
 
 # Initialize weapons
-Bombardino_Crocodillo = Weapon(name="Bombardino_Crocodillo", ammo=10, cooldown=10000, maximum_time_active=10000, range=400 * DISPLAY_SIZE_MULTIPLIER)
-Bombini_Gusini = Weapon(name="Bombini_Gusini", ammo=5, cooldown=5000, maximum_time_active=10000, range=250 * DISPLAY_SIZE_MULTIPLIER)
+Bombardino_Crocodillo = Weapon(name="Bombardino_Crocodillo", ammo=10, cooldown=10000, maximum_time_active=10000, range=Consts.BOMBARDINO_CROCODILO_RANGE)
+Bombini_Gusini = Weapon(name="Bombini_Gusini", ammo=5, cooldown=5000, maximum_time_active=10000, range= Consts.BOMBINI_GUSINI_RANGE)
 
 def draw_object(image: pygame.Surface, x: float, y: float) -> None:
     screen.blit(image, (x, y))
@@ -119,7 +119,7 @@ def shoot(weapon: Weapon, mouse_x: int, mouse_y: int, animals : List[Animal]) ->
                 return True
     return False
 
-def prompt_numeric_input(screen, font, question_text, position=(750 * DISPLAY_SIZE_MULTIPLIER, 650 * DISPLAY_SIZE_MULTIPLIER)):
+def prompt_numeric_input(screen, font, question_text, position=(750 * DISPLAY_SIZE_MULTIPLIER, 800 * DISPLAY_SIZE_MULTIPLIER)):
     input_text = ""
     active = True
 
@@ -130,7 +130,7 @@ def prompt_numeric_input(screen, font, question_text, position=(750 * DISPLAY_SI
         screen.blit(question_surface, position)
 
         # Draw the input box
-        input_box = pygame.Rect(position[0], position[1] + 40, 200 * DISPLAY_SIZE_MULTIPLIER, 36 * DISPLAY_SIZE_MULTIPLIER)
+        input_box = pygame.Rect(position[0], position[1] + 40 * DISPLAY_SIZE_MULTIPLIER, 200 * DISPLAY_SIZE_MULTIPLIER, 36 * DISPLAY_SIZE_MULTIPLIER)
         pygame.draw.rect(screen, (200, 200, 200), input_box)
         text_surface = font.render(input_text, True, BLACK)
         screen.blit(text_surface, (input_box.x + 5 * DISPLAY_SIZE_MULTIPLIER, input_box.y + 5 *  DISPLAY_SIZE_MULTIPLIER))
@@ -222,9 +222,9 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
 
         # display weapon ammo
         bombardino_ammo_text = font.render(f"Crocodilo Ammo: {Bombardino_Crocodillo.ammo}", True, WHITE)
-        screen.blit(bombardino_ammo_text, (WIDTH* 0.8, 10 * DISPLAY_SIZE_MULTIPLIER))
+        screen.blit(bombardino_ammo_text, (WIDTH* 0.85, 10 * DISPLAY_SIZE_MULTIPLIER))
         bombini_ammo_text = font.render(f"Gusini Ammo: {Bombini_Gusini.ammo}", True, WHITE)
-        screen.blit(bombini_ammo_text, (WIDTH* 0.8, 50 * DISPLAY_SIZE_MULTIPLIER))
+        screen.blit(bombini_ammo_text, (WIDTH* 0.85, 50 * DISPLAY_SIZE_MULTIPLIER))
         
 
         # # Display weapon ammo and status
@@ -292,11 +292,11 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
                 el_tracker.sendMessage(f"!RIGHT_MOUSE_UP {mouse_x} {mouse_y}")  # Send right click release event to EyeLink tracker
 
             # Handle weapon activation
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_1:  # '1' key for Bombardino_Crocodillo
+            if event.type == pygame.KEYDOWN and (event.key == pygame.K_1 or event.key == pygame.K_KP1) :  # '1' key for Bombardino_Crocodillo
                 el_tracker.sendMessage("BUTTON_1_PRESSED")  # Send button press event to EyeLink tracker
                 if Bombardino_Crocodillo.activate():
                     Assets.bombardino_activation_sound.play()  # Play activation sound for Bombardino_Crocodillo
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_2:  # '2' key for Bombini_Gusini
+            if event.type == pygame.KEYDOWN and (event.key == pygame.K_2 or event.key == pygame.K_KP2):  # '2' key for Bombini_Gusini
                 el_tracker.sendMessage("BUTTON_2_PRESSED")  # Send button press event to EyeLink tracker
                 if Bombini_Gusini.activate():
                     Assets.bombini_activation_sound.play()  # Play activation sound for Bombini_Gusini

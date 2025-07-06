@@ -16,7 +16,7 @@ from ..Utils import generate_grid_positions, drift_correction, HEIGHT,WIDTH,WHIT
 pygame.init()
 
 # Parameters
-FONT_SIZE = 40 * DISPLAY_SIZE_MULTIPLIER
+FONT_SIZE = int(40 * DISPLAY_SIZE_MULTIPLIER)
 USE_NOISE = True  # Set to False for exact center, True for jittered
 
 # Shapes

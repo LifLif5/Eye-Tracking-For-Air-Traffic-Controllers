@@ -1,3 +1,5 @@
+import ctypes
+ctypes.windll.user32.SetProcessDPIAware()  # Ensure high DPI awareness for Windows
 asc_file = input("Enter the path to the ASC file: ")
 
 from stimulus.Mot.visualize_mot import visualize_mot_experiment

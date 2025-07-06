@@ -38,11 +38,11 @@ def show_explanation_screen(images):
                 pygame.quit()
                 exit()
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT and current_page < total_pages - 1:
+                if (event.key == pygame.K_LEFT or event.key ==  pygame.K_KP_4)  and current_page < total_pages - 1:
                     current_page += 1
-                elif event.key == pygame.K_RIGHT and current_page > 0:
+                elif (event.key == pygame.K_RIGHT or event.key ==  pygame.K_KP_6) and current_page > 0:
                     current_page -= 1
-                elif event.key == pygame.K_RETURN and current_page == total_pages - 1:
+                elif (event.key == pygame.K_RETURN or event.key ==  pygame.K_KP_ENTER) and current_page == total_pages - 1:
                     return
                 
 # Load or initialize config
@@ -74,32 +74,6 @@ else:
             for _ in range(1)          # TODO 3 trials each
         ]
     }
-
-def mot_drift_correction(el_tracker: pylink.EyeLink):
-    if not DUMMY_MODE:
-                # Stop any existing recording cleanly before drift correction
-        if el_tracker.isRecording():
-            el_tracker.stopRecording()
-            pylink.msecDelay(100)  # wait for recording to stop fully
-        screen.fill(BLACK)
-        focus_text = font.render("+", True, WHITE)
-        
-        focus_rect = focus_text.get_rect(center=(WIDTH // 2, HEIGHT // 2))
-        screen.blit(focus_text, focus_rect.topleft)
-        el_tracker.sendMessage("FIX_POINT_DRAWN")
-        pygame.display.flip()
-        pygame.event.pump()
-        pygame.time.wait(50)
-
-        try:
-            error = el_tracker.doDriftCorrect(WIDTH // 2,  HEIGHT // 2, 0, 1)
-            if error is pylink.ESC_KEY:
-                             el_tracker.sendMessage(f"DRIFT_CORRECTION_FAILED")
-        except:
-             pass
-                # After drift correction, start recording explicitly
-        el_tracker.startRecording(1, 1, 1, 1)
-        pylink.pumpDelay(100)  # allow tracker to start recordin
 
 def save_config():
     with open(CONFIG_PATH, "w") as f:
@@ -221,11 +195,11 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
             if event.type == pygame.MOUSEBUTTONDOWN:
                 el_tracker.sendMessage(f"!LEFT_MOUSE_DOWN {mouse_x} {mouse_y}")  # Send left click position to EyeLink tracker
 
-                mouse_pos = event.pos
+
                 for i, obj in enumerate(objects):
                     if i in clicked:
                         continue
-                    if np.linalg.norm(np.array(obj["pos"]) - mouse_pos) <= BALL_RADIUS:
+                    if np.linalg.norm(np.array(obj["pos"]) - (mouse_x, mouse_y)) <= BALL_RADIUS:
                         clicked.append(i)
                         count += 1
 

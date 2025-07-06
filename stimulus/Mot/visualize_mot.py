@@ -7,6 +7,7 @@ import os
 import pylink
 from MouseMovements.MouseTracker import MouseRecorder  # noqa: F401 (side‑effects)
 from parser import AscParser  # local AscParser (now binocular‑aware)
+from .Mot import BALL_RADIUS
 from ..Utils import (
     generate_grid_positions,  # noqa: F401
     HEIGHT,
@@ -15,6 +16,7 @@ from ..Utils import (
     RED,
     GREEN,
     BLACK,
+    DISPLAY_SIZE_MULTIPLIER
 )
 
 # Extra colours for new overlays
@@ -80,7 +82,8 @@ def mot_trial(
     # --------------------------------------------------------------
     trial_cfg = config["trials"][trial_index]
     num_objects, num_targets, trial_duration, speed = trial_cfg["params"]
-    radius = 20
+    radius = BALL_RADIUS
+    speed = int(speed * DISPLAY_SIZE_MULTIPLIER)  # Scale speed for display size
 
     # --------------------------------------------------------------
     # Initial object positions / directions
@@ -164,7 +167,6 @@ def mot_trial(
                 gaze_l_ptr += 1
             if gaze_l_ptr:
                 gx, gy = gaze_left[gaze_l_ptr - 1, 1:].astype(int)
-                print(f"[Gaze @ {elapsed} ms]: ({gx}, {gy})")
                 pygame.draw.circle(screen, GREEN, (gx, gy), 8, 2)
 
             # --------------------------------------------------
@@ -194,7 +196,6 @@ def mot_trial(
             while msg_ptr < len(other_msgs) and other_msgs[msg_ptr][0] <= elapsed:
                 show_message = other_msgs[msg_ptr][1]
                 message_timer = pygame.time.get_ticks()
-                print(f"[MSG @ {elapsed} ms]: {show_message}")
                 msg_ptr += 1
                 if show_message == f"TRIAL_RESULT {pylink.TRIAL_OK}":
                     return  # end phase early on trial completion
@@ -261,7 +262,7 @@ def visualize_mot_experiment(asc_data_parsed: AscParser, n_trials: int | None = 
             start_ts = msg_raw[0][0]  # first MSG is TRIALID by construction
             rel_msgs = [(ts - start_ts, msg) for ts, msg in msg_raw[1:]]
 
-            mot_trial(i, gaze_l, gaze_r, rel_msgs)
+            mot_trial(i-1, gaze_l, gaze_r, rel_msgs)
 
     except SystemExit:
         pass  # graceful termination

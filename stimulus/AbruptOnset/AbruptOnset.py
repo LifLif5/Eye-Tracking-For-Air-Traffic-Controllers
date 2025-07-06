@@ -8,10 +8,10 @@ from ..Utils import drift_correction, HEIGHT,WIDTH, WHITE, RED, GREEN, BLACK, DU
 
 BACKGROUND_COLOR = (230, 230, 230)
 FIXATION_COLOR = (0, 0, 0)
-FIXATION_SIZE = 40  * DISPLAY_SIZE_MULTIPLIER # Size of the + sign
+FIXATION_SIZE = int(40  * DISPLAY_SIZE_MULTIPLIER) # Size of the + sign
 
 LETTER_COLOR = (50, 50, 180)
-LETTER_FONT_SIZE = 30  * DISPLAY_SIZE_MULTIPLIER
+LETTER_FONT_SIZE = int(30  * DISPLAY_SIZE_MULTIPLIER)
 TARGET_LETTERS = ['4', '5', '6']
 VALID_KEYS = [pygame.K_4, pygame.K_5, pygame.K_6, pygame.K_7,
                pygame.K_KP4, pygame.K_KP5, pygame.K_KP6, pygame.K_KP7]
@@ -20,7 +20,7 @@ DISTRACTOR_LETTER = '7'
 FIXATION_TIME = 1.0
 MAX_TRIAL_DURATION = 10.0
 NUM_TRIALS = 20 #TODO 50
-DIST_FROM_CENTER = 450  * DISPLAY_SIZE_MULTIPLIER # Radius from center for letter placement
+DIST_FROM_CENTER = 500  * DISPLAY_SIZE_MULTIPLIER # Radius from center for letter placement
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
@@ -79,11 +79,11 @@ def wait_for_keypress():
 
 def display_instructions(lines):
     screen.fill(BACKGROUND_COLOR)
-    y_offset = 100
+    y_offset = 100 * DISPLAY_SIZE_MULTIPLIER  # Start position for the first line
     for line in lines:
         txt_surf = instruction_font.render(line, True, (0, 0, 0))
-        screen.blit(txt_surf, (50, y_offset))
-        y_offset += 50
+        screen.blit(txt_surf, (50 * DISPLAY_SIZE_MULTIPLIER, y_offset))
+        y_offset += 50 * DISPLAY_SIZE_MULTIPLIER
     pygame.display.flip()
     wait_for_keypress()
 

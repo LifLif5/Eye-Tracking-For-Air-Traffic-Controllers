@@ -1,0 +1,1922 @@
+[
+  {
+    "trial_id": 0,
+    "target_pos": [
+      2446,
+      587
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          283,
+          1380
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          440,
+          708
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1474,
+          500
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3325,
+          611
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3463,
+          1834
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1678,
+          1471
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2360,
+          1614
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 1,
+    "target_pos": [
+      2724,
+      1329
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3134,
+          189
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3058,
+          1873
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2595,
+          155
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3548,
+          373
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          298,
+          1799
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2183,
+          354
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1114,
+          1890
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          303,
+          141
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3547,
+          1293
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          771,
+          1771
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1178,
+          1374
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1164,
+          285
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2256,
+          922
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3064,
+          1279
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1130,
+          809
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1753,
+          809
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3716,
+          2018
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          781,
+          1236
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3013,
+          702
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          255,
+          1333
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          723,
+          255
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1696,
+          1973
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3635,
+          722
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1672,
+          326
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2105,
+          1833
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2754,
+          813
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2696,
+          2003
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          177,
+          747
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2221,
+          1371
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1666,
+          1382
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          825,
+          734
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 2,
+    "target_pos": [
+      1636,
+      1333
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1146,
+          1220
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1247,
+          833
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3291,
+          249
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2206,
+          211
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3313,
+          1572
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1870,
+          463
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2228,
+          1585
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3263,
+          515
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2944,
+          1654
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          919,
+          1226
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          188,
+          225
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          499,
+          90
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          926,
+          1549
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3578,
+          1224
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2652,
+          1285
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3036,
+          883
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3633,
+          1564
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2589,
+          109
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1845,
+          1893
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1885,
+          1204
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3722,
+          516
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2681,
+          2015
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3604,
+          256
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3732,
+          951
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1549,
+          947
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2280,
+          1204
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1499,
+          505
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1532,
+          1599
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3049,
+          503
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1179,
+          1623
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2911,
+          144
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1288,
+          476
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          534,
+          1641
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3401,
+          1288
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          584,
+          867
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          120,
+          1949
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          838,
+          108
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          234,
+          1544
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          209,
+          821
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1904,
+          1545
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3341,
+          2065
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3320,
+          945
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          610,
+          589
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2343,
+          512
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1901,
+          958
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          922,
+          984
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2546,
+          1552
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2584,
+          533
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2194,
+          877
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          541,
+          2025
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2287,
+          1961
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2909,
+          1890
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1930,
+          232
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          537,
+          1227
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2961,
+          1284
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1520,
+          1997
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          223,
+          480
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3749,
+          2047
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1191,
+          100
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          843,
+          467
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2535,
+          930
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1631,
+          225
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1281,
+          1939
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          907,
+          1949
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          149,
+          1256
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 0,
+    "target_pos": [
+      3501,
+      1772
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          513,
+          666
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1374,
+          289
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2183,
+          1405
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          717,
+          1627
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3185,
+          548
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2622,
+          757
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1235,
+          1458
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 1,
+    "target_pos": [
+      725,
+      1434
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3602,
+          352
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          164,
+          1986
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1272,
+          1866
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1143,
+          691
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          772,
+          356
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2698,
+          154
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3701,
+          1900
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          350,
+          800
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          142,
+          230
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1781,
+          237
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2140,
+          1860
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3584,
+          1305
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2730,
+          1867
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2612,
+          757
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3135,
+          1798
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1640,
+          780
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1699,
+          1477
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          695,
+          1758
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3202,
+          361
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2214,
+          1324
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2115,
+          367
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1298,
+          1229
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3120,
+          881
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3147,
+          1294
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2638,
+          1244
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          339,
+          1418
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3488,
+          756
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          811,
+          925
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2190,
+          822
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1083,
+          235
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1656,
+          1989
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 2,
+    "target_pos": [
+      3001,
+      1315
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          237,
+          202
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1939,
+          1181
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          152,
+          1317
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2674,
+          1267
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3255,
+          918
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          901,
+          1192
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1226,
+          1547
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1877,
+          1655
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          256,
+          1600
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3723,
+          450
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3020,
+          593
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2998,
+          1602
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1637,
+          983
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1587,
+          226
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1289,
+          928
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3729,
+          1179
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          832,
+          2020
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2348,
+          1636
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1274,
+          179
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3699,
+          1608
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          520,
+          141
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          545,
+          1258
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          449,
+          859
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2661,
+          1627
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2580,
+          1960
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          531,
+          2043
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3328,
+          567
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2254,
+          485
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2192,
+          1285
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3626,
+          172
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3005,
+          2005
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1639,
+          1578
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          822,
+          505
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2700,
+          92
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          161,
+          1916
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1151,
+          1949
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3329,
+          1658
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2293,
+          846
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1621,
+          524
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1169,
+          1224
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3399,
+          1207
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2579,
+          815
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2963,
+          148
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3267,
+          2022
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1639,
+          1250
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2346,
+          158
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1298,
+          480
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          171,
+          577
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          195,
+          906
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          511,
+          1611
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          829,
+          954
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2555,
+          590
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1991,
+          522
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2183,
+          1959
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2904,
+          912
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3590,
+          880
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          847,
+          182
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          512,
+          525
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1906,
+          905
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3720,
+          1977
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1973,
+          158
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3301,
+          108
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          900,
+          1691
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1964,
+          1977
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1613,
+          2064
+        ]
+      }
+    ]
+  }
+]
