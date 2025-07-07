@@ -387,9 +387,9 @@ def terminate_task(task_name, performance):
                 json.dump(performance, f, indent=2)
         except Exception as e:
             print("Failed to save performance data:", e)
-        el_tracker.close()
+        # el_tracker.close()
 
-    pylink.closeGraphics()
+    # pylink.closeGraphics()
 
 
 # def abort_trial():
