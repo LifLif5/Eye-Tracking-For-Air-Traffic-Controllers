@@ -4,7 +4,42 @@ import time
 import math
 import pylink
 import json
-from ..Utils import drift_correction, HEIGHT,WIDTH, WHITE, RED, GREEN, BLACK, DUMMY_MODE, DISPLAY_SIZE_MULTIPLIER
+from ..Utils import drift_correction,display_instructions, HEIGHT,WIDTH, WHITE, RED, GREEN, BLACK, DUMMY_MODE, DISPLAY_SIZE_MULTIPLIER
+
+opening_instructions = [
+    "ברוכים הבאים למשימת זיהוי הספרות!",
+    "משימה זו מורכבת משני חלקים.",
+    "לחצו על מקש כלשהו כדי להמשיך לחלק הראשון..."
+]
+
+phase1_instructions = [
+    "חלק ראשון: זיהוי ספרה בודדת.",
+    "בכל סיבוב, יופיע + במרכז המסך, עליכם להסתכל על המרכז שלו.",
+    "לאחר מכן תופיע ספרה אחת (4, 5 או 6) במרחק קבוע מהמרכז,",
+    "המטרה שלכם היא ללחוץ (במקלדת) על מקש הספרה המתאימה במהירות ובדיוק",
+    "(לאחר שהספרה מופיעה אתם כבר לא צריכים להסתכל על ה +)",
+    "",
+    "",
+    "יהיו 50 סיבובים כאלו,",
+    "לחצו על מקש כלשהו כדי להתחיל..."
+]
+
+phase2_instructions = [
+    "חלק שני: ספרות מסיחות.",
+    "כעת תופיע ספרת מטרה (4, 5 או 6) יחד עם 3 ספרות מסיחות (7).",
+    "המטרה שלכם היא לזהות את ספרת המטרה בלבד וללחוץ על מקש מתאים במהירות ובדיוק.",
+    "המסיחים אינם רלוונטיים — התעלמו מהם.",
+    "",
+    "",
+    "גם הפעם יהיו 50 סיבובים,",
+    "לחצו על מקש כלשהו כדי להתחיל..."
+]
+
+ending_instructions = [
+    "סיימתם את המשימה!!!!!",
+    "לחצו על מקש כלשהו כדי להמשיך."
+]
+
 
 BACKGROUND_COLOR = (230, 230, 230)
 FIXATION_COLOR = (0, 0, 0)
@@ -19,7 +54,7 @@ DISTRACTOR_LETTER = '7'
 
 FIXATION_TIME = 1.0
 MAX_TRIAL_DURATION = 10.0
-NUM_TRIALS = 20 #TODO 50
+NUM_TRIALS = 2 #TODO 50
 DIST_FROM_CENTER = 500  * DISPLAY_SIZE_MULTIPLIER # Radius from center for letter placement
 
 pygame.init()
@@ -27,7 +62,6 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption("Digit Identification Task")
 clock = pygame.time.Clock()
 fixation_font = pygame.font.SysFont(None, FIXATION_SIZE)
-instruction_font = pygame.font.SysFont(None, FIXATION_SIZE)  # Main font for instructions and messages
 letter_font = pygame.font.SysFont(None, LETTER_FONT_SIZE)
 
 def build_config_file():
@@ -64,28 +98,6 @@ def draw_letter(letter, x, y):
     screen.blit(text_surf, text_rect)
 
 
-def wait_for_keypress():
-    while True:
-        for event in pygame.event.get():
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_ESCAPE:
-                    pygame.quit()
-                    exit()
-                return
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                exit()
-
-
-def display_instructions(lines):
-    screen.fill(BACKGROUND_COLOR)
-    y_offset = 100 * DISPLAY_SIZE_MULTIPLIER  # Start position for the first line
-    for line in lines:
-        txt_surf = instruction_font.render(line, True, (0, 0, 0))
-        screen.blit(txt_surf, (50 * DISPLAY_SIZE_MULTIPLIER, y_offset))
-        y_offset += 50 * DISPLAY_SIZE_MULTIPLIER
-    pygame.display.flip()
-    wait_for_keypress()
 
 
 def get_position_around_center(radius, angle_deg=None):
@@ -156,6 +168,7 @@ def run_trial(el_tracker : pylink.EyeLink, trial_index ,with_distractors=False):
 
 
 def main_abrupt_onset_experiment():
+    display_instructions(opening_instructions,screen)
     el_tracker = pylink.getEYELINK()
 
     # Flush keypress queue to avoid skipping screens
@@ -163,12 +176,7 @@ def main_abrupt_onset_experiment():
 
     pygame.mouse.set_visible(False)
     # Instructions before Phase 1
-    display_instructions([
-        "Digit Identification Task",
-        "A single digit (4, 5, or 6) will appear around the center.",
-        "Press the matching key as quickly and accurately as possible.",
-        "Press any key to start..."
-    ])
+    display_instructions(phase1_instructions, screen)
 
     # Start Phase 1 Recording
 
@@ -189,12 +197,7 @@ def main_abrupt_onset_experiment():
 
     # Instructions before Phase 2
     pylink.flushGetkeyQueue()
-    display_instructions([
-        "Phase 2: Distractor Digits",
-        "Now you'll see extra digits (7s) appearing along with the target.",
-        "Focus on the correct digit (4, 5, or 6) and ignore the rest.",
-        "Press any key to begin..."
-    ])
+    display_instructions(phase2_instructions, screen)
 
     # Start Phase 2 Recording
     el_tracker.sendMessage("PHASE2_START")
@@ -213,10 +216,7 @@ def main_abrupt_onset_experiment():
 
     # Final instructions
     pylink.flushGetkeyQueue()
-    display_instructions([
-        "Experiment complete.",
-        "Press any key to exit."
-    ])
+    display_instructions(ending_instructions,screen)
 
     return reaction_times
 

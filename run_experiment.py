@@ -32,9 +32,9 @@ mot_performance = main_mot_experiment()
 terminate_task("MOT", mot_performance)
 
 
-el_tracker, edf_filename = setup_and_calibrate_tracker("REACTION")
-reaction_performance = main_abrupt_onset_experiment()
-terminate_task("REACTION", reaction_performance)
+# el_tracker, edf_filename = setup_and_calibrate_tracker("REACTION")
+# reaction_performance = main_abrupt_onset_experiment()
+# terminate_task("REACTION", reaction_performance)
 
 
 el_tracker, edf_filename = setup_and_calibrate_tracker("SEARCH")
