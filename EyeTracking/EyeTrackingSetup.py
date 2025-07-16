@@ -389,7 +389,7 @@ def terminate_task(task_name, performance):
             print("Failed to save performance data:", e)
         # el_tracker.close()
 
-    # pylink.closeGraphics()
+    pylink.closeGraphics()
 
 
 # def abort_trial():
