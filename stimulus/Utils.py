@@ -4,15 +4,15 @@ import random
 import tkinter as tk
 import pygame
 import argparse
-
+import os
 import pylink
-
+from bidi.algorithm import get_display
 pygame.init()
 screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 WIDTH, HEIGHT = screen.get_size()
 print(f"Screen dimensions: {WIDTH}x{HEIGHT}")
 
-DISPLAY_SIZE_MULTIPLIER = 1.75
+DISPLAY_SIZE_MULTIPLIER = 1
 # Colors
 WHITE, RED, GREEN, BLACK = (255,255,255), (255,0,0), (0,255,0), (0,0,0)
 BLUE = (0, 0, 255)
@@ -23,6 +23,10 @@ args = parser.parse_args()
 DUMMY_MODE = args.dummy
 
 MOUSE_POS_MSG = "!MOUSE_POS"
+WALDO_FOLDER = "stimulus/VisualSearch/waldo_images/"
+instruction_font = pygame.font.Font("stimulus/instructions/hebrew_font.ttf", int(40  * DISPLAY_SIZE_MULTIPLIER)) 
+
+
     
 def generate_grid_positions(n_items, jitter=True):
     aspect_ratio = WIDTH / HEIGHT
@@ -119,3 +123,48 @@ def show_explanation_screen(images):
                     current_page -= 1
                 elif (event.key == pygame.K_RETURN or event.key ==  pygame.K_KP_ENTER) and current_page == total_pages - 1:
                     return
+                
+
+def display_instructions(lines,screen, waldo_image=False):
+    pygame.event.clear()
+    def wait_for_keypress():
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_ESCAPE:
+                        pygame.quit()
+                        exit()
+                    return
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    exit()
+
+   
+    screen.fill(WHITE)
+    y_offset = 100 * DISPLAY_SIZE_MULTIPLIER  # Start position for the first line
+    for logical in lines:
+        visual = get_display(logical)        # <- line 1: reorder for RTL/BiDi
+        surf   = instruction_font.render(visual, True, (0, 0, 0))
+        x      = screen.get_width() - surf.get_width() - 50 * DISPLAY_SIZE_MULTIPLIER
+        screen.blit(surf, (x, y_offset))
+        y_offset += 80 * DISPLAY_SIZE_MULTIPLIER
+
+    if waldo_image:
+                    # Load and display example Waldo image
+                    example_path = os.path.join(WALDO_FOLDER, "waldo_example.png")
+                    if os.path.exists(example_path):
+                        waldo_img = pygame.image.load(example_path).convert_alpha()
+                        # Scale to width = 200 px
+                        w_ratio = 200 * DISPLAY_SIZE_MULTIPLIER / waldo_img.get_width()
+                        new_size = (200 * DISPLAY_SIZE_MULTIPLIER, int(waldo_img.get_height() * w_ratio))
+                        waldo_img = pygame.transform.scale(waldo_img, new_size)
+
+                        # Blit to bottom center
+                        screen.blit(waldo_img, (WIDTH//2 - new_size[0]//2, HEIGHT - new_size[1] - 50))
+                    else:
+                        print("Example Waldo image not found at", example_path)
+
+    pygame.display.flip()
+    wait_for_keypress()
+
+

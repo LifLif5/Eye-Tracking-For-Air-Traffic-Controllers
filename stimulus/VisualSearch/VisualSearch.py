@@ -10,11 +10,64 @@ import glob
 
 import pylink
 
-from ..Utils import generate_grid_positions, drift_correction, HEIGHT,WIDTH,WHITE, BLACK,RED,BLUE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER
+from ..Utils import generate_grid_positions, drift_correction,display_instructions, HEIGHT,WIDTH,WHITE, BLACK,RED,BLUE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER,WALDO_FOLDER
 
 # Initialize pygame
 pygame.init()
 
+intro_instructions = [
+    "ברוכים הבאים למשימת החיפוש החזותי!",
+    "המשימה כוללת 4 חלקים בדרגות קושי עולות.",
+    "בכל חלק מספר הסחות-הדעת (אותיות/אובייקטים מבלבלים) יעלה בהדרגה, וכך גם רמת הקושי.",
+    "",
+    "לחצו על מקש כלשהו כדי להמשיך לחלק הראשון..."
+]
+
+# --- Phase 1: Pop-out search (Hebrew) ---
+pop_out_instructions = [
+    "חלק ראשון:",
+    "בכל סיבוב, יופיע + במרכז המסך, עליכם להסתכל על המרכז שלו.",
+    "לאחר השהיה קצרה יופיע סט של אותיות.",
+    "עליכם למצוא את האות T האדומה וללחוץ עליה במהירות האפשרית.",
+    "",
+    "לחצו על מקש כלשהו כדי להתחיל את הניסוי..."
+]
+
+# --- Phase 2: Feature search (Hebrew) ---
+feature_instructions = [
+    "חלק שני:",
+    "כעת נעבור למשימה קצת יותר קשה .",
+    "כל האותיות יהיו שחורות.",
+    "יופיעו הרבה אותיות L ורק אות T אחת.",
+    "עליכם למצוא את האות T וללחוץ עליה במהירות האפשרית.",
+    "",
+    "לחצו על מקש כלשהו כדי להתחיל את הניסוי..."
+]
+
+# --- Phase 3: Conjunction search (Hebrew) ---
+conjunction_instructions = [
+    "חלק שלישי:",
+    "כעת נעבור למשימה קשה עוד יותר.",
+    "תראו סט של אותיות, חלקן T וחלקן L.",
+    "עליכם למצוא T כחולה או L אדומה וללחוץ עליה במהירות האפשרית.",
+    "",
+    "לחצו על מקש כלשהו כדי להתחיל את הניסוי..."
+]
+
+# --- Phase 4: Waldo scenes (Hebrew) ---
+waldo_instructions = [
+    "חלק רביעי ואחרון!",
+    "בכל סיבוב תופיע תמונת קומיקס .",
+    "מצאו את WALDO (דוגמה למטה) והקליקו עליו.",
+    "אם אינכם מצליחים למצוא אותו תוך 30 שניות, נעבור לסיבוב הבא.",
+    "",
+    "לחצו על מקש כלשהו כדי להמשיך..."
+]
+
+ending_instructions = [
+    "סיימתם את המשימה!!!!!",
+    "לחצו על מקש כלשהו כדי להמשיך."
+]
 # Parameters
 FONT_SIZE = int(40 * DISPLAY_SIZE_MULTIPLIER)
 USE_NOISE = True  # Set to False for exact center, True for jittered
@@ -23,12 +76,10 @@ USE_NOISE = True  # Set to False for exact center, True for jittered
 T_SHAPE = "T"
 L_SHAPE = "L"
 FILE_LOCATION = "stimulus/VisualSearch/"
-WALDO_FOLDER = "stimulus/VisualSearch/waldo_images/"
 # Initialize screen
 screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption("Visual Search Task")
 font = pygame.font.SysFont(None, FONT_SIZE, bold=True)
-instructions_font = pygame.font.SysFont(None, FONT_SIZE, bold=False)
 
 def save_trial_config(search_type, trial_data):
     filename = f"{FILE_LOCATION}{search_type.lower()}_trials.json"
@@ -57,44 +108,6 @@ def draw_letter(letter, color, pos, angle=0):
     screen.blit(text_surface, rect.topleft)
 
 
-def wait_for_keypress():
-    while True:
-        for event in pygame.event.get():
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_ESCAPE:
-                    pygame.quit()
-                    exit()
-                return
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                exit()
-
-
-def display_instructions(lines, waldo_image=False):
-    screen.fill(WHITE)
-    y_offset = 100
-    for line in lines:
-        txt_surf = instructions_font.render(line, True, (0, 0, 0))
-        screen.blit(txt_surf, (50 * DISPLAY_SIZE_MULTIPLIER, y_offset))
-        y_offset += 50 * DISPLAY_SIZE_MULTIPLIER
-
-    if waldo_image:
-        # Load and display example Waldo image
-        example_path = os.path.join(WALDO_FOLDER, "waldo_example.png")
-        if os.path.exists(example_path):
-            waldo_img = pygame.image.load(example_path).convert_alpha()
-            # Scale to width = 200 px
-            w_ratio = 200 * DISPLAY_SIZE_MULTIPLIER / waldo_img.get_width()
-            new_size = (200 * DISPLAY_SIZE_MULTIPLIER, int(waldo_img.get_height() * w_ratio))
-            waldo_img = pygame.transform.scale(waldo_img, new_size)
-
-            # Blit to bottom center
-            screen.blit(waldo_img, (WIDTH//2 - new_size[0]//2, HEIGHT - new_size[1] - 50))
-        else:
-            print("Example Waldo image not found at", example_path)
-
-    pygame.display.flip()
-    wait_for_keypress()
 
 def search_trial(trial_count, el_tracker, SEARCH_TYPE, N_DISTRACTORS, use_saved_config=False):
     el_tracker.sendMessage(f"TRIALID {trial_count}")
@@ -247,6 +260,8 @@ def waldo_trial(trial_id, el_tracker, image_surf, bbox, timeout=20):
     return -1
 
 def main_visual_search_experiment():
+    display_instructions(intro_instructions, screen)
+
     el_tracker = pylink.getEYELINK()
     performance = []
     num_trials = 2 # TODO 8
@@ -257,15 +272,7 @@ def main_visual_search_experiment():
 
     # --- Phase 1: Pop-out search ---
     pylink.flushGetkeyQueue()
-    display_instructions([
-        "Welcome to the Visual Search Task!",
-        "Each trial you will see a + sign in the center of the screen.",
-        "This is your fixation point.",
-        "After a short delay, you will see a set of letters.",
-        "Your task is to find the RED T letter and press it as quickly as possible.",
-        "",
-        "Press any key to start the experiment..."
-    ])
+    display_instructions(pop_out_instructions,screen)
 
     el_tracker.sendMessage("PHASE1_POP_OUT_START")
 
@@ -281,15 +288,7 @@ def main_visual_search_experiment():
 
     # --- Phase 2: Feature search ---
     pylink.flushGetkeyQueue()
-    display_instructions([
-        "Great Job!",
-        "Now we will do a more difficult task.",
-        "All letters will be black.",
-        "There will be many L letters and only one T letter.",
-        "Your task is to find the T and press it as quickly as possible.",
-        "",
-        "Press any key to start the experiment..."
-    ])
+    display_instructions(feature_instructions,screen)
 
     el_tracker.sendMessage("PHASE2_FEATURE_SEARCH_START")
 
@@ -305,14 +304,7 @@ def main_visual_search_experiment():
 
     # --- Phase 3: Conjunction search ---
     pylink.flushGetkeyQueue()
-    display_instructions([
-        "Great Job!",
-        "Now we move to an even harder task.",
-        "You will see a set of letters, some of which are T and some are L.",
-        "Your task is to find a BLUE T OR a RED L and press it as quickly as possible.",
-        "",
-        "Press any key to start the experiment..."
-    ])
+    display_instructions(conjunction_instructions,screen)
 
     el_tracker.sendMessage("PHASE3_CONJUNCTION_SEARCH_START")
 
@@ -336,14 +328,7 @@ def main_visual_search_experiment():
     waldo_imgs = sorted(glob.glob(WALDO_FOLDER + "*.jpg"))[:10]   # 10 scenes
 
     # instructions
-    display_instructions([
-        "Last part!",
-        "You will see crowded cartoon scenes.",
-        "Find WALDO (example below) and click him.",
-        "If you cannot find him within 30 s the scene will advance.",
-        "",
-        "Press any key to continue..."
-    ], waldo_image=True)
+    display_instructions(waldo_instructions,screen, waldo_image=True)
 
 
     el_tracker.sendMessage("PHASE4_WALDO_START")
@@ -369,6 +354,7 @@ def main_visual_search_experiment():
     pylink.pumpDelay(100)
     # ----------------------------------------------------------
 
+    display_instructions(ending_instructions, screen)
 
     # --- End of experiment ---
     return performance

@@ -6,7 +6,7 @@ import yaml
 import os
 import pylink
 from MouseMovements.MouseTracker import MouseRecorder
-from ..Utils import generate_grid_positions, drift_correction, show_explanation_screen
+from ..Utils import generate_grid_positions, drift_correction, show_explanation_screen, display_instructions
 from ..Utils import HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK, YELLOW, DUMMY_MODE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER
 
 
@@ -20,7 +20,18 @@ font = pygame.font.SysFont(None, int(40 * DISPLAY_SIZE_MULTIPLIER))
 BALL_RADIUS = int(20 * DISPLAY_SIZE_MULTIPLIER)
 
 
-                
+# --- Opening text for the entire experiment (Hebrew) ---
+experiment_opening = [
+    "ברוכים הבאים לניסוי!",
+    "",
+    "הניסוי מורכב מארבע משימות שונות וייקח סך הכול 35-40 דקות,",
+    "תוכלו לקחת הפסקות, אבל עדיף לא באמצע משימה.",
+    "",
+    "כאשר תראו מסך אפור, זהו שלב כיול/וולידציה של עוקב העיניים ואינו חלק מהמשימות עצמן.",
+    "כשיש מסך כזה, ומופיעות נקודות התפקסות, השתדלו להתסכל למרכז שלהן.",
+    "",
+    "לחצו על מקש כלשהו כדי להמשיך למשימה הראשונה..."
+]                
 # Load or initialize config
 CONFIG_PATH = "stimulus\\MOT\\mot_config.yaml"
 if os.path.exists(CONFIG_PATH):
@@ -211,6 +222,7 @@ def mot_trial(el_tracker : pylink.EyeLink, trial_index):
 
 
 def main_mot_experiment():
+    display_instructions(experiment_opening, screen)
     performance = []
     try:
         el_tracker = pylink.getEYELINK()
