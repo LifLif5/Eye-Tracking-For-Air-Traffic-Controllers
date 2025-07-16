@@ -264,8 +264,7 @@ def main_visual_search_experiment():
 
     el_tracker = pylink.getEYELINK()
     performance = []
-    num_trials = 2 # TODO 8
-    # num_distractors = [7, 17, 31, 65, 119, 189]
+    num_trials = 8 # TODO 8
     num_distractors = [7, 31, 65]
     
     trial_count = 0
@@ -279,7 +278,7 @@ def main_visual_search_experiment():
     for distractors in num_distractors:
         drift_correction(el_tracker)  # Ensure tracker is calibrated
         for _ in range(num_trials):
-            performance.append(search_trial(trial_count, el_tracker, "pop_out", distractors, use_saved_config=False))
+            performance.append(search_trial(trial_count, el_tracker, "pop_out", distractors, use_saved_config=True))
             trial_count += 1
 
     el_tracker.sendMessage("PHASE1_POP_OUT_END")
@@ -295,7 +294,7 @@ def main_visual_search_experiment():
     for distractors in num_distractors:
         drift_correction(el_tracker)  # Ensure tracker is calibrated
         for _ in range(num_trials):
-            performance.append(search_trial(trial_count, el_tracker, "feature", distractors, use_saved_config=False))
+            performance.append(search_trial(trial_count, el_tracker, "feature", distractors, use_saved_config=True))
             trial_count += 1
 
     el_tracker.sendMessage("PHASE2_FEATURE_SEARCH_END")
@@ -311,7 +310,7 @@ def main_visual_search_experiment():
     for distractors in num_distractors:
         drift_correction(el_tracker)  # Ensure tracker is calibrated
         for _ in range(num_trials):
-            performance.append(search_trial(trial_count, el_tracker, "conjunction", distractors, use_saved_config=False))
+            performance.append(search_trial(trial_count, el_tracker, "conjunction", distractors, use_saved_config=True))
             trial_count += 1
 
     el_tracker.sendMessage("PHASE3_CONJUNCTION_SEARCH_END")

@@ -132,7 +132,9 @@ def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" :
     results_folder = 'results'
     if not os.path.exists(results_folder):
         os.makedirs(results_folder)
-
+    participant_folder = os.path.join(results_folder, participant_name)
+    if not os.path.exists(participant_folder):
+        os.makedirs(participant_folder)
     # We download EDF data file from the EyeLink Host PC to the local hard
     # drive at the end of each testing session, here we rename the EDF to
     # include session start date/time
@@ -140,7 +142,7 @@ def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" :
     session_identifier =  task_name + "_" +edf_fname + time_str
 
     # create a folder for the current testing session in the "results" folder
-    session_folder = os.path.join(results_folder, session_identifier)
+    session_folder = os.path.join(participant_folder, session_identifier)
     if not os.path.exists(session_folder):
         os.makedirs(session_folder)
 
@@ -223,7 +225,7 @@ def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" :
     # Set a gamepad button to accept calibration/drift check target
     # You need a supported gamepad/button box that is connected to the Host PC
     el_tracker.sendCommand("button_function 5 'accept_target_fixation'")
-
+    el_tracker.setScreenSimulationDistance(850)
     # Step 4: set up a graphics environment for calibration
         
     # scn_width, scn_height = win.get_size()

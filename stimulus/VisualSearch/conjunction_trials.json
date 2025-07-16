@@ -1,0 +1,7682 @@
+[
+  {
+    "trial_id": 48,
+    "target_pos": [
+      414,
+      1838
+    ],
+    "target_type": "L_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1678,
+          481
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2241,
+          1885
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2447,
+          666
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1465,
+          1549
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3416,
+          769
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3150,
+          1621
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          457,
+          437
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 49,
+    "target_pos": [
+      361,
+      308
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2271,
+          407
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1425,
+          1462
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3287,
+          1790
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1334,
+          316
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2223,
+          1722
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          652,
+          1488
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3235,
+          692
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 50,
+    "target_pos": [
+      2457,
+      677
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3266,
+          1358
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          438,
+          299
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2600,
+          1645
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1648,
+          1793
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3226,
+          278
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1253,
+          386
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          503,
+          1782
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 51,
+    "target_pos": [
+      2425,
+      643
+    ],
+    "target_type": "L_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3413,
+          772
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          567,
+          635
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          404,
+          1359
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3431,
+          1518
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1228,
+          1786
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2354,
+          1540
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1273,
+          738
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 52,
+    "target_pos": [
+      322,
+      1607
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3519,
+          1591
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3291,
+          326
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2293,
+          1623
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1583,
+          1393
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          638,
+          469
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2465,
+          342
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1583,
+          606
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 53,
+    "target_pos": [
+      1203,
+      359
+    ],
+    "target_type": "L_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2371,
+          1669
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3538,
+          1718
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          685,
+          476
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1584,
+          1715
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          596,
+          1415
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3531,
+          445
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2618,
+          654
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 54,
+    "target_pos": [
+      3482,
+      1352
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2298,
+          397
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1220,
+          410
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3412,
+          629
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1372,
+          1428
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          464,
+          1565
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          627,
+          456
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2353,
+          1737
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 55,
+    "target_pos": [
+      376,
+      682
+    ],
+    "target_type": "L_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3233,
+          342
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1387,
+          742
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          325,
+          1629
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2420,
+          617
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2521,
+          1571
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3384,
+          1587
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1247,
+          1748
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 56,
+    "target_pos": [
+      1657,
+      790
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          663,
+          1275
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2126,
+          1815
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          163,
+          1804
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1122,
+          763
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          218,
+          822
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1797,
+          1372
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3095,
+          1444
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          223,
+          1303
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          757,
+          1879
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3582,
+          824
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3023,
+          356
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          660,
+          225
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          291,
+          224
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2740,
+          749
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2164,
+          930
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2086,
+          387
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3642,
+          1261
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1615,
+          1832
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2673,
+          1283
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3221,
+          859
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1107,
+          1810
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2719,
+          1777
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2048,
+          1216
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3061,
+          1806
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          808,
+          935
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1600,
+          164
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1156,
+          353
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3650,
+          270
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2669,
+          229
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1289,
+          1224
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3589,
+          1871
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 57,
+    "target_pos": [
+      688,
+      1397
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2152,
+          754
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3225,
+          1337
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1678,
+          1413
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          706,
+          2012
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3658,
+          1982
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3694,
+          331
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2211,
+          2000
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1565,
+          389
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3550,
+          908
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1197,
+          1762
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1657,
+          1940
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          617,
+          365
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2229,
+          1229
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1229,
+          724
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2608,
+          1374
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3576,
+          1261
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          687,
+          772
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2150,
+          337
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2597,
+          253
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          245,
+          1987
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3220,
+          868
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          271,
+          1397
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1120,
+          164
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1315,
+          1334
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2716,
+          1893
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2591,
+          698
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3008,
+          1916
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3223,
+          219
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1695,
+          712
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          239,
+          363
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          173,
+          858
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 58,
+    "target_pos": [
+      3592,
+      761
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3530,
+          1343
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          611,
+          157
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3169,
+          1772
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2155,
+          1244
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          637,
+          1438
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          251,
+          282
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1195,
+          331
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2044,
+          1988
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2246,
+          151
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3225,
+          1356
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2613,
+          325
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1600,
+          1967
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3219,
+          930
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1191,
+          1800
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2216,
+          716
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1751,
+          1215
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          220,
+          1389
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1575,
+          294
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1095,
+          1367
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2621,
+          1788
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          652,
+          1831
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3701,
+          339
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1216,
+          907
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3493,
+          1868
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2686,
+          1478
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          319,
+          1936
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3237,
+          207
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2636,
+          812
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          729,
+          798
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1595,
+          725
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          300,
+          680
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 59,
+    "target_pos": [
+      739,
+      209
+    ],
+    "target_type": "L_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3226,
+          404
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2667,
+          1861
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2177,
+          1919
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2251,
+          1297
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3719,
+          163
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2590,
+          214
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          153,
+          198
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2600,
+          1383
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          732,
+          1324
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3141,
+          1905
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3200,
+          713
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1150,
+          148
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1106,
+          1407
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1738,
+          352
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1121,
+          1815
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2229,
+          941
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          252,
+          1382
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2209,
+          392
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1766,
+          1440
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          762,
+          868
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1601,
+          1945
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3611,
+          675
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          129,
+          884
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3655,
+          1384
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1279,
+          696
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3606,
+          1800
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          806,
+          1856
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2687,
+          934
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1758,
+          869
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3120,
+          1232
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          228,
+          1856
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 60,
+    "target_pos": [
+      1651,
+      375
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2276,
+          227
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          829,
+          1984
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          140,
+          233
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1165,
+          766
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2674,
+          1282
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1199,
+          375
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2648,
+          318
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1240,
+          1478
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1710,
+          1483
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          325,
+          1469
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1144,
+          1798
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3044,
+          245
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          346,
+          1880
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2671,
+          830
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2715,
+          1885
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1669,
+          748
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2046,
+          1983
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3550,
+          1385
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          811,
+          313
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3020,
+          1904
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2198,
+          1216
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3155,
+          1319
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3696,
+          708
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3005,
+          930
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1616,
+          1979
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          797,
+          1247
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          266,
+          816
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3594,
+          393
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2076,
+          781
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          651,
+          944
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3686,
+          1811
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 61,
+    "target_pos": [
+      2741,
+      1248
+    ],
+    "target_type": "L_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3093,
+          854
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2268,
+          145
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1237,
+          395
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3499,
+          829
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2756,
+          1757
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3097,
+          1917
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1619,
+          934
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3681,
+          1356
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          176,
+          303
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2191,
+          1398
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          818,
+          714
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1648,
+          1342
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3540,
+          160
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          234,
+          760
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3537,
+          1809
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          359,
+          1907
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2562,
+          812
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1194,
+          879
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          705,
+          1462
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          827,
+          1874
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          183,
+          1441
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1224,
+          1450
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1726,
+          281
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2705,
+          225
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2153,
+          1797
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3018,
+          1358
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2088,
+          735
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1681,
+          1791
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3016,
+          272
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          624,
+          139
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1159,
+          1844
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 62,
+    "target_pos": [
+      778,
+      1861
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1315,
+          1869
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3654,
+          760
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          717,
+          831
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2243,
+          717
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1751,
+          280
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3081,
+          1294
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2168,
+          1357
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          281,
+          296
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3132,
+          1815
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2253,
+          170
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3625,
+          318
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          164,
+          1837
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3149,
+          903
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          822,
+          1283
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          328,
+          768
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2728,
+          832
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2648,
+          1791
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1657,
+          1369
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          272,
+          1462
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2757,
+          1409
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2085,
+          1998
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3668,
+          1337
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1289,
+          895
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          619,
+          147
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1684,
+          1856
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1597,
+          881
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2595,
+          236
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3100,
+          369
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1179,
+          273
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1099,
+          1365
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3631,
+          1929
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 63,
+    "target_pos": [
+      2097,
+      334
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2174,
+          1469
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3633,
+          1289
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2715,
+          308
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1180,
+          885
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3017,
+          761
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3683,
+          178
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1566,
+          227
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          313,
+          172
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1174,
+          1814
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2727,
+          1810
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          308,
+          1991
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2089,
+          841
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2051,
+          1852
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          775,
+          262
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1576,
+          1922
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2554,
+          705
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3653,
+          913
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3642,
+          1758
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3089,
+          302
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3092,
+          1982
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3045,
+          1439
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1209,
+          234
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          143,
+          737
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1662,
+          751
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          136,
+          1483
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2744,
+          1348
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          828,
+          1220
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1084,
+          1290
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          645,
+          1919
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1786,
+          1279
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          776,
+          908
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 64,
+    "target_pos": [
+      2324,
+      570
+    ],
+    "target_type": "L_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1548,
+          952
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2299,
+          1242
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          808,
+          1637
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3615,
+          1276
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1999,
+          493
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2962,
+          487
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          476,
+          1606
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1653,
+          1664
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3041,
+          1536
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2607,
+          1202
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3295,
+          229
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          440,
+          1995
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1932,
+          2013
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1653,
+          1326
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1538,
+          498
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2642,
+          111
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1240,
+          169
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          206,
+          1983
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3655,
+          221
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3004,
+          895
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1560,
+          192
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1165,
+          1176
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3735,
+          507
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3384,
+          1176
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          208,
+          541
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1905,
+          952
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          468,
+          603
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3383,
+          2061
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          827,
+          2042
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1934,
+          1607
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2201,
+          1584
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2684,
+          477
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          151,
+          915
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          128,
+          1199
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1584,
+          1912
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3271,
+          508
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3726,
+          1976
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2190,
+          834
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          187,
+          1639
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1252,
+          1590
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          904,
+          245
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3596,
+          845
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          801,
+          555
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2318,
+          236
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1238,
+          2044
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1282,
+          963
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1136,
+          477
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3686,
+          1560
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2984,
+          128
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          907,
+          905
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          479,
+          1335
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          202,
+          242
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2586,
+          1928
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2346,
+          1956
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3034,
+          2059
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3346,
+          1534
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          543,
+          841
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2659,
+          1659
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1854,
+          254
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2900,
+          1339
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2628,
+          872
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          905,
+          1197
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1911,
+          1211
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          588,
+          184
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3311,
+          901
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 65,
+    "target_pos": [
+      879,
+      593
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1891,
+          1567
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2978,
+          1950
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          785,
+          1951
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          96,
+          248
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3029,
+          1591
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2604,
+          1987
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          926,
+          102
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          899,
+          1196
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          201,
+          2019
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          222,
+          1303
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3602,
+          1559
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2234,
+          583
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          870,
+          889
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1915,
+          1314
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2352,
+          1915
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1587,
+          257
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2554,
+          1572
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1153,
+          209
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3276,
+          254
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3345,
+          888
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2234,
+          1632
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          555,
+          113
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1195,
+          821
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2614,
+          1319
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1850,
+          987
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2536,
+          822
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3242,
+          1196
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1531,
+          557
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2952,
+          873
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3723,
+          1294
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1964,
+          223
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1137,
+          2066
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3664,
+          504
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1172,
+          1273
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3344,
+          498
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          472,
+          1653
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3647,
+          836
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1507,
+          1332
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          146,
+          565
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          470,
+          1178
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3009,
+          571
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          179,
+          932
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          476,
+          968
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3010,
+          1340
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2250,
+          961
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2557,
+          212
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2226,
+          264
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2971,
+          221
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3318,
+          1910
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2288,
+          1187
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1538,
+          2011
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2631,
+          552
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1270,
+          1656
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          218,
+          1549
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3666,
+          131
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3714,
+          2002
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1499,
+          1624
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3398,
+          1550
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1136,
+          587
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1958,
+          1991
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          505,
+          508
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          587,
+          1950
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1965,
+          586
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1635,
+          815
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          800,
+          1683
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 66,
+    "target_pos": [
+      2587,
+      1285
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3599,
+          1549
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          164,
+          1892
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1485,
+          1699
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2892,
+          1699
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2304,
+          559
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          148,
+          476
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          574,
+          1686
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3016,
+          831
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1630,
+          1174
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2003,
+          1667
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2355,
+          186
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3399,
+          253
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          866,
+          1253
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3255,
+          579
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1526,
+          204
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3359,
+          1700
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1234,
+          126
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1270,
+          2036
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3017,
+          1312
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          944,
+          965
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          251,
+          1265
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2702,
+          2011
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1190,
+          961
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2903,
+          195
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1886,
+          1236
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2182,
+          1202
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3662,
+          212
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1898,
+          843
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          914,
+          1993
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          804,
+          171
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          157,
+          1691
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          851,
+          526
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1960,
+          549
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          852,
+          1665
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          148,
+          185
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3280,
+          2024
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3655,
+          1973
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3399,
+          877
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2294,
+          1897
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2685,
+          1549
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1569,
+          971
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          93,
+          978
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1885,
+          1942
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2662,
+          180
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          565,
+          613
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3644,
+          467
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2267,
+          825
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          489,
+          108
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3006,
+          1933
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3645,
+          1176
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1879,
+          121
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2603,
+          845
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1603,
+          2030
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          516,
+          921
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2258,
+          1622
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2937,
+          574
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3397,
+          1237
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1292,
+          1665
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1605,
+          522
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2644,
+          575
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1227,
+          1253
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          487,
+          1981
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          463,
+          1194
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3700,
+          922
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1162,
+          618
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 67,
+    "target_pos": [
+      2230,
+      927
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          101,
+          544
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          577,
+          1330
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1308,
+          976
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2880,
+          491
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3672,
+          228
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1969,
+          822
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          794,
+          1175
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3241,
+          539
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3345,
+          1636
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2330,
+          1560
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1164,
+          1208
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2991,
+          1286
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          191,
+          1211
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1185,
+          481
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3704,
+          2011
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          253,
+          2015
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          535,
+          152
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3688,
+          944
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          447,
+          465
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3370,
+          1933
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2941,
+          962
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1974,
+          595
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2574,
+          124
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2645,
+          933
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1221,
+          1911
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2625,
+          453
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1509,
+          159
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2972,
+          2053
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          944,
+          1696
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3367,
+          830
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3642,
+          1218
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1986,
+          152
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1944,
+          1958
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          135,
+          1652
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          523,
+          2023
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1495,
+          874
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1584,
+          1979
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2271,
+          1974
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1588,
+          1538
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          255,
+          933
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2551,
+          1639
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          597,
+          979
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3391,
+          186
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1626,
+          547
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3673,
+          508
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2238,
+          165
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          589,
+          1603
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3014,
+          1564
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1286,
+          170
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          915,
+          520
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1306,
+          1687
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          789,
+          1947
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          801,
+          845
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2218,
+          1267
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2213,
+          499
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          245,
+          121
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2662,
+          1959
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3654,
+          1600
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1837,
+          1172
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1869,
+          1595
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2988,
+          267
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1491,
+          1228
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3373,
+          1251
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          819,
+          181
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2561,
+          1336
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 68,
+    "target_pos": [
+      1489,
+      1899
+    ],
+    "target_type": "L_SHAPE",
+    "target_color": "RED",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3618,
+          1577
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1307,
+          1932
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3281,
+          243
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2186,
+          1595
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2687,
+          1547
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2654,
+          111
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3329,
+          1911
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2196,
+          539
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          218,
+          1991
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2896,
+          2060
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1298,
+          893
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          445,
+          1189
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2247,
+          144
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2917,
+          489
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1848,
+          854
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1248,
+          623
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1188,
+          1289
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3391,
+          851
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3583,
+          1206
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          146,
+          1333
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3378,
+          1705
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3300,
+          1283
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1983,
+          1682
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          855,
+          1651
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3294,
+          588
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1870,
+          586
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2998,
+          129
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2565,
+          519
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1971,
+          2035
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1583,
+          886
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          903,
+          1266
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1629,
+          477
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1849,
+          183
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3025,
+          1677
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          132,
+          1704
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2622,
+          975
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1589,
+          249
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1635,
+          1550
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2200,
+          1975
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1934,
+          1183
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2572,
+          1301
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1485,
+          1346
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          515,
+          861
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          880,
+          580
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          200,
+          902
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3624,
+          195
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2328,
+          891
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          813,
+          929
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2683,
+          1916
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1176,
+          235
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          541,
+          1638
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          602,
+          2048
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          608,
+          155
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          888,
+          182
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          234,
+          131
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2984,
+          953
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1198,
+          1657
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2206,
+          1311
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          261,
+          572
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3639,
+          485
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3750,
+          922
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          468,
+          495
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2885,
+          1181
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3638,
+          1938
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          832,
+          2015
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 69,
+    "target_pos": [
+      1897,
+      1983
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1644,
+          1671
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2612,
+          1303
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1543,
+          833
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          951,
+          1695
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1979,
+          215
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          835,
+          1254
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2288,
+          176
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1632,
+          253
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          507,
+          138
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          159,
+          2043
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2303,
+          573
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3008,
+          1612
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1280,
+          1928
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3354,
+          1569
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2242,
+          836
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          237,
+          1331
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2998,
+          1927
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          444,
+          860
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2638,
+          202
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          796,
+          103
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          580,
+          2051
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2945,
+          1348
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          145,
+          133
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1855,
+          495
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3608,
+          496
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1266,
+          881
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3584,
+          234
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1274,
+          556
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3247,
+          115
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          512,
+          537
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1514,
+          625
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2557,
+          625
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3597,
+          839
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2584,
+          827
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3621,
+          1542
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          816,
+          496
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          599,
+          1226
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3345,
+          820
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2315,
+          1552
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2274,
+          2007
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1964,
+          1257
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1240,
+          1551
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3316,
+          1194
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1151,
+          130
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3335,
+          2011
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1526,
+          1276
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2003,
+          1630
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          830,
+          1925
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          119,
+          489
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3663,
+          1185
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3382,
+          586
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3009,
+          495
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2603,
+          1995
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1955,
+          961
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1200,
+          1290
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          87,
+          961
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2617,
+          1692
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2342,
+          1319
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1530,
+          2018
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3582,
+          2028
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3048,
+          237
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3033,
+          817
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          94,
+          1612
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          946,
+          891
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          437,
+          1631
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 70,
+    "target_pos": [
+      1883,
+      965
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1558,
+          1532
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2348,
+          522
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          206,
+          237
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          513,
+          487
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1961,
+          2066
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2328,
+          974
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2601,
+          129
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2590,
+          1609
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2325,
+          1284
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1888,
+          125
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2652,
+          2059
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1958,
+          476
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1639,
+          1305
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3691,
+          1218
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1227,
+          1547
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          954,
+          893
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          182,
+          1628
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3301,
+          609
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1902,
+          1639
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          890,
+          117
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3034,
+          116
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          218,
+          2046
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3308,
+          241
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3393,
+          1234
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3622,
+          1981
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3041,
+          1179
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3013,
+          880
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          102,
+          822
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1534,
+          950
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1506,
+          99
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3261,
+          2008
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          795,
+          1899
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          214,
+          562
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          545,
+          1605
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          3700,
+          235
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3378,
+          973
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2642,
+          853
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          809,
+          1558
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3670,
+          1606
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2547,
+          1249
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          120,
+          1250
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          3054,
+          551
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1192,
+          2024
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1229,
+          551
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2275,
+          133
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2265,
+          2060
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1274,
+          253
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          525,
+          1315
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          606,
+          98
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2664,
+          496
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3626,
+          832
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3019,
+          1913
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          509,
+          1930
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          446,
+          874
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1550,
+          2057
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1504,
+          523
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1934,
+          1329
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3293,
+          1562
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1243,
+          1260
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2256,
+          1648
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3040,
+          1636
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          875,
+          483
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          884,
+          1204
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1199,
+          816
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3693,
+          505
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 71,
+    "target_pos": [
+      2604,
+      828
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLUE",
+    "distractors": [
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          453,
+          104
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1642,
+          1618
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1152,
+          480
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3591,
+          879
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2226,
+          1254
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2248,
+          976
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          3256,
+          463
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2340,
+          1975
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1568,
+          505
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          231,
+          162
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3736,
+          1700
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          1844,
+          249
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2669,
+          169
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          829,
+          2004
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3240,
+          1564
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2629,
+          451
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          1644,
+          99
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          441,
+          481
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2205,
+          258
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1657,
+          947
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          882,
+          944
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          588,
+          1282
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          140,
+          2025
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          477,
+          2051
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1244,
+          1224
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          927,
+          1621
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          861,
+          1237
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2604,
+          1541
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1930,
+          465
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          149,
+          867
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2955,
+          474
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          2233,
+          1676
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3649,
+          1926
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2955,
+          1987
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          929,
+          222
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          3260,
+          186
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          2995,
+          1180
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          3331,
+          1981
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          1249,
+          837
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          2673,
+          1190
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3678,
+          1194
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3317,
+          973
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          571,
+          1696
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          2297,
+          475
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          1848,
+          2039
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3394,
+          1313
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          497,
+          909
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          171,
+          1305
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1591,
+          1306
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 90,
+        "pos": [
+          184,
+          1620
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          1565,
+          2015
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          799,
+          507
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          3603,
+          171
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1844,
+          829
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1848,
+          1629
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          2002,
+          1293
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          2533,
+          2030
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          1300,
+          1674
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 0,
+        "pos": [
+          115,
+          552
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 180,
+        "pos": [
+          2980,
+          878
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 270,
+        "pos": [
+          3731,
+          515
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 270,
+        "pos": [
+          1212,
+          157
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 0,
+        "pos": [
+          3001,
+          145
+        ]
+      },
+      {
+        "shape": "T_SHAPE",
+        "color": "RED",
+        "angle": 180,
+        "pos": [
+          1139,
+          2048
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLUE",
+        "angle": 90,
+        "pos": [
+          2999,
+          1613
+        ]
+      }
+    ]
+  }
+]

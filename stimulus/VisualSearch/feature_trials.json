@@ -1,0 +1,7682 @@
+[
+  {
+    "trial_id": 24,
+    "target_pos": [
+      2252,
+      1494
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3565,
+          1771
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2523,
+          452
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          655,
+          1757
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1244,
+          472
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3164,
+          787
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1474,
+          1711
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          404,
+          416
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 25,
+    "target_pos": [
+      526,
+      583
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3485,
+          1858
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3214,
+          372
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1490,
+          645
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          247,
+          1410
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1307,
+          1363
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2222,
+          332
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2468,
+          1350
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 26,
+    "target_pos": [
+      3277,
+      1538
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          653,
+          303
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2243,
+          1814
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1271,
+          1528
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2434,
+          610
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3594,
+          746
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          355,
+          1601
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1300,
+          350
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 27,
+    "target_pos": [
+      2186,
+      312
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3373,
+          1662
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          501,
+          1624
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1548,
+          1467
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3213,
+          738
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2517,
+          1386
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          615,
+          307
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1327,
+          396
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 28,
+    "target_pos": [
+      3415,
+      1445
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1577,
+          290
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          321,
+          1535
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2639,
+          523
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1465,
+          1794
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3369,
+          700
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          641,
+          401
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2280,
+          1430
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 29,
+    "target_pos": [
+      3470,
+      330
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1403,
+          1422
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2559,
+          297
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1354,
+          420
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2351,
+          1776
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3417,
+          1826
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          252,
+          1423
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          422,
+          761
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 30,
+    "target_pos": [
+      3192,
+      494
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2433,
+          701
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          523,
+          1476
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3160,
+          1854
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          376,
+          578
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1411,
+          1392
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1543,
+          366
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2268,
+          1401
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 31,
+    "target_pos": [
+      2253,
+      1407
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3152,
+          1880
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          303,
+          279
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3498,
+          704
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1282,
+          1560
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1375,
+          392
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          283,
+          1617
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2269,
+          320
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 32,
+    "target_pos": [
+      304,
+      177
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          718,
+          235
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          331,
+          1259
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2726,
+          1429
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          818,
+          880
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1271,
+          698
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3221,
+          291
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          621,
+          1886
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1114,
+          181
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2641,
+          397
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2075,
+          1475
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3671,
+          838
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1785,
+          807
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          177,
+          1828
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1786,
+          1858
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2198,
+          156
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3030,
+          1870
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2067,
+          2005
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          272,
+          844
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2050,
+          924
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3091,
+          747
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2644,
+          1952
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1793,
+          1471
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2707,
+          769
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1175,
+          1775
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          787,
+          1324
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3039,
+          1279
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3617,
+          1987
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3593,
+          389
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3718,
+          1257
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1281,
+          1240
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1786,
+          393
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 33,
+    "target_pos": [
+      1188,
+      1472
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3509,
+          879
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2656,
+          1877
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          826,
+          1975
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1278,
+          1887
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1154,
+          737
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2075,
+          1395
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1745,
+          190
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          214,
+          1305
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          237,
+          840
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1599,
+          1456
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1780,
+          892
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          166,
+          166
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1133,
+          274
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          282,
+          1788
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          821,
+          1231
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2126,
+          404
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3539,
+          1851
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3239,
+          677
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2524,
+          1383
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2570,
+          366
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2116,
+          1907
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3600,
+          374
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2207,
+          767
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3007,
+          238
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3076,
+          1366
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3541,
+          1374
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3163,
+          1937
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2649,
+          816
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          839,
+          143
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          740,
+          701
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1561,
+          1969
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 34,
+    "target_pos": [
+      716,
+      1263
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          605,
+          785
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1678,
+          773
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3048,
+          322
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2141,
+          2009
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2159,
+          691
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          290,
+          1838
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1319,
+          203
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          675,
+          339
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          197,
+          1248
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          191,
+          400
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1627,
+          1774
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2639,
+          941
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1089,
+          1973
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1707,
+          237
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3496,
+          1309
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2530,
+          1399
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2721,
+          1844
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1175,
+          1335
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3117,
+          807
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          751,
+          1845
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1581,
+          1397
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2597,
+          141
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          328,
+          805
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1105,
+          746
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3660,
+          848
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3154,
+          1296
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2182,
+          241
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3027,
+          1947
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3717,
+          1770
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3703,
+          341
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2141,
+          1363
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 35,
+    "target_pos": [
+      1649,
+      1269
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3034,
+          1333
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3719,
+          901
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          725,
+          687
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1791,
+          233
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2525,
+          329
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          195,
+          135
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3555,
+          1390
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3037,
+          755
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          337,
+          1302
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          681,
+          2010
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1735,
+          877
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          228,
+          1763
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3582,
+          362
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1668,
+          1771
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2088,
+          1285
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3113,
+          1854
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2749,
+          804
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          799,
+          1246
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3543,
+          1864
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1259,
+          730
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2196,
+          1992
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2730,
+          1348
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          655,
+          369
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1228,
+          1377
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2710,
+          1787
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          348,
+          837
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1107,
+          370
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3209,
+          283
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2211,
+          215
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2207,
+          804
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1134,
+          1968
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 36,
+    "target_pos": [
+      160,
+      1451
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1171,
+          1875
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3588,
+          1416
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1162,
+          260
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          235,
+          734
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2222,
+          234
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3157,
+          1461
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1743,
+          897
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          124,
+          1836
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2569,
+          752
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3492,
+          1995
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          652,
+          692
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1319,
+          733
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          261,
+          258
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2163,
+          710
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1618,
+          1886
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3666,
+          701
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1688,
+          1471
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3229,
+          1805
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2246,
+          1222
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3007,
+          734
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1629,
+          373
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2718,
+          1840
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          818,
+          283
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2069,
+          1881
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1263,
+          1301
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          674,
+          1299
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3491,
+          279
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3146,
+          334
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2655,
+          254
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2571,
+          1288
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          755,
+          1972
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 37,
+    "target_pos": [
+      2701,
+      2023
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3116,
+          895
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          232,
+          744
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2170,
+          1471
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2130,
+          317
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3230,
+          1378
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2667,
+          1332
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2687,
+          882
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3571,
+          1410
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          706,
+          861
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          261,
+          1229
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          306,
+          1755
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1672,
+          1756
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3708,
+          361
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3073,
+          340
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2205,
+          1867
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1712,
+          177
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2565,
+          375
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1171,
+          199
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1766,
+          1419
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1705,
+          700
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1149,
+          795
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1141,
+          1827
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1179,
+          1395
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3549,
+          758
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          666,
+          1421
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3042,
+          1956
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          741,
+          321
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2174,
+          818
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          199,
+          257
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3501,
+          1828
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          746,
+          1896
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 38,
+    "target_pos": [
+      342,
+      905
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2058,
+          1869
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          627,
+          1784
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3507,
+          1349
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          624,
+          1303
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3232,
+          683
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1650,
+          1889
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1643,
+          352
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          704,
+          327
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2041,
+          389
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1785,
+          873
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2041,
+          1482
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1275,
+          1821
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3236,
+          1238
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3586,
+          873
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2731,
+          309
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2521,
+          804
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          798,
+          694
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1086,
+          1302
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          138,
+          154
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3192,
+          255
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3668,
+          398
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          238,
+          1907
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2618,
+          1824
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2650,
+          1351
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1789,
+          1304
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3175,
+          1942
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3704,
+          1967
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          231,
+          1381
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2114,
+          725
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1116,
+          936
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1293,
+          309
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 39,
+    "target_pos": [
+      2236,
+      901
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3701,
+          1947
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3032,
+          283
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1702,
+          162
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          698,
+          908
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          181,
+          1798
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          339,
+          1372
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2578,
+          1981
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2648,
+          888
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3136,
+          743
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3642,
+          679
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1598,
+          815
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          661,
+          1358
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1149,
+          2011
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          612,
+          286
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2175,
+          223
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3153,
+          1375
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1091,
+          843
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1694,
+          1470
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1789,
+          1838
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2051,
+          1422
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1181,
+          1454
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3668,
+          173
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          246,
+          820
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2179,
+          1826
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          687,
+          1979
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3584,
+          1219
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3123,
+          1842
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2540,
+          202
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          298,
+          147
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2696,
+          1239
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1274,
+          263
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 40,
+    "target_pos": [
+      465,
+      1938
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2181,
+          254
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1622,
+          1278
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          610,
+          1575
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3332,
+          1645
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1923,
+          537
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2699,
+          937
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3689,
+          2058
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          817,
+          1916
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1216,
+          1628
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3010,
+          1896
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2597,
+          2031
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          467,
+          870
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3579,
+          229
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          871,
+          1260
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1511,
+          862
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          914,
+          555
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3720,
+          1671
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1897,
+          1920
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          893,
+          969
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          546,
+          1197
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          127,
+          1256
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          947,
+          184
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          147,
+          620
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3325,
+          518
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1293,
+          572
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1922,
+          984
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1595,
+          124
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1212,
+          1271
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          157,
+          1979
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2208,
+          1658
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3377,
+          1981
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1577,
+          1583
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3260,
+          1248
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3327,
+          826
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          602,
+          556
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2880,
+          1615
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1901,
+          1187
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2973,
+          267
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1923,
+          1694
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1154,
+          954
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1513,
+          537
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3581,
+          967
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3017,
+          1332
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2208,
+          1990
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3232,
+          93
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1241,
+          1972
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2585,
+          1176
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1546,
+          2061
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2217,
+          939
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          222,
+          969
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1173,
+          131
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          225,
+          206
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2564,
+          473
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3635,
+          529
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          87,
+          1558
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          786,
+          1673
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2912,
+          982
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2670,
+          234
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2963,
+          514
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1876,
+          191
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2307,
+          457
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3655,
+          1321
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          497,
+          161
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2224,
+          1296
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2662,
+          1541
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 41,
+    "target_pos": [
+      1303,
+      1302
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3394,
+          1591
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3595,
+          247
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          200,
+          1338
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          951,
+          217
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2993,
+          1556
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          109,
+          2046
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2548,
+          1910
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2606,
+          1227
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2356,
+          562
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          446,
+          1697
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2245,
+          1215
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3676,
+          1348
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1876,
+          1946
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3290,
+          978
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1867,
+          179
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          842,
+          1590
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          440,
+          1198
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          543,
+          513
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2892,
+          2018
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3399,
+          1892
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          603,
+          208
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1541,
+          2055
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1511,
+          571
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2571,
+          166
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3699,
+          1570
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2218,
+          956
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1162,
+          1577
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          565,
+          1974
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          840,
+          1246
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1653,
+          1226
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1630,
+          194
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3271,
+          470
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1896,
+          462
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1920,
+          1703
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          952,
+          918
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2678,
+          815
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          238,
+          920
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2308,
+          116
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1964,
+          938
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          848,
+          544
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          241,
+          249
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          160,
+          1652
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1145,
+          509
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2986,
+          897
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2543,
+          1603
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3595,
+          453
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2262,
+          1951
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3624,
+          1961
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          241,
+          493
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1272,
+          1956
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1495,
+          1624
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          598,
+          960
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2911,
+          1190
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1850,
+          1188
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3353,
+          1300
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2328,
+          1626
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2998,
+          245
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2970,
+          590
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3662,
+          855
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2657,
+          452
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1147,
+          810
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          853,
+          1960
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1621,
+          846
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3278,
+          246
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1265,
+          239
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 42,
+    "target_pos": [
+      3648,
+      1593
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1496,
+          225
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          123,
+          2063
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2598,
+          1974
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          190,
+          1278
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3676,
+          1254
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3599,
+          976
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1625,
+          1541
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          232,
+          171
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1847,
+          938
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3700,
+          528
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1150,
+          115
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1886,
+          169
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1570,
+          2002
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3320,
+          1324
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          160,
+          1705
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3346,
+          460
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1933,
+          1213
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          609,
+          1961
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3386,
+          1892
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1208,
+          1596
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2638,
+          495
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3332,
+          221
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          528,
+          489
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2249,
+          1338
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3386,
+          882
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          591,
+          258
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1543,
+          1212
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2931,
+          169
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          786,
+          1917
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          841,
+          816
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2327,
+          1560
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          838,
+          1624
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2241,
+          1903
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1596,
+          578
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2235,
+          179
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2232,
+          507
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2969,
+          836
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2700,
+          1194
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2568,
+          813
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1145,
+          1959
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1533,
+          835
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3318,
+          1602
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2632,
+          1555
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1905,
+          1940
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3023,
+          599
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          106,
+          888
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1903,
+          603
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          550,
+          897
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          836,
+          576
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3735,
+          2032
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          814,
+          1279
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2886,
+          1189
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3735,
+          186
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          531,
+          1543
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2326,
+          901
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1886,
+          1646
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1152,
+          617
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2960,
+          1666
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1197,
+          1335
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3013,
+          2049
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          512,
+          1298
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          164,
+          605
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          909,
+          256
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1226,
+          839
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2580,
+          225
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 43,
+    "target_pos": [
+      2256,
+      1586
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1164,
+          889
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1213,
+          1656
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          444,
+          1915
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3601,
+          1584
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3343,
+          1973
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2354,
+          929
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3008,
+          844
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          441,
+          1202
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3689,
+          1910
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2324,
+          222
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1588,
+          252
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1985,
+          569
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          839,
+          562
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          123,
+          1911
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1875,
+          222
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          149,
+          556
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          109,
+          257
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          896,
+          1345
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3381,
+          1673
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1996,
+          2059
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          868,
+          1975
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1513,
+          932
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          436,
+          539
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2278,
+          1246
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2561,
+          1645
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          118,
+          1194
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1495,
+          629
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3021,
+          1339
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1223,
+          1346
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3046,
+          1645
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          917,
+          1552
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1198,
+          1958
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          128,
+          1636
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3318,
+          513
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1193,
+          615
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1874,
+          1320
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3589,
+          132
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3349,
+          185
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          575,
+          978
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2633,
+          550
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3609,
+          898
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          211,
+          847
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2664,
+          135
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3627,
+          490
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1170,
+          190
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          573,
+          222
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2334,
+          624
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2280,
+          1954
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2643,
+          828
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2561,
+          1200
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1497,
+          2016
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1942,
+          928
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1619,
+          1560
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3305,
+          949
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          899,
+          222
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          487,
+          1545
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          833,
+          898
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2661,
+          2041
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1543,
+          1226
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3334,
+          1304
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3699,
+          1220
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2924,
+          623
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1913,
+          1539
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2911,
+          2026
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2892,
+          223
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 44,
+    "target_pos": [
+      874,
+      1308
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          190,
+          1665
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3009,
+          111
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1584,
+          1229
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2203,
+          233
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          935,
+          241
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2542,
+          1618
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1866,
+          592
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          236,
+          1311
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2650,
+          256
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          89,
+          914
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2623,
+          1199
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3361,
+          2019
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3023,
+          910
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3752,
+          1641
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1963,
+          134
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3278,
+          1603
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1616,
+          200
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1252,
+          1307
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1553,
+          577
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3633,
+          1315
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1912,
+          1553
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1893,
+          1931
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3234,
+          1272
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2293,
+          1282
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3293,
+          140
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3619,
+          480
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1566,
+          923
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2695,
+          978
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2226,
+          1591
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1502,
+          2063
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2255,
+          581
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          551,
+          1932
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2985,
+          1539
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2632,
+          524
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3709,
+          831
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1497,
+          1665
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          210,
+          145
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1969,
+          893
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          847,
+          1641
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          906,
+          2023
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          570,
+          1300
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2296,
+          2005
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2897,
+          1215
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1224,
+          874
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1937,
+          1240
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          469,
+          1659
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2894,
+          1996
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          510,
+          534
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          563,
+          109
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1159,
+          543
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1294,
+          1685
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3241,
+          915
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3042,
+          629
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          239,
+          589
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          116,
+          2031
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3390,
+          519
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2696,
+          1973
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          882,
+          501
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2345,
+          886
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1231,
+          1907
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          461,
+          957
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3650,
+          146
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3744,
+          2067
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1207,
+          138
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          859,
+          893
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 45,
+    "target_pos": [
+      1186,
+      623
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1594,
+          258
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          446,
+          516
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3353,
+          220
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2618,
+          983
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          798,
+          620
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          873,
+          158
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1586,
+          574
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2204,
+          589
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1259,
+          1318
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1865,
+          2051
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          843,
+          1691
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2355,
+          1574
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2632,
+          470
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3707,
+          1588
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1963,
+          1185
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2892,
+          502
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2935,
+          2006
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1503,
+          1980
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1164,
+          1644
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          447,
+          115
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1834,
+          958
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2662,
+          2067
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2969,
+          159
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          129,
+          1971
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1508,
+          1688
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2962,
+          1600
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3312,
+          1933
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          136,
+          1233
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2543,
+          1552
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1839,
+          1623
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2653,
+          224
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1293,
+          2066
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          855,
+          981
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          847,
+          1316
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3661,
+          1948
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2316,
+          870
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3728,
+          879
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3292,
+          487
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3701,
+          1305
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3048,
+          895
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2561,
+          1206
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          573,
+          874
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1280,
+          155
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2191,
+          1964
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          870,
+          2060
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          594,
+          1187
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1942,
+          452
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2217,
+          173
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3019,
+          1344
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3368,
+          958
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          144,
+          874
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3274,
+          1253
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1634,
+          1312
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2193,
+          1293
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          192,
+          126
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          606,
+          1646
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1583,
+          864
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3679,
+          250
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3365,
+          1670
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1152,
+          819
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1974,
+          185
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          489,
+          1986
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3614,
+          505
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          211,
+          461
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          211,
+          1552
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 46,
+    "target_pos": [
+      537,
+      1988
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1649,
+          1933
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2627,
+          1605
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2666,
+          1345
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3324,
+          1195
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3301,
+          867
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          610,
+          1244
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2237,
+          1990
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1208,
+          1562
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3236,
+          1598
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1869,
+          1911
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2323,
+          172
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1590,
+          936
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3654,
+          1915
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3354,
+          558
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          107,
+          1318
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1180,
+          127
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1573,
+          1202
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2693,
+          616
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          172,
+          223
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          785,
+          266
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1976,
+          169
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1267,
+          1952
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3588,
+          1227
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2958,
+          626
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2192,
+          485
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1958,
+          471
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2218,
+          1280
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1615,
+          195
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1599,
+          1581
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          507,
+          474
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3052,
+          1933
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2958,
+          1189
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1535,
+          492
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          890,
+          450
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          504,
+          170
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3672,
+          858
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2644,
+          1956
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3289,
+          167
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3366,
+          1993
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2986,
+          1573
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3667,
+          1561
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          122,
+          860
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1920,
+          1537
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          854,
+          2054
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2239,
+          1623
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1258,
+          482
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1873,
+          1300
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1205,
+          848
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2996,
+          942
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          525,
+          1625
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          171,
+          612
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          812,
+          1178
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2698,
+          225
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          795,
+          896
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          481,
+          837
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3038,
+          176
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          929,
+          1695
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          97,
+          1550
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2545,
+          888
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          154,
+          1974
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3600,
+          598
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2338,
+          933
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3607,
+          173
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1262,
+          1218
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1868,
+          822
+        ]
+      }
+    ]
+  },
+  {
+    "trial_id": 47,
+    "target_pos": [
+      1857,
+      1271
+    ],
+    "target_type": "T_SHAPE",
+    "target_color": "BLACK",
+    "distractors": [
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1998,
+          498
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3292,
+          1664
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1614,
+          590
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2971,
+          2062
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          561,
+          839
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2671,
+          1229
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1186,
+          983
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2944,
+          139
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1632,
+          2011
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          950,
+          2040
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1229,
+          554
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1483,
+          1258
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3744,
+          2034
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2593,
+          526
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1204,
+          1999
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2319,
+          2003
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1542,
+          880
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          1277,
+          1543
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          823,
+          1346
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2354,
+          858
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          514,
+          102
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1922,
+          134
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          177,
+          548
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          89,
+          931
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2233,
+          239
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          473,
+          1704
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1956,
+          2047
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3246,
+          160
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2244,
+          1590
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          548,
+          1182
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          796,
+          1657
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          3241,
+          608
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1190,
+          181
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3314,
+          913
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3651,
+          915
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          244,
+          2069
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2990,
+          584
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3688,
+          116
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2907,
+          1303
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          478,
+          575
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          1888,
+          1638
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3612,
+          1295
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          864,
+          943
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2996,
+          1552
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          3653,
+          494
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2944,
+          926
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1615,
+          100
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          132,
+          1201
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          236,
+          1618
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          1550,
+          1532
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2208,
+          618
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1270,
+          1293
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          2640,
+          1631
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          959,
+          492
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3360,
+          1326
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          815,
+          95
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          3350,
+          1983
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          2633,
+          902
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 270,
+        "pos": [
+          1845,
+          947
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          467,
+          1902
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          2574,
+          1941
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2261,
+          1335
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 180,
+        "pos": [
+          2697,
+          135
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 0,
+        "pos": [
+          3620,
+          1635
+        ]
+      },
+      {
+        "shape": "L_SHAPE",
+        "color": "BLACK",
+        "angle": 90,
+        "pos": [
+          188,
+          189
+        ]
+      }
+    ]
+  }
+]

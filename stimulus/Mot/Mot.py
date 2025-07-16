@@ -58,7 +58,7 @@ else:
             {"params": [num_objects, targets, duration, speed],
             "locations": None, "directions": None, "targets": None}
             for (num_objects, targets, duration, speed) in combos
-            for _ in range(1)          # TODO 3 trials each
+            for _ in range(3)          # TODO 3 trials each
         ]
     }
 
