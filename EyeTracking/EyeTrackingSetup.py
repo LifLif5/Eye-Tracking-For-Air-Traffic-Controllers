@@ -236,7 +236,10 @@ def setup_and_calibrate_tracker(task_name) -> "pylink.EyeLink" :
     el_coords = "screen_pixel_coords = 0 0 %d %d" % (scn_width - 1, scn_height - 1)
     el_tracker.sendCommand(el_coords)
     # el_tracker.sendCommand("binocular_enabled = YES")
-
+    el_tracker.sendCommand("driftcorrect_cr_disable = OFF")
+    # el_tracker.sendCommand("online_dcorr_refposn 1920,1080")
+    # el_tracker.sendCommand("online_dcorr_button = ON")
+    # el_tracker.sendCommand("key_function F9 'online_dcorr_trigger'")
 
     # Write a DISPLAY_COORDS message to the EDF file
     # Data Viewer needs this piece of info for proper visualization, see Data

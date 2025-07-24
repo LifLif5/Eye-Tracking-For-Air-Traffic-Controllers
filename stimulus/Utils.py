@@ -83,6 +83,9 @@ def drift_correction(el_tracker: pylink.EyeLink) -> int:
             1,            # EyeLink draws the fixation dot
             1       # ESC opens full Setup/Camera screen
         )                       # returns 0 (OK) or 27 (ESC) :contentReference[oaicite:3]{index=3}
+        if result == 0:
+            el_tracker.applyDriftCorrect()  # apply the correction
+
     except Exception as exc:    # network or SDK glitch
         el_tracker.sendMessage(f"PY_DRIFTCORR_EXCEPTION {exc}")
         result = -2
