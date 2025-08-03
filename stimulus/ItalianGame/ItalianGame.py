@@ -69,7 +69,7 @@ def draw_weapon(image: pygame.Surface, x: float, y: float) -> None:
     """Draw the weapon image at the specified position."""
     screen.blit(image, (x, y))
 
-def shoot(weapon: Weapon, mouse_x: int, mouse_y: int, animals : List[Animal]) -> bool:
+def shoot(el_tracker, weapon: Weapon, mouse_x: int, mouse_y: int, animals : List[Animal]) -> bool:
     """Shoot the weapon if it's active, has ammo, and is within range. Returns True if it shoots."""
     global tung_tung_kills  # Declare tung_tung_kills as global
     if weapon.is_active:
@@ -85,6 +85,7 @@ def shoot(weapon: Weapon, mouse_x: int, mouse_y: int, animals : List[Animal]) ->
                 animal.health -= 1
                 if animal.health <= 0:
                     animals.remove(animal)
+                    el_tracker.sendMessage("BUTTON_2_PRESSED")
                     if animal.animal_type == "Tung_Tung_Sahur":
                         tung_tung_kills += 1
                 weapon.ammo -= 1
@@ -270,10 +271,10 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:  # Left mouse button for shooting
                 # Prioritize Bombini_Gusini if both weapons are active and the click is within range
                 el_tracker.sendMessage(f"!LEFT_MOUSE_DOWN {mouse_x} {mouse_y}")  # Send left click position to EyeLink tracker
-                if Bombini_Gusini.is_active and shoot(Bombini_Gusini, mouse_x, mouse_y, animals):
+                if Bombini_Gusini.is_active and shoot(el_tracker,Bombini_Gusini, mouse_x, mouse_y, animals):
                     pass  # Bombini_Gusini shoots, so Bombardino_Crocodillo does nothing
                 elif Bombardino_Crocodillo.is_active:
-                    shoot(Bombardino_Crocodillo, mouse_x, mouse_y ,animals)
+                    shoot(el_tracker, Bombardino_Crocodillo, mouse_x, mouse_y ,animals)
             if event.type == pygame.MOUSEBUTTONUP and event.button == 1:
                 el_tracker.sendMessage(f"!LEFT_MOUSE_UP {mouse_x} {mouse_y}")
 
@@ -318,7 +319,7 @@ def game_round(trial_index, el_tracker: pylink.EyeLink, beep_distractions: bool 
         game_over_text = font.render("Game Over You Died", True, RED)  # Red color for game over text
     else:
         el_tracker.sendMessage("GAME_OVER YOU_WON")
-        game_over_text = font.render("Game Over You Won", True, (0, 200, 0))  # Green color for victory text
+        game_over_text = font.render("Game Over", True, (0, 200, 0))  # Green color for victory text
 
     final_score_text = font.render(f"Tung Tung Kills: {tung_tung_kills}", True, BLACK)  # Black color for final score
 

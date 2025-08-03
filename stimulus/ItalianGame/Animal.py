@@ -39,7 +39,7 @@ class Animal:
         self.x, self.y = self.spline.get_next(Consts.ANIMAL_SPEED)
 
     def is_clicked(self, mouse_x: int, mouse_y: int) -> bool:
-        return self.x <= mouse_x <= self.x + 50 and self.y <= mouse_y <= self.y + 50
+        return self.x <= mouse_x <= self.x + 2*Consts.ANIMALS_CIRCLE_RADIUS and self.y <= mouse_y <= self.y + 2*Consts.ANIMALS_CIRCLE_RADIUS
 
 def randomize_animal_location() -> Tuple[int, int]:
     spawn_x: int = random.choice([0+Consts.ANIMALS_CIRCLE_RADIUS, WIDTH - Consts.ANIMALS_CIRCLE_RADIUS])
