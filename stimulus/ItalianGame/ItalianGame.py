@@ -360,7 +360,7 @@ def main_italian_game_experiment():
     performance = []
 
     el_tracker = pylink.getEYELINK()
-    generate_trials()  # Generate trials if needed
+    # generate_trials()  # Generate trials if needed
     # Call the explanation screen before starting the game loop
     show_explanation_screen(Assets.instruction_images[0:4])
     drift_correction(el_tracker)
