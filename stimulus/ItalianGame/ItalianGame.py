@@ -11,7 +11,7 @@ from . import CommonConsts as Consts
 from .Animal import Animal, Weapon
 from typing import List
 from . import AssetLoader as Assets
-from ..Utils import show_explanation_screen, drift_correction, HEIGHT,WIDTH, WHITE, BLACK, RED, BLUE, GREEN, DUMMY_MODE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER
+from ..Utils import show_explanation_screen, drift_correction, HEIGHT,WIDTH, WHITE, BLACK, RED, BLUE, GREEN, DUMMY_MODE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER, DRIFT_CORRECTION_BALL_RADIUS
 
 
 
@@ -30,6 +30,12 @@ pygame.display.set_caption("Eye Tracking Experiment")
 # Font for displaying health
 font = pygame.font.Font(None, Consts.FONT_SIZE)
 
+def game_drift_correction(el_tracker):
+    screen.blit(Assets.background_image, (0, 0))  # Draw background
+    pygame.draw.circle(screen, RED, (WIDTH // 2, HEIGHT // 2), DRIFT_CORRECTION_BALL_RADIUS)
+    pygame.display.flip()
+    pygame.time.wait(100)
+    drift_correction(el_tracker)
 
 def update_weapon_status(weapon: Weapon) -> None:
     """Deactivate the weapon if its active time has expired or ammo is 0."""
@@ -363,20 +369,20 @@ def main_italian_game_experiment():
     # generate_trials()  # Generate trials if needed
     # Call the explanation screen before starting the game loop
     show_explanation_screen(Assets.instruction_images[0:4])
-    drift_correction(el_tracker)
+    game_drift_correction(el_tracker)
 
     performance.append(game_round(0, el_tracker))
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
 
     show_explanation_screen(Assets.instruction_images[4:5])
-    drift_correction(el_tracker)
+    game_drift_correction(el_tracker)
     performance.append(game_round(1, el_tracker, beep_distractions= True))
     pylink.pumpDelay(100)
     el_tracker.stopRecording()
 
     show_explanation_screen(Assets.instruction_images[5:6])
-    drift_correction(el_tracker)
+    game_drift_correction(el_tracker)
     performance.append(game_round(2, el_tracker, visual_distractions=True))
     pylink.pumpDelay(100)
     el_tracker.stopRecording()

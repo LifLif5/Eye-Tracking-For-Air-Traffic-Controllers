@@ -10,7 +10,7 @@ import glob
 
 import pylink
 
-from ..Utils import generate_grid_positions, drift_correction,display_instructions, HEIGHT,WIDTH,WHITE, BLACK,RED,BLUE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER,WALDO_FOLDER
+from ..Utils import generate_grid_positions, drift_correction,display_instructions, HEIGHT,WIDTH,WHITE, BLACK,RED,BLUE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER,WALDO_FOLDER, DRIFT_CORRECTION_BALL_RADIUS
 
 # Initialize pygame
 pygame.init()
@@ -100,6 +100,12 @@ def load_trial_config(search_type, trial_count):
             return trial
     raise ValueError(f"Trial with trial_id={trial_count} not found in {filename}")
 
+def search_drift_correction(el_tracker):
+    screen.fill(WHITE)
+    pygame.draw.circle(screen, BLACK, (WIDTH // 2, HEIGHT // 2), DRIFT_CORRECTION_BALL_RADIUS)
+    pygame.display.flip()
+    pygame.time.wait(100)
+    drift_correction(el_tracker)
 
 def draw_letter(letter, color, pos, angle=0):
     text_surface = font.render(letter, True, color)
@@ -276,7 +282,7 @@ def main_visual_search_experiment():
     el_tracker.sendMessage("PHASE1_POP_OUT_START")
 
     for distractors in num_distractors:
-        drift_correction(el_tracker)  # Ensure tracker is calibrated
+        search_drift_correction(el_tracker)  # Ensure tracker is calibrated
         for _ in range(num_trials):
             performance.append(search_trial(trial_count, el_tracker, "pop_out", distractors, use_saved_config=True))
             trial_count += 1
@@ -292,7 +298,7 @@ def main_visual_search_experiment():
     el_tracker.sendMessage("PHASE2_FEATURE_SEARCH_START")
 
     for distractors in num_distractors:
-        drift_correction(el_tracker)  # Ensure tracker is calibrated
+        search_drift_correction(el_tracker)  # Ensure tracker is calibrated
         for _ in range(num_trials):
             performance.append(search_trial(trial_count, el_tracker, "feature", distractors, use_saved_config=True))
             trial_count += 1
@@ -308,7 +314,7 @@ def main_visual_search_experiment():
     el_tracker.sendMessage("PHASE3_CONJUNCTION_SEARCH_START")
 
     for distractors in num_distractors:
-        drift_correction(el_tracker)  # Ensure tracker is calibrated
+        search_drift_correction(el_tracker)  # Ensure tracker is calibrated
         for _ in range(num_trials):
             performance.append(search_trial(trial_count, el_tracker, "conjunction", distractors, use_saved_config=True))
             trial_count += 1
@@ -343,7 +349,7 @@ def main_visual_search_experiment():
         bbox = pygame.Rect(bx*scale_x, by*scale_y, bw*scale_x, bh*scale_y)
 
         # drift correction
-        drift_correction(el_tracker)  # Ensure tracker is calibrated
+        search_drift_correction(el_tracker)  # Ensure tracker is calibrated
         rt = waldo_trial(trial_count, el_tracker, surf, bbox)
         performance.append(rt)
         trial_count += 1

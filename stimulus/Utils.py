@@ -25,7 +25,7 @@ DUMMY_MODE = args.dummy
 MOUSE_POS_MSG = "!MOUSE_POS"
 WALDO_FOLDER = "stimulus/VisualSearch/waldo_images/"
 instruction_font = pygame.font.Font("stimulus/instructions/hebrew_font.ttf", int(40  * DISPLAY_SIZE_MULTIPLIER)) 
-
+DRIFT_CORRECTION_BALL_RADIUS = int(10 * DISPLAY_SIZE_MULTIPLIER)  # Radius for drift correction circle
 
     
 def generate_grid_positions(n_items, jitter=True):
@@ -80,7 +80,7 @@ def drift_correction(el_tracker: pylink.EyeLink) -> int:
     try:
         result = el_tracker.doDriftCorrect(
             WIDTH // 2, HEIGHT // 2,
-            1,            # EyeLink draws the fixation dot
+            0,            # EyeLink draws the fixation dot
             1       # ESC opens full Setup/Camera screen
         )                       # returns 0 (OK) or 27 (ESC) :contentReference[oaicite:3]{index=3}
         if result == 0:

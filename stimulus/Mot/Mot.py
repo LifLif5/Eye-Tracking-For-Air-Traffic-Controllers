@@ -7,7 +7,7 @@ import os
 import pylink
 from MouseMovements.MouseTracker import MouseRecorder
 from ..Utils import generate_grid_positions, drift_correction, show_explanation_screen, display_instructions
-from ..Utils import HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK, YELLOW, DUMMY_MODE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER
+from ..Utils import HEIGHT,WIDTH,WHITE, RED, GREEN, BLACK, YELLOW, DUMMY_MODE,MOUSE_POS_MSG, DISPLAY_SIZE_MULTIPLIER,DRIFT_CORRECTION_BALL_RADIUS
 
 
 # Init pygame
@@ -70,6 +70,14 @@ def quit_check(events):
     for event in events:
         if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             raise SystemExit("Experiment terminated by user.")
+        
+def mot_drift_correction(el_tracker):
+    screen.fill(BLACK)
+    pygame.draw.circle(screen, WHITE, (WIDTH // 2, HEIGHT // 2), DRIFT_CORRECTION_BALL_RADIUS)
+    pygame.display.flip()
+    pygame.time.wait(100)
+
+    drift_correction(el_tracker)
 
 def mot_trial(el_tracker : pylink.EyeLink, trial_index):
     trial = config["trials"][trial_index]
@@ -237,7 +245,7 @@ def main_mot_experiment():
         pylink.pumpDelay(100)  # allow tracker to stabilize
         for i in range(len(config["trials"])):
         # for i in range(5):
-            drift_correction(el_tracker)
+            mot_drift_correction(el_tracker)
             performance.append(mot_trial(el_tracker, i))
 
         pylink.pumpDelay(100)

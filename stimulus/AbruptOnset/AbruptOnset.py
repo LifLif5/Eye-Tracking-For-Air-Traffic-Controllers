@@ -4,7 +4,7 @@ import time
 import math
 import pylink
 import json
-from ..Utils import drift_correction,display_instructions, HEIGHT,WIDTH, WHITE, RED, GREEN, BLACK, DUMMY_MODE, DISPLAY_SIZE_MULTIPLIER
+from ..Utils import drift_correction,display_instructions, HEIGHT,WIDTH, WHITE, RED, GREEN, BLACK, DUMMY_MODE, DISPLAY_SIZE_MULTIPLIER, DRIFT_CORRECTION_BALL_RADIUS
 
 opening_instructions = [
     "ברוכים הבאים למשימת זיהוי הספרות!",
@@ -63,6 +63,13 @@ pygame.display.set_caption("Digit Identification Task")
 clock = pygame.time.Clock()
 fixation_font = pygame.font.SysFont(None, FIXATION_SIZE)
 letter_font = pygame.font.SysFont(None, LETTER_FONT_SIZE)
+
+def onset_drift_correction(el_tracker):
+    screen.fill(WHITE)
+    pygame.draw.circle(screen, BLACK, (WIDTH // 2, HEIGHT // 2), DRIFT_CORRECTION_BALL_RADIUS)
+    pygame.display.flip()
+    pygame.time.wait(100)
+    drift_correction(el_tracker)
 
 def build_config_file():
     rng = random.Random()  # Independent random generator instance
@@ -186,7 +193,7 @@ def main_abrupt_onset_experiment():
     trial_count = 0
     for _ in range(NUM_TRIALS):
         if trial_count %10 ==0:
-            drift_correction(el_tracker)
+            onset_drift_correction(el_tracker)
         rt = run_trial(el_tracker, trial_count, with_distractors=False)
         reaction_times.append(rt)
         trial_count += 1
@@ -204,7 +211,7 @@ def main_abrupt_onset_experiment():
 
     for _ in range(NUM_TRIALS):
         if trial_count %10 ==0:
-            drift_correction(el_tracker)
+            onset_drift_correction(el_tracker)
         rt = run_trial(el_tracker, trial_count, with_distractors=True)
         reaction_times.append(rt)
         trial_count += 1
